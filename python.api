@@ -1,0 +1,1678 @@
+AggregationMethod(??) [doc: A class listing aggregation methods used to combine gradients.]
+ArithmeticError(??) [doc: Base class for arithmetic errors.]
+Assert(??) [doc: Asserts that the given condition is true.]
+AssertionError(??) [doc: Assertion failed.]
+AttrValue
+AttributeError(??) [doc: Attribute not found.]
+BaseException(??) [doc: Common base class for all exceptions]
+BlockingIOError(??) [doc: I/O operation would block.]
+BrokenPipeError(??) [doc: Broken pipe.]
+BufferError(??) [doc: Buffer error.]
+BytesWarning(??) [doc: Base class for warnings about bytes and buffer related problems, mostly]
+COMPILER_VERSION
+ChildProcessError(??) [doc: Child process error.]
+ConditionalAccumulator(??) [doc: A conditional accumulator for aggregating gradients.]
+ConditionalAccumulatorBase(??) [doc: A conditional accumulator for aggregating gradients.]
+ConfigProto
+ConnectionAbortedError(??) [doc: Connection aborted.]
+ConnectionError(??) [doc: Connection error.]
+ConnectionRefusedError(??) [doc: Connection refused.]
+ConnectionResetError(??) [doc: Connection reset.]
+DType(??) [doc: Represents the type of the elements in a `Tensor`.]
+DeprecationWarning(??) [doc: Base class for warnings about deprecated features.]
+DeviceSpec(??) [doc: Represents a (possibly partial) specification for a TensorFlow device.]
+Dimension(??) [doc: Represents the value of one dimension in a TensorShape.]
+EOFError(??) [doc: Read beyond end of file.]
+Ellipsis
+EnvironmentError(??) [doc: Base class for I/O related errors.]
+Event
+Exception(??) [doc: Common base class for all non-exit exceptions.]
+FIFOQueue(??) [doc: A queue implementation that dequeues elements in first-in first-out order.]
+False
+FileExistsError(??) [doc: File already exists.]
+FileNotFoundError(??) [doc: File not found.]
+FixedLenFeature(??) [doc: Configuration for parsing a fixed-length input feature.]
+FixedLenSequenceFeature(??) [doc: Configuration for parsing a variable-length input feature into a `Tensor`.]
+FixedLengthRecordReader(??) [doc: A Reader that outputs fixed-length records from a file.]
+FloatingPointError(??) [doc: Floating point operation failed.]
+FutureWarning(??) [doc: Base class for warnings about constructs that will change semantically]
+GIT_VERSION
+GPUOptions
+GRAPH_DEF_VERSION
+GRAPH_DEF_VERSION_MIN_CONSUMER
+GRAPH_DEF_VERSION_MIN_PRODUCER
+GeneratorExit(??) [doc: Request that a generator exit.]
+Graph(??) [doc: A TensorFlow computation, represented as a dataflow graph.]
+GraphDef
+GraphKeys(??) [doc: Standard names to use for graph collections.]
+GraphOptions
+HistogramProto
+IOError(??) [doc: Base class for I/O related errors.]
+IdentityReader(??) [doc: A Reader that outputs the queued work as both the key and value.]
+ImportError(??) [doc: Import can't find module, or can't find name in module.]
+ImportWarning(??) [doc: Base class for warnings about probable mistakes in module imports]
+IndentationError(??) [doc: Improper indentation.]
+IndexError(??) [doc: Sequence index out of range.]
+IndexedSlices(??) [doc: A sparse representation of a set of tensor slices at given indices.]
+InteractiveSession(??) [doc: A TensorFlow `Session` for use in interactive contexts, such as a shell.]
+InterruptedError(??) [doc: Interrupted by signal.]
+IsADirectoryError(??) [doc: Operation doesn't work on directories.]
+KeyError(??) [doc: Mapping key not found.]
+KeyboardInterrupt(??) [doc: Program interrupted by user.]
+LMDBReader(??) [doc: A Reader that outputs the records from a LMDB file.]
+LogMessage
+LookupError(??) [doc: Base class for lookup errors.]
+MemoryError(??) [doc: Out of memory.]
+MetaGraphDef
+ModuleNotFoundError(??) [doc: Module not found.]
+NameAttrList
+NameError(??) [doc: Name not found globally.]
+NoGradient(??) [doc: Specifies that ops of type `op_type` is not differentiable.]
+NodeDef
+None
+NotADirectoryError(??) [doc: Operation only works on directories.]
+NotDifferentiable(??) [doc: Specifies that ops of type `op_type` is not differentiable.]
+NotImplemented
+NotImplementedError(??) [doc: Method or function hasn't been implemented yet.]
+OSError(??) [doc: Base class for I/O related errors.]
+OpError(??) [doc: A generic error that is raised when TensorFlow execution fails.]
+Operation(??) [doc: Represents a graph node that performs computation on tensors.]
+OptimizerOptions
+OverflowError(??) [doc: Result too large to be represented.]
+PaddingFIFOQueue(??) [doc: A FIFOQueue that supports batching variable-sized tensors by padding.]
+PendingDeprecationWarning(??) [doc: Base class for warnings about features which will be deprecated]
+PermissionError(??) [doc: Not enough permissions.]
+Print(??) [doc: Prints a list of tensors.]
+PriorityQueue(??) [doc: A queue implementation that dequeues elements in prioritized order.]
+ProcessLookupError(??) [doc: Process not found.]
+QUANTIZED_DTYPES
+QueueBase(??) [doc: Base class for queue implementations.]
+RandomShuffleQueue(??) [doc: A queue implementation that dequeues elements in a random order.]
+ReaderBase(??) [doc: Base class for different Reader types, that produce a record every step.]
+RecursionError(??) [doc: Recursion limit exceeded.]
+ReferenceError(??) [doc: Weak ref proxy used after referent went away.]
+RegisterGradient(??) [doc: A decorator for registering the gradient function for an op type.]
+ResourceWarning(??) [doc: Base class for warnings about resource usage.]
+RunMetadata
+RunOptions
+RuntimeError(??) [doc: Unspecified run-time error.]
+RuntimeWarning(??) [doc: Base class for warnings about dubious runtime behavior.]
+Session(??) [doc: A class for running TensorFlow operations.]
+SessionLog
+SparseConditionalAccumulator(??) [doc: A conditional accumulator for aggregating sparse gradients.]
+SparseFeature(??) [doc: Configuration for parsing a sparse input feature from an `Example`.]
+SparseTensor(??) [doc: Represents a sparse tensor.]
+SparseTensorValue(indices, values, dense_shape)
+StopAsyncIteration(??) [doc: Signal the end from iterator.__anext__().]
+StopIteration(??) [doc: Signal the end from iterator.__next__().]
+Summary
+SummaryMetadata
+SyntaxError(??) [doc: Invalid syntax.]
+SyntaxWarning(??) [doc: Base class for warnings about dubious syntax.]
+SystemError(??) [doc: Internal error in the Python interpreter.]
+SystemExit(??) [doc: Request to exit from the interpreter.]
+TFRecordReader(??) [doc: A Reader that outputs the records from a TFRecords file.]
+TabError(??) [doc: Improper mixture of spaces and tabs.]
+Tensor(??) [doc: Represents one of the outputs of an `Operation`.]
+TensorArray(??) [doc: Class wrapping dynamic-sized, per-time-step, write-once Tensor arrays.]
+TensorInfo
+TensorShape(??) [doc: Represents the shape of a `Tensor`.]
+TextLineReader(??) [doc: A Reader that outputs the lines of a file delimited by newlines.]
+TimeoutError(??) [doc: Timeout expired.]
+True
+TypeError(??) [doc: Inappropriate argument type.]
+UnboundLocalError(??) [doc: Local name referenced but not bound to a value.]
+UnicodeDecodeError(??) [doc: Unicode decoding error.]
+UnicodeEncodeError(??) [doc: Unicode encoding error.]
+UnicodeError(??) [doc: Unicode related error.]
+UnicodeTranslateError(??) [doc: Unicode translation error.]
+UnicodeWarning(??) [doc: Base class for warnings about Unicode related problems, mostly]
+UserWarning(??) [doc: Base class for warnings generated by user code.]
+VERSION
+ValueError(??) [doc: Inappropriate argument value (of correct type).]
+VarLenFeature(??) [doc: Configuration for parsing a variable-length input feature.]
+Variable(??) [doc: See the @{$variables$Variables How To} for a high level overview.]
+VariableScope(??) [doc: Variable scope object to carry defaults to provide to `get_variable`.]
+Warning(??) [doc: Base class for warning categories.]
+WholeFileReader(??) [doc: A Reader that outputs the entire contents of a file as a value.]
+WindowsError(??) [doc: Base class for I/O related errors.]
+ZeroDivisionError(??) [doc: Second argument to a division or modulo operation was zero.]
+__build_class__(func, name, *bases, metaclass=None, **kwds) -> class
+__builtins__
+__cached__
+__compiler_version__
+__debug__
+__doc__
+__file__
+__git_version__
+__import__(name, globals=None, locals=None, fromlist=(), level=0) -> module
+__loader__(??) [doc: Meta path import for built-in modules.]
+__name__
+__package__
+__path__
+__spec__
+__version__
+abs(??) [doc: Computes the absolute value of a tensor.]
+accumulate_n(??) [doc: Returns the element-wise sum of a list of tensors.]
+acos(??) [doc: Computes acos of x element-wise.]
+acosh(??) [doc: Computes inverse hyperbolic cosine of x element-wise.]
+add(??) [doc: Returns x + y element-wise.]
+add_check_numerics_ops(??) [doc: Connect a `check_numerics` to every floating point tensor.]
+add_n(??) [doc: Adds all input tensors element-wise.]
+add_to_collection(??) [doc: Wrapper for `Graph.add_to_collection()` using the default graph.]
+all
+all_variables(??) [doc: See `tf.global_variables`. (deprecated)]
+and
+any
+app:: [module]
+arg_max(??) [doc: Returns the index with the largest value across dimensions of a tensor. (deprecated)]
+arg_min(??) [doc: Returns the index with the smallest value across dimensions of a tensor. (deprecated)]
+argmax(??) [doc: Returns the index with the largest value across axes of a tensor. (deprecated arguments)]
+argmin(??) [doc: Returns the index with the smallest value across axes of a tensor. (deprecated arguments)]
+array.ArrayType(??) [doc: array(typecode [, initializer]) -> array]
+array.__doc__
+array.__loader__(??) [doc: Meta path import for built-in modules.]
+array.__name__
+array.__package__
+array.__spec__
+array._array_reconstructor
+array.array(typecode [, initializer]) -> array
+array.typecodes
+as
+as_dtype(??) [doc: Converts the given `type_value` to a `DType`.]
+as_string(??) [doc: Converts each entry in the given tensor to strings.  Supports many numeric]
+ascii
+asin(??) [doc: Computes asin of x element-wise.]
+asinh(??) [doc: Computes inverse hyperbolic sine of x element-wise.]
+assert
+assert_equal(??) [doc: Assert the condition `x == y` holds element-wise.]
+assert_greater(??) [doc: Assert the condition `x > y` holds element-wise.]
+assert_greater_equal(??) [doc: Assert the condition `x >= y` holds element-wise.]
+assert_integer(??) [doc: Assert that `x` is of integer dtype.]
+assert_less(??) [doc: Assert the condition `x < y` holds element-wise.]
+assert_less_equal(??) [doc: Assert the condition `x <= y` holds element-wise.]
+assert_negative(??) [doc: Assert the condition `x < 0` holds element-wise.]
+assert_non_negative(??) [doc: Assert the condition `x >= 0` holds element-wise.]
+assert_non_positive(??) [doc: Assert the condition `x <= 0` holds element-wise.]
+assert_none_equal(??) [doc: Assert the condition `x != y` holds for all elements.]
+assert_positive(??) [doc: Assert the condition `x > 0` holds element-wise.]
+assert_proper_iterable(??) [doc: Static assert that values is a "proper" iterable.]
+assert_rank(??) [doc: Assert `x` has rank equal to `rank`.]
+assert_rank_at_least(??) [doc: Assert `x` has rank equal to `rank` or higher.]
+assert_same_float_dtype(??) [doc: Validate and return float type based on `tensors` and `dtype`.]
+assert_scalar(??) [function]
+assert_type(??) [doc: Statically asserts that the given `Tensor` is of the specified type.]
+assert_variables_initialized(??) [doc: Returns an Op to check if variables are initialized.]
+assign(??) [doc: Update 'ref' by assigning 'value' to it.]
+assign_add(??) [doc: Update 'ref' by adding 'value' to it.]
+assign_sub(??) [doc: Update 'ref' by subtracting 'value' from it.]
+atan(??) [doc: Computes atan of x element-wise.]
+atan2(??) [doc: Computes arctangent of `y/x` element-wise, respecting signs of the arguments.]
+atanh(??) [doc: Computes inverse hyperbolic tangent of x element-wise.]
+atexit.__doc__
+atexit.__loader__(??) [doc: Meta path import for built-in modules.]
+atexit.__name__
+atexit.__package__
+atexit.__spec__
+atexit._clear() -> None
+atexit._ncallbacks() -> int
+atexit._run_exitfuncs() -> None
+atexit.register(func, *args, **kwargs) -> func
+atexit.unregister(func) -> None
+audioop.__doc__
+audioop.__loader__(??) [doc: Meta path import for built-in modules.]
+audioop.__name__
+audioop.__package__
+audioop.__spec__
+audioop.add
+audioop.adpcm2lin
+audioop.alaw2lin
+audioop.avg
+audioop.avgpp
+audioop.bias
+audioop.byteswap
+audioop.cross
+audioop.error(??) [class]
+audioop.findfactor
+audioop.findfit
+audioop.findmax
+audioop.getsample
+audioop.lin2adpcm
+audioop.lin2alaw
+audioop.lin2lin
+audioop.lin2ulaw
+audioop.max
+audioop.maxpp
+audioop.minmax
+audioop.mul
+audioop.ratecv
+audioop.reverse
+audioop.rms
+audioop.tomono
+audioop.tostereo
+audioop.ulaw2lin
+batch_to_space(??) [doc: BatchToSpace for 4-D tensors of type T.]
+batch_to_space_nd(??) [doc: BatchToSpace for N-D tensors of type T.]
+betainc(??) [doc: Compute the regularized incomplete beta integral \\(I_x(a, b)\\).]
+bfloat16
+bin
+binascii.Error(??) [class]
+binascii.Incomplete(??) [class]
+binascii.__doc__
+binascii.__loader__(??) [doc: Meta path import for built-in modules.]
+binascii.__name__
+binascii.__package__
+binascii.__spec__
+binascii.a2b_base64
+binascii.a2b_hex
+binascii.a2b_hqx
+binascii.a2b_qp
+binascii.a2b_uu
+binascii.b2a_base64
+binascii.b2a_hex
+binascii.b2a_hqx
+binascii.b2a_qp
+binascii.b2a_uu
+binascii.crc32
+binascii.crc_hqx
+binascii.hexlify
+binascii.rlecode_hqx
+binascii.rledecode_hqx
+binascii.unhexlify
+bincount(??) [doc: Counts the number of occurrences of each value in an integer array.]
+bitcast(??) [doc: Bitcasts a tensor from one type to another without copying data.]
+bitwise:: [module]
+bool(x) -> bool
+boolean_mask(??) [doc: Apply boolean mask to tensor.  Numpy equivalent is `tensor[mask]`.]
+break
+broadcast_dynamic_shape(??) [doc: Returns the broadcasted dynamic shape between `shape_x` and `shape_y`.]
+broadcast_static_shape(??) [doc: Returns the broadcasted static shape between `shape_x` and `shape_y`.]
+builtins.ArithmeticError(??) [doc: Base class for arithmetic errors.]
+builtins.AssertionError(??) [doc: Assertion failed.]
+builtins.AttributeError(??) [doc: Attribute not found.]
+builtins.BaseException(??) [doc: Common base class for all exceptions]
+builtins.BlockingIOError(??) [doc: I/O operation would block.]
+builtins.BrokenPipeError(??) [doc: Broken pipe.]
+builtins.BufferError(??) [doc: Buffer error.]
+builtins.BytesWarning(??) [doc: Base class for warnings about bytes and buffer related problems, mostly]
+builtins.ChildProcessError(??) [doc: Child process error.]
+builtins.ConnectionAbortedError(??) [doc: Connection aborted.]
+builtins.ConnectionError(??) [doc: Connection error.]
+builtins.ConnectionRefusedError(??) [doc: Connection refused.]
+builtins.ConnectionResetError(??) [doc: Connection reset.]
+builtins.DeprecationWarning(??) [doc: Base class for warnings about deprecated features.]
+builtins.EOFError(??) [doc: Read beyond end of file.]
+builtins.Ellipsis
+builtins.EnvironmentError(??) [doc: Base class for I/O related errors.]
+builtins.Exception(??) [doc: Common base class for all non-exit exceptions.]
+builtins.FileExistsError(??) [doc: File already exists.]
+builtins.FileNotFoundError(??) [doc: File not found.]
+builtins.FloatingPointError(??) [doc: Floating point operation failed.]
+builtins.FutureWarning(??) [doc: Base class for warnings about constructs that will change semantically]
+builtins.GeneratorExit(??) [doc: Request that a generator exit.]
+builtins.IOError(??) [doc: Base class for I/O related errors.]
+builtins.ImportError(??) [doc: Import can't find module, or can't find name in module.]
+builtins.ImportWarning(??) [doc: Base class for warnings about probable mistakes in module imports]
+builtins.IndentationError(??) [doc: Improper indentation.]
+builtins.IndexError(??) [doc: Sequence index out of range.]
+builtins.InterruptedError(??) [doc: Interrupted by signal.]
+builtins.IsADirectoryError(??) [doc: Operation doesn't work on directories.]
+builtins.KeyError(??) [doc: Mapping key not found.]
+builtins.KeyboardInterrupt(??) [doc: Program interrupted by user.]
+builtins.LookupError(??) [doc: Base class for lookup errors.]
+builtins.MemoryError(??) [doc: Out of memory.]
+builtins.ModuleNotFoundError(??) [doc: Module not found.]
+builtins.NameError(??) [doc: Name not found globally.]
+builtins.NotADirectoryError(??) [doc: Operation only works on directories.]
+builtins.NotImplemented
+builtins.NotImplementedError(??) [doc: Method or function hasn't been implemented yet.]
+builtins.OSError(??) [doc: Base class for I/O related errors.]
+builtins.OverflowError(??) [doc: Result too large to be represented.]
+builtins.PendingDeprecationWarning(??) [doc: Base class for warnings about features which will be deprecated]
+builtins.PermissionError(??) [doc: Not enough permissions.]
+builtins.ProcessLookupError(??) [doc: Process not found.]
+builtins.RecursionError(??) [doc: Recursion limit exceeded.]
+builtins.ReferenceError(??) [doc: Weak ref proxy used after referent went away.]
+builtins.ResourceWarning(??) [doc: Base class for warnings about resource usage.]
+builtins.RuntimeError(??) [doc: Unspecified run-time error.]
+builtins.RuntimeWarning(??) [doc: Base class for warnings about dubious runtime behavior.]
+builtins.StopAsyncIteration(??) [doc: Signal the end from iterator.__anext__().]
+builtins.StopIteration(??) [doc: Signal the end from iterator.__next__().]
+builtins.SyntaxError(??) [doc: Invalid syntax.]
+builtins.SyntaxWarning(??) [doc: Base class for warnings about dubious syntax.]
+builtins.SystemError(??) [doc: Internal error in the Python interpreter.]
+builtins.SystemExit(??) [doc: Request to exit from the interpreter.]
+builtins.TabError(??) [doc: Improper mixture of spaces and tabs.]
+builtins.TimeoutError(??) [doc: Timeout expired.]
+builtins.TypeError(??) [doc: Inappropriate argument type.]
+builtins.UnboundLocalError(??) [doc: Local name referenced but not bound to a value.]
+builtins.UnicodeDecodeError(??) [doc: Unicode decoding error.]
+builtins.UnicodeEncodeError(??) [doc: Unicode encoding error.]
+builtins.UnicodeError(??) [doc: Unicode related error.]
+builtins.UnicodeTranslateError(??) [doc: Unicode translation error.]
+builtins.UnicodeWarning(??) [doc: Base class for warnings about Unicode related problems, mostly]
+builtins.UserWarning(??) [doc: Base class for warnings generated by user code.]
+builtins.ValueError(??) [doc: Inappropriate argument value (of correct type).]
+builtins.Warning(??) [doc: Base class for warning categories.]
+builtins.WindowsError(??) [doc: Base class for I/O related errors.]
+builtins.ZeroDivisionError(??) [doc: Second argument to a division or modulo operation was zero.]
+builtins.__build_class__(func, name, *bases, metaclass=None, **kwds) -> class
+builtins.__debug__
+builtins.__doc__
+builtins.__import__(name, globals=None, locals=None, fromlist=(), level=0) -> module
+builtins.__loader__(??) [doc: Meta path import for built-in modules.]
+builtins.__name__
+builtins.__package__
+builtins.__spec__
+builtins.abs
+builtins.all
+builtins.any
+builtins.ascii
+builtins.bin
+builtins.bool(x) -> bool
+builtins.bytearray(iterable_of_ints) -> bytearray
+builtins.bytes(iterable_of_ints) -> bytes
+builtins.callable
+builtins.chr
+builtins.classmethod(function) -> method
+builtins.compile
+builtins.complex(real[, imag]) -> complex number
+builtins.copyright
+builtins.credits
+builtins.delattr
+builtins.dict() -> new empty dictionary
+builtins.dir([object]) -> list of strings
+builtins.divmod
+builtins.enumerate(iterable[, start]) -> iterator for index, value of iterable
+builtins.eval
+builtins.exec
+builtins.exit
+builtins.filter(function or None, iterable) --> filter object
+builtins.float(x) -> floating point number
+builtins.format
+builtins.frozenset() -> empty frozenset object
+builtins.getattr(object, name[, default]) -> value
+builtins.globals
+builtins.hasattr
+builtins.hash
+builtins.help
+builtins.hex
+builtins.id
+builtins.input
+builtins.int(x=0) -> integer
+builtins.isinstance
+builtins.issubclass
+builtins.iter(iterable) -> iterator
+builtins.len
+builtins.license
+builtins.list() -> new empty list
+builtins.locals
+builtins.map(func, *iterables) --> map object
+builtins.max(iterable, *[, default=obj, key=func]) -> value
+builtins.memoryview(??) [doc: Create a new memoryview object which references the given object.]
+builtins.min(iterable, *[, default=obj, key=func]) -> value
+builtins.next(iterator[, default])
+builtins.object(??) [doc: The most base type]
+builtins.oct
+builtins.open
+builtins.ord
+builtins.pow
+builtins.print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+builtins.property(fget=None, fset=None, fdel=None, doc=None) -> property attribute
+builtins.quit
+builtins.range(stop) -> range object
+builtins.repr
+builtins.reversed(sequence) -> reverse iterator over values of the sequence
+builtins.round(number[, ndigits]) -> number
+builtins.set() -> new empty set object
+builtins.setattr
+builtins.slice(stop)
+builtins.sorted
+builtins.staticmethod(function) -> method
+builtins.str(object='') -> str
+builtins.sum
+builtins.super() -> same as super(__class__, <first argument>)
+builtins.tuple() -> empty tuple
+builtins.type(object_or_name, bases, dict)
+builtins.vars([object]) -> dictionary
+builtins.zip(iter1 [,iter2 [...]]) --> zip object
+bytearray(iterable_of_ints) -> bytearray
+bytes(iterable_of_ints) -> bytes
+callable
+case(??) [doc: Create a case operation.]
+cast(??) [doc: Casts a tensor to a new type.]
+ceil(??) [doc: Returns element-wise smallest integer in not less than x.]
+check_numerics(??) [doc: Checks a tensor for NaN and Inf values.]
+cholesky(??) [doc: Computes the Cholesky decomposition of one or more square matrices.]
+cholesky_solve(??) [doc: Solves systems of linear eqns `A X = RHS`, given Cholesky factorizations.]
+chr
+class
+classmethod(function) -> method
+clip_by_average_norm(??) [doc: Clips tensor values to a maximum average L2-norm.]
+clip_by_global_norm(??) [doc: Clips values of multiple tensors by the ratio of the sum of their norms.]
+clip_by_norm(??) [doc: Clips tensor values to a maximum L2-norm.]
+clip_by_value(??) [doc: Clips tensor values to a specified min and max.]
+cmath.__doc__
+cmath.__loader__(??) [doc: Meta path import for built-in modules.]
+cmath.__name__
+cmath.__package__
+cmath.__spec__
+cmath.acos
+cmath.acosh
+cmath.asin
+cmath.asinh
+cmath.atan
+cmath.atanh
+cmath.cos
+cmath.cosh
+cmath.e
+cmath.exp
+cmath.inf
+cmath.infj
+cmath.isclose
+cmath.isfinite
+cmath.isinf
+cmath.isnan
+cmath.log
+cmath.log10
+cmath.nan
+cmath.nanj
+cmath.phase
+cmath.pi
+cmath.polar
+cmath.rect
+cmath.sin
+cmath.sinh
+cmath.sqrt
+cmath.tan
+cmath.tanh
+cmath.tau
+colocate_with(??) [function]
+compat:: [module]
+compile
+complex(??) [doc: Converts two real numbers to a complex number.]
+complex128
+complex64
+concat(??) [doc: Concatenates tensors along one dimension.]
+cond(??) [doc: Return `true_fn()` if the predicate `pred` is true else `false_fn()`. (deprecated arguments)]
+confusion_matrix(??) [doc: Computes the confusion matrix from predictions and labels.]
+conj(??) [doc: Returns the complex conjugate of a complex number.]
+constant(??) [doc: Creates a constant tensor.]
+constant_initializer(??) [doc: Initializer that generates tensors with constant values.]
+container(??) [doc: Wrapper for `Graph.container()` using the default graph.]
+continue
+contrib
+control_dependencies(??) [doc: Wrapper for `Graph.control_dependencies()` using the default graph.]
+convert_to_tensor(??) [doc: Converts the given `value` to a `Tensor`.]
+convert_to_tensor_or_indexed_slices(??) [doc: Converts the given object to a `Tensor` or an `IndexedSlices`.]
+convert_to_tensor_or_sparse_tensor(??) [doc: Converts value to a `SparseTensor` or `Tensor`.]
+copyright
+cos(??) [doc: Computes cos of x element-wise.]
+cosh(??) [doc: Computes hyperbolic cosine of x element-wise.]
+count_nonzero(??) [doc: Computes number of nonzero elements across dimensions of a tensor.]
+count_up_to(??) [doc: Increments 'ref' until it reaches 'limit'.]
+create_partitioned_variables(??) [doc: Create a list of partitioned variables according to the given `slicing`.]
+credits
+cross(??) [doc: Compute the pairwise cross product.]
+cumprod(??) [doc: Compute the cumulative product of the tensor `x` along `axis`.]
+cumsum(??) [doc: Compute the cumulative sum of the tensor `x` along `axis`.]
+decode_base64(??) [doc: Decode web-safe base64-encoded strings.]
+decode_csv(??) [doc: Convert CSV records to tensors. Each column maps to one tensor.]
+decode_json_example(??) [doc: Convert JSON-encoded Example records to binary protocol buffer strings.]
+decode_raw(??) [doc: Reinterpret the bytes of a string as a vector of numbers.]
+def
+del
+delattr
+delete_session_tensor(??) [doc: Delete the tensor for the given tensor handle.]
+depth_to_space(??) [doc: DepthToSpace for tensors of type T.]
+dequantize(??) [doc: Dequantize the 'input' tensor into a float Tensor.]
+deserialize_many_sparse(??) [doc: Deserialize and concatenate `SparseTensors` from a serialized minibatch.]
+device(??) [doc: Wrapper for `Graph.device()` using the default graph.]
+diag(??) [doc: Returns a diagonal tensor with a given diagonal values.]
+diag_part(??) [doc: Returns the diagonal part of the tensor.]
+dict() -> new empty dictionary
+digamma(??) [doc: Computes Psi, the derivative of Lgamma (the log of the absolute value of]
+dir([object]) -> list of strings
+distributions:: [module]
+div(??) [doc: Divides x / y elementwise (using Python 2 division operator semantics).]
+divide(??) [doc: Computes Python style division of `x` by `y`.]
+divmod
+double
+dynamic_partition(??) [doc: Partitions `data` into `num_partitions` tensors using indices from `partitions`.]
+dynamic_stitch(??) [doc: Interleave the values from the `data` tensors into a single tensor.]
+edit_distance(??) [doc: Computes the Levenshtein distance between sequences.]
+einsum(??) [doc: A generalized contraction between tensors of arbitrary dimension.]
+elif
+else
+encode_base64(??) [doc: Encode strings into web-safe base64 format.]
+enumerate(iterable[, start]) -> iterator for index, value of iterable
+equal(??) [doc: Returns the truth value of (x == y) element-wise.]
+erf(??) [doc: Computes the Gauss error function of `x` element-wise.]
+erfc(??) [doc: Computes the complementary error function of `x` element-wise.]
+errno.E2BIG
+errno.EACCES
+errno.EADDRINUSE
+errno.EADDRNOTAVAIL
+errno.EAFNOSUPPORT
+errno.EAGAIN
+errno.EALREADY
+errno.EBADF
+errno.EBADMSG
+errno.EBUSY
+errno.ECANCELED
+errno.ECHILD
+errno.ECONNABORTED
+errno.ECONNREFUSED
+errno.ECONNRESET
+errno.EDEADLK
+errno.EDEADLOCK
+errno.EDESTADDRREQ
+errno.EDOM
+errno.EDQUOT
+errno.EEXIST
+errno.EFAULT
+errno.EFBIG
+errno.EHOSTDOWN
+errno.EHOSTUNREACH
+errno.EIDRM
+errno.EILSEQ
+errno.EINPROGRESS
+errno.EINTR
+errno.EINVAL
+errno.EIO
+errno.EISCONN
+errno.EISDIR
+errno.ELOOP
+errno.EMFILE
+errno.EMLINK
+errno.EMSGSIZE
+errno.ENAMETOOLONG
+errno.ENETDOWN
+errno.ENETRESET
+errno.ENETUNREACH
+errno.ENFILE
+errno.ENOBUFS
+errno.ENODATA
+errno.ENODEV
+errno.ENOENT
+errno.ENOEXEC
+errno.ENOLCK
+errno.ENOLINK
+errno.ENOMEM
+errno.ENOMSG
+errno.ENOPROTOOPT
+errno.ENOSPC
+errno.ENOSR
+errno.ENOSTR
+errno.ENOSYS
+errno.ENOTCONN
+errno.ENOTDIR
+errno.ENOTEMPTY
+errno.ENOTRECOVERABLE
+errno.ENOTSOCK
+errno.ENOTSUP
+errno.ENOTTY
+errno.ENXIO
+errno.EOPNOTSUPP
+errno.EOVERFLOW
+errno.EOWNERDEAD
+errno.EPERM
+errno.EPFNOSUPPORT
+errno.EPIPE
+errno.EPROTO
+errno.EPROTONOSUPPORT
+errno.EPROTOTYPE
+errno.ERANGE
+errno.EREMOTE
+errno.EROFS
+errno.ESHUTDOWN
+errno.ESOCKTNOSUPPORT
+errno.ESPIPE
+errno.ESRCH
+errno.ESTALE
+errno.ETIME
+errno.ETIMEDOUT
+errno.ETOOMANYREFS
+errno.ETXTBSY
+errno.EUSERS
+errno.EWOULDBLOCK
+errno.EXDEV
+errno.WSABASEERR
+errno.WSAEACCES
+errno.WSAEADDRINUSE
+errno.WSAEADDRNOTAVAIL
+errno.WSAEAFNOSUPPORT
+errno.WSAEALREADY
+errno.WSAEBADF
+errno.WSAECONNABORTED
+errno.WSAECONNREFUSED
+errno.WSAECONNRESET
+errno.WSAEDESTADDRREQ
+errno.WSAEDISCON
+errno.WSAEDQUOT
+errno.WSAEFAULT
+errno.WSAEHOSTDOWN
+errno.WSAEHOSTUNREACH
+errno.WSAEINPROGRESS
+errno.WSAEINTR
+errno.WSAEINVAL
+errno.WSAEISCONN
+errno.WSAELOOP
+errno.WSAEMFILE
+errno.WSAEMSGSIZE
+errno.WSAENAMETOOLONG
+errno.WSAENETDOWN
+errno.WSAENETRESET
+errno.WSAENETUNREACH
+errno.WSAENOBUFS
+errno.WSAENOPROTOOPT
+errno.WSAENOTCONN
+errno.WSAENOTEMPTY
+errno.WSAENOTSOCK
+errno.WSAEOPNOTSUPP
+errno.WSAEPFNOSUPPORT
+errno.WSAEPROCLIM
+errno.WSAEPROTONOSUPPORT
+errno.WSAEPROTOTYPE
+errno.WSAEREMOTE
+errno.WSAESHUTDOWN
+errno.WSAESOCKTNOSUPPORT
+errno.WSAESTALE
+errno.WSAETIMEDOUT
+errno.WSAETOOMANYREFS
+errno.WSAEUSERS
+errno.WSAEWOULDBLOCK
+errno.WSANOTINITIALISED
+errno.WSASYSNOTREADY
+errno.WSAVERNOTSUPPORTED
+errno.__doc__
+errno.__loader__(??) [doc: Meta path import for built-in modules.]
+errno.__name__
+errno.__package__
+errno.__spec__
+errno.errorcode
+errors:: [module]
+estimator:: [module]
+eval
+except
+exec
+exit
+exp(??) [doc: Computes exponential of x element-wise.  \\(y = e^x\\).]
+expand_dims(??) [doc: Inserts a dimension of 1 into a tensor's shape.]
+expm1(??) [doc: Computes exponential of x - 1 element-wise.]
+extract_image_patches(??) [doc: Extract `patches` from `images` and put them in the "depth" output dimension.]
+eye(??) [doc: Construct an identity matrix, or a batch of matrices.]
+fake_quant_with_min_max_args(??) [doc: Fake-quantize the 'inputs' tensor, type float to 'outputs' tensor of same type.]
+fake_quant_with_min_max_args_gradient(??) [doc: Compute gradients for a FakeQuantWithMinMaxArgs operation.]
+fake_quant_with_min_max_vars(??) [doc: Fake-quantize the 'inputs' tensor of type float via global float scalars `min`]
+fake_quant_with_min_max_vars_gradient(??) [doc: Compute gradients for a FakeQuantWithMinMaxVars operation.]
+fake_quant_with_min_max_vars_per_channel(??) [doc: Fake-quantize the 'inputs' tensor of type float and one of the shapes: `[d]`,]
+fake_quant_with_min_max_vars_per_channel_gradient(??) [doc: Compute gradients for a FakeQuantWithMinMaxVarsPerChannel operation.]
+faulthandler._EXCEPTION_ACCESS_VIOLATION
+faulthandler._EXCEPTION_INT_DIVIDE_BY_ZERO
+faulthandler._EXCEPTION_NONCONTINUABLE
+faulthandler._EXCEPTION_NONCONTINUABLE_EXCEPTION
+faulthandler._EXCEPTION_STACK_OVERFLOW
+faulthandler.__doc__
+faulthandler.__loader__(??) [doc: Meta path import for built-in modules.]
+faulthandler.__name__
+faulthandler.__package__
+faulthandler.__spec__
+faulthandler._fatal_error(message): call Py_FatalError(message)
+faulthandler._fatal_error_c_thread
+faulthandler._raise_exception
+faulthandler._read_null(): read from NULL, raise a SIGSEGV or SIGBUS signal depending on the platform
+faulthandler._sigabrt(): raise a SIGABRT signal
+faulthandler._sigfpe(): raise a SIGFPE signal
+faulthandler._sigsegv(release_gil=False): raise a SIGSEGV signal
+faulthandler.cancel_dump_traceback_later():
+faulthandler.disable(): disable the fault handler
+faulthandler.dump_traceback(file=sys.stderr, all_threads=True): dump the traceback of the current thread, or of all threads if all_threads is True, into file
+faulthandler.dump_traceback_later(timeout, repeat=False, file=sys.stderrn, exit=False):
+faulthandler.enable(file=sys.stderr, all_threads=True): enable the fault handler
+faulthandler.is_enabled()->bool: check if the handler is enabled
+feature_column:: [module]
+fft(??) [doc: Fast Fourier transform.]
+fft2d(??) [doc: 2D fast Fourier transform.]
+fft3d(??) [doc: 3D fast Fourier transform.]
+fill(??) [doc: Creates a tensor filled with a scalar value.]
+filter(function or None, iterable) --> filter object
+finally
+fixed_size_partitioner(??) [doc: Partitioner to specify a fixed number of shards along given axis.]
+flags:: [module]
+float(x) -> floating point number
+float16
+float32
+float64
+floor(??) [doc: Returns element-wise largest integer not greater than x.]
+floor_div(??) [doc: Returns x // y element-wise.]
+floordiv(??) [doc: Divides `x / y` elementwise, rounding toward the most negative integer.]
+floormod(??) [doc: Returns element-wise remainder of division. When `x < 0` xor `y < 0` is]
+foldl(??) [doc: foldl on the list of tensors unpacked from `elems` on dimension 0.]
+foldr(??) [doc: foldr on the list of tensors unpacked from `elems` on dimension 0.]
+for
+format
+from
+frozenset() -> empty frozenset object
+gather(??) [doc: Gather slices from `params` axis `axis` according to `indices`.]
+gather_nd(??) [doc: Gather slices from `params` into a Tensor with shape specified by `indices`.]
+gc.DEBUG_COLLECTABLE
+gc.DEBUG_LEAK
+gc.DEBUG_SAVEALL
+gc.DEBUG_STATS
+gc.DEBUG_UNCOLLECTABLE
+gc.__doc__
+gc.__loader__(??) [doc: Meta path import for built-in modules.]
+gc.__name__
+gc.__package__
+gc.__spec__
+gc.callbacks
+gc.collect([generation]) -> n
+gc.disable() -> None
+gc.enable() -> None
+gc.garbage
+gc.get_count() -> (count0, count1, count2)
+gc.get_debug() -> flags
+gc.get_objects() -> [...]
+gc.get_referents(*objs) -> list
+gc.get_referrers(*objs) -> list
+gc.get_stats() -> [...]
+gc.get_threshold() -> (threshold0, threshold1, threshold2)
+gc.is_tracked(obj) -> bool
+gc.isenabled() -> status
+gc.set_debug(flags) -> None
+gc.set_threshold(threshold0, [threshold1, threshold2]) -> None
+get_collection(??) [doc: Wrapper for `Graph.get_collection()` using the default graph.]
+get_collection_ref(??) [doc: Wrapper for `Graph.get_collection_ref()` using the default graph.]
+get_default_graph(??) [doc: Returns the default graph for the current thread.]
+get_default_session(??) [doc: Returns the default session for the current thread.]
+get_local_variable(??) [doc: Gets an existing *local* variable or creates a new one.]
+get_seed(??) [doc: Returns the local seeds an operation should use given an op-specific seed.]
+get_session_handle(??) [doc: Return the handle of `data`.]
+get_session_tensor(??) [doc: Get the tensor of type `dtype` by feeding a tensor handle.]
+get_variable(??) [doc: Gets an existing variable with these parameters or create a new one.]
+get_variable_scope(??) [doc: Returns the current variable scope.]
+getattr(object, name[, default]) -> value
+gfile:: [module]
+global
+global_norm(??) [doc: Computes the global norm of multiple tensors.]
+global_variables(??) [doc: Returns global variables.]
+global_variables_initializer(??) [doc: Returns an Op that initializes global variables.]
+globals
+glorot_normal_initializer(??) [doc: The Glorot normal initializer, also called Xavier normal initializer.]
+glorot_uniform_initializer(??) [doc: The Glorot uniform initializer, also called Xavier uniform initializer.]
+gradients(??) [doc: Constructs symbolic partial derivatives of sum of `ys` w.r.t. x in `xs`.]
+graph_util:: [module]
+greater(??) [doc: Returns the truth value of (x > y) element-wise.]
+greater_equal(??) [doc: Returns the truth value of (x >= y) element-wise.]
+group(??) [doc: Create an op that groups multiple operations.]
+half
+hasattr
+hash
+help
+hessians(??) [doc: Constructs the Hessian of sum of `ys` with respect to `x` in `xs`.]
+hex
+histogram_fixed_width(??) [doc: Return histogram of values.]
+id
+identity(??) [doc: Return a tensor with the same shape and contents as the input tensor or value.]
+if
+ifft(??) [doc: Inverse fast Fourier transform.]
+ifft2d(??) [doc: Inverse 2D fast Fourier transform.]
+ifft3d(??) [doc: Inverse 3D fast Fourier transform.]
+igamma(??) [doc: Compute the lower regularized incomplete Gamma function `Q(a, x)`.]
+igammac(??) [doc: Compute the upper regularized incomplete Gamma function `Q(a, x)`.]
+imag(??) [doc: Returns the imaginary part of a complex number.]
+image:: [module]
+import
+import_graph_def(??) [doc: Imports the graph from `graph_def` into the current default `Graph`.]
+in
+initialize_all_tables(??) [doc: Returns an Op that initializes all tables of the default graph. (deprecated)]
+initialize_all_variables(??) [doc: See `tf.global_variables_initializer`. (deprecated)]
+initialize_local_variables(??) [doc: See `tf.local_variables_initializer`. (deprecated)]
+initialize_variables(??) [doc: See `tf.variables_initializer`. (deprecated)]
+input
+int(x=0) -> integer
+int16
+int32
+int64
+int8
+invert_permutation(??) [doc: Computes the inverse permutation of a tensor.]
+is
+is_finite(??) [doc: Returns which elements of x are finite.]
+is_inf(??) [doc: Returns which elements of x are Inf.]
+is_nan(??) [doc: Returns which elements of x are NaN.]
+is_non_decreasing(??) [doc: Returns `True` if `x` is non-decreasing.]
+is_numeric_tensor(??) [function]
+is_strictly_increasing(??) [doc: Returns `True` if `x` is strictly increasing.]
+is_variable_initialized(??) [doc: Tests if a variable has been initialized.]
+isinstance
+issubclass
+iter(iterable) -> iterator
+itertools.__doc__
+itertools.__loader__(??) [doc: Meta path import for built-in modules.]
+itertools.__name__
+itertools.__package__
+itertools.__spec__
+itertools._grouper(??) [class]
+itertools._tee(??) [doc: Iterator wrapped to make it copyable]
+itertools._tee_dataobject(??) [doc: Data container common to multiple tee objects.]
+itertools.accumulate(iterable[, func]) --> accumulate object
+itertools.chain(*iterables) --> chain object
+itertools.combinations(iterable, r) --> combinations object
+itertools.combinations_with_replacement(iterable, r) --> combinations_with_replacement object
+itertools.compress(data, selectors) --> iterator over selected data
+itertools.count(start=0, step=1) --> count object
+itertools.cycle(iterable) --> cycle object
+itertools.dropwhile(predicate, iterable) --> dropwhile object
+itertools.filterfalse(function or None, sequence) --> filterfalse object
+itertools.groupby(iterable[, keyfunc]) -> create an iterator which returns
+itertools.islice(iterable, stop) --> islice object
+itertools.permutations(iterable[, r]) --> permutations object
+itertools.product(*iterables, repeat=1) --> product object
+itertools.repeat(object [,times]) -> create an iterator which returns the object
+itertools.starmap(function, sequence) --> starmap object
+itertools.takewhile(predicate, iterable) --> takewhile object
+itertools.tee(iterable, n=2) --> tuple of n independent iterators.
+itertools.zip_longest(iter1 [,iter2 [...]], [fillvalue=None]) --> zip_longest object
+lambda
+layers:: [module]
+lbeta(??) [doc: Computes \\(ln(|Beta(x)|)\\), reducing along the last dimension.]
+len
+less(??) [doc: Returns the truth value of (x < y) element-wise.]
+less_equal(??) [doc: Returns the truth value of (x <= y) element-wise.]
+lgamma(??) [doc: Computes the log of the absolute value of `Gamma(x)` element-wise.]
+license
+lin_space(??) [doc: Generates values in an interval.]
+linspace(??) [doc: Generates values in an interval.]
+list() -> new empty list
+load_file_system_library(??) [doc: Loads a TensorFlow plugin, containing file system implementation.]
+load_op_library(??) [doc: Loads a TensorFlow plugin, containing custom ops and kernels.]
+local_variables(??) [doc: Returns local variables.]
+local_variables_initializer(??) [doc: Returns an Op that initializes all local variables.]
+locals
+log(??) [doc: Computes natural logarithm of x element-wise.]
+log1p(??) [doc: Computes natural logarithm of (1 + x) element-wise.]
+log_sigmoid(??) [doc: Computes log sigmoid of `x` element-wise.]
+logging:: [module]
+logical_and(??) [doc: Returns the truth value of x AND y element-wise.]
+logical_not(??) [doc: Returns the truth value of NOT x element-wise.]
+logical_or(??) [doc: Returns the truth value of x OR y element-wise.]
+logical_xor(??) [doc: x ^ y = (x | y) & ~(x & y).]
+losses:: [module]
+make_ndarray(??) [doc: Create a numpy ndarray from a tensor.]
+make_template(??) [doc: Given an arbitrary function, wrap it so that it does variable sharing.]
+make_tensor_proto(??) [doc: Create a TensorProto.]
+map(func, *iterables) --> map object
+map_fn(??) [doc: map on the list of tensors unpacked from `elems` on dimension 0.]
+marshal.__doc__
+marshal.__loader__(??) [doc: Meta path import for built-in modules.]
+marshal.__name__
+marshal.__package__
+marshal.__spec__
+marshal.dump(value, file[, version])
+marshal.dumps(value[, version])
+marshal.load(file)
+marshal.loads(bytes)
+marshal.version
+matching_files(??) [doc: Returns the set of files matching one or more glob patterns.]
+math.__doc__
+math.__loader__(??) [doc: Meta path import for built-in modules.]
+math.__name__
+math.__package__
+math.__spec__
+math.acos(x)
+math.acosh(x)
+math.asin(x)
+math.asinh(x)
+math.atan(x)
+math.atan2(y, x)
+math.atanh(x)
+math.ceil(x)
+math.copysign(x, y)
+math.cos(x)
+math.cosh(x)
+math.degrees(x)
+math.e
+math.erf(x)
+math.erfc(x)
+math.exp(x)
+math.expm1(x)
+math.fabs(x)
+math.factorial(x) -> Integral
+math.floor(x)
+math.fmod(x, y)
+math.frexp(x)
+math.fsum(iterable)
+math.gamma(x)
+math.gcd(x, y) -> int
+math.hypot(x, y)
+math.inf
+math.isclose(a, b, *, rel_tol=1e-09, abs_tol=0.0) -> bool
+math.isfinite(x) -> bool
+math.isinf(x) -> bool
+math.isnan(x) -> bool
+math.ldexp(x, i)
+math.lgamma(x)
+math.log(x[, base])
+math.log10(x)
+math.log1p(x)
+math.log2(x)
+math.modf(x)
+math.nan
+math.pi
+math.pow(x, y)
+math.radians(x)
+math.sin(x)
+math.sinh(x)
+math.sqrt(x)
+math.tan(x)
+math.tanh(x)
+math.tau
+math.trunc(x:Real) -> Integral
+matmul(??) [doc: Multiplies matrix `a` by matrix `b`, producing `a` * `b`.]
+matrix_band_part(??) [doc: Copy a tensor setting everything outside a central band in each innermost matrix]
+matrix_determinant(??) [doc: Computes the determinant of one ore more square matrices.]
+matrix_diag(??) [doc: Returns a batched diagonal tensor with a given batched diagonal values.]
+matrix_diag_part(??) [doc: Returns the batched diagonal part of a batched tensor.]
+matrix_inverse(??) [doc: Computes the inverse of one or more square invertible matrices or their]
+matrix_set_diag(??) [doc: Returns a batched matrix tensor with new batched diagonal values.]
+matrix_solve(??) [doc: Solves systems of linear equations.]
+matrix_solve_ls(??) [doc: Solves one or more linear least-squares problems.]
+matrix_transpose(??) [doc: Transposes last two dimensions of tensor `a`.]
+matrix_triangular_solve(??) [doc: Solves systems of linear equations with upper or lower triangular matrices by]
+max(iterable, *[, default=obj, key=func]) -> value
+maximum(??) [doc: Returns the max of x and y (i.e. x > y ? x : y) element-wise.]
+memoryview(??) [doc: Create a new memoryview object which references the given object.]
+meshgrid(??) [doc: Broadcasts parameters for evaluation on an N-D grid.]
+metrics:: [module]
+min(iterable, *[, default=obj, key=func]) -> value
+min_max_variable_partitioner(??) [doc: Partitioner to allocate minimum size per slice.]
+minimum(??) [doc: Returns the min of x and y (i.e. x < y ? x : y) element-wise.]
+mmap.ACCESS_COPY
+mmap.ACCESS_READ
+mmap.ACCESS_WRITE
+mmap.ALLOCATIONGRANULARITY
+mmap.PAGESIZE
+mmap.__doc__
+mmap.__loader__(??) [doc: Meta path import for built-in modules.]
+mmap.__name__
+mmap.__package__
+mmap.__spec__
+mmap.error(??) [doc: Base class for I/O related errors.]
+mmap.mmap(??) [doc: Windows: mmap(fileno, length[, tagname[, access[, offset]]])]
+mod(??) [doc: Returns element-wise remainder of division. When `x < 0` xor `y < 0` is]
+model_variables(??) [doc: Returns all variables in the MODEL_VARIABLES collection.]
+moving_average_variables(??) [doc: Returns all variables that maintain their moving averages.]
+msvcrt.CRT_ASSEMBLY_VERSION
+msvcrt.LK_LOCK
+msvcrt.LK_NBLCK
+msvcrt.LK_NBRLCK
+msvcrt.LK_RLCK
+msvcrt.LK_UNLCK
+msvcrt.SEM_FAILCRITICALERRORS
+msvcrt.SEM_NOALIGNMENTFAULTEXCEPT
+msvcrt.SEM_NOGPFAULTERRORBOX
+msvcrt.SEM_NOOPENFILEERRORBOX
+msvcrt.SetErrorMode
+msvcrt.__doc__
+msvcrt.__loader__(??) [doc: Meta path import for built-in modules.]
+msvcrt.__name__
+msvcrt.__package__
+msvcrt.__spec__
+msvcrt.get_osfhandle
+msvcrt.getch
+msvcrt.getche
+msvcrt.getwch
+msvcrt.getwche
+msvcrt.heapmin
+msvcrt.kbhit
+msvcrt.locking
+msvcrt.open_osfhandle
+msvcrt.putch
+msvcrt.putwch
+msvcrt.setmode
+msvcrt.ungetch
+msvcrt.ungetwch
+multinomial(??) [doc: Draws samples from a multinomial distribution.]
+multiply(??) [doc: Returns x * y element-wise.]
+name_scope(??) [doc: Returns a context manager for use when defining a Python op.]
+negative(??) [doc: Computes numerical negative value element-wise.]
+newaxis
+next(iterator[, default])
+nn:: [module]
+no_op(??) [doc: Does nothing. Only useful as a placeholder for control edges.]
+no_regularizer(??) [doc: Use this function to prevent regularization of variables.]
+nonlocal
+norm(??) [doc: Computes the norm of vectors, matrices, and tensors.]
+not
+not_equal(??) [doc: Returns the truth value of (x != y) element-wise.]
+nt.DirEntry(??) [class]
+nt.F_OK
+nt.O_APPEND
+nt.O_BINARY
+nt.O_CREAT
+nt.O_EXCL
+nt.O_NOINHERIT
+nt.O_RANDOM
+nt.O_RDONLY
+nt.O_RDWR
+nt.O_SEQUENTIAL
+nt.O_SHORT_LIVED
+nt.O_TEMPORARY
+nt.O_TEXT
+nt.O_TRUNC
+nt.O_WRONLY
+nt.P_DETACH
+nt.P_NOWAIT
+nt.P_NOWAITO
+nt.P_OVERLAY
+nt.P_WAIT
+nt.R_OK
+nt.TMP_MAX
+nt.W_OK
+nt.X_OK
+nt.__doc__
+nt.__loader__(??) [doc: Meta path import for built-in modules.]
+nt.__name__
+nt.__package__
+nt.__spec__
+nt._exit
+nt._getdiskusage
+nt._getfinalpathname
+nt._getfullpathname
+nt._getvolumepathname
+nt._have_functions
+nt._isdir
+nt.abort
+nt.access
+nt.chdir
+nt.chmod
+nt.close
+nt.closerange
+nt.cpu_count
+nt.device_encoding
+nt.dup
+nt.dup2
+nt.environ
+nt.error(??) [doc: Base class for I/O related errors.]
+nt.execv
+nt.execve
+nt.fspath
+nt.fstat
+nt.fsync
+nt.ftruncate
+nt.get_handle_inheritable
+nt.get_inheritable
+nt.get_terminal_size
+nt.getcwd
+nt.getcwdb
+nt.getlogin
+nt.getpid
+nt.getppid
+nt.isatty
+nt.kill
+nt.link
+nt.listdir
+nt.lseek
+nt.lstat
+nt.mkdir
+nt.open
+nt.pipe
+nt.putenv
+nt.read
+nt.readlink(path, *, dir_fd=None) -> path
+nt.remove
+nt.rename
+nt.replace
+nt.rmdir
+nt.scandir(path='.') -> iterator of DirEntry objects for given path
+nt.set_handle_inheritable
+nt.set_inheritable
+nt.spawnv
+nt.spawnve
+nt.startfile(filepath [, operation])
+nt.stat
+nt.stat_float_times([newval]) -> oldval
+nt.stat_result(??) [doc: stat_result: Result from stat, fstat, or lstat.]
+nt.statvfs_result(??) [doc: statvfs_result: Result from statvfs or fstatvfs.]
+nt.strerror
+nt.symlink
+nt.system
+nt.terminal_size(??) [doc: A tuple of (columns, lines) for holding terminal window size]
+nt.times
+nt.times_result(??) [doc: times_result: Result from os.times().]
+nt.truncate
+nt.umask
+nt.uname_result(??) [doc: uname_result: Result from os.uname().]
+nt.unlink
+nt.urandom
+nt.utime
+nt.waitpid
+nt.write
+object(??) [doc: The most base type]
+oct
+one_hot(??) [doc: Returns a one-hot tensor.]
+ones(??) [doc: Creates a tensor with all elements set to 1.]
+ones_initializer(??) [doc: Initializer that generates tensors initialized to 1.]
+ones_like(??) [doc: Creates a tensor with all elements set to 1.]
+op_scope(??) [doc: DEPRECATED. Same as name_scope above, just different argument order.]
+open
+or
+ord
+orthogonal_initializer(??) [doc: Initializer that generates an orthogonal matrix.]
+os.path.__all__
+os.path.__builtins__
+os.path.__cached__
+os.path.__doc__
+os.path.__file__
+os.path.__loader__
+os.path.__name__
+os.path.__package__
+os.path.__spec__
+os.path._get_bothseps(??) [function]
+os.path._getfinalpathname
+os.path._getfullpathname
+os.path._getvolumepathname
+os.path.abspath(??) [doc: Return the absolute version of a path.]
+os.path.altsep
+os.path.basename(??) [doc: Returns the final component of a pathname]
+os.path.commonpath(??) [doc: Given a sequence of path names, returns the longest common sub-path.]
+os.path.commonprefix(??) [doc: Given a list of pathnames, returns the longest common leading component]
+os.path.curdir
+os.path.defpath
+os.path.devnull
+os.path.dirname(??) [doc: Returns the directory component of a pathname]
+os.path.exists(??) [doc: Test whether a path exists.  Returns False for broken symbolic links]
+os.path.expanduser(??) [doc: Expand ~ and ~user constructs.]
+os.path.expandvars(??) [doc: Expand shell variables of the forms $var, ${var} and %var%.]
+os.path.extsep
+os.path.genericpath:: [module]
+os.path.getatime(??) [doc: Return the last access time of a file, reported by os.stat().]
+os.path.getctime(??) [doc: Return the metadata change time of a file, reported by os.stat().]
+os.path.getmtime(??) [doc: Return the last modification time of a file, reported by os.stat().]
+os.path.getsize(??) [doc: Return the size of a file, reported by os.stat().]
+os.path.isabs(??) [doc: Test whether a path is absolute]
+os.path.isdir
+os.path.isfile(??) [doc: Test whether a path is a regular file]
+os.path.islink(??) [doc: Test whether a path is a symbolic link.]
+os.path.ismount(??) [doc: Test whether a path is a mount point (a drive root, the root of a]
+os.path.join(??) [function]
+os.path.lexists(??) [doc: Test whether a path exists.  Returns True for broken symbolic links]
+os.path.normcase(??) [doc: Normalize case of pathname.]
+os.path.normpath(??) [doc: Normalize path, eliminating double slashes, etc.]
+os.path.os:: [module]
+os.path.pardir
+os.path.pathsep
+os.path.realpath(??) [doc: Return the absolute version of a path.]
+os.path.relpath(??) [doc: Return a relative version of a path]
+os.path.samefile(??) [doc: Test whether two pathnames reference the same actual file]
+os.path.sameopenfile(??) [doc: Test whether two open file objects reference the same file]
+os.path.samestat(??) [doc: Test whether two stat buffers reference the same file]
+os.path.sep
+os.path.split(??) [doc: Split a pathname.]
+os.path.splitdrive(??) [doc: Split a pathname into drive/UNC sharepoint and relative path specifiers.]
+os.path.splitext(??) [doc: Split the extension from a pathname.]
+os.path.splitunc(??) [doc: Deprecated since Python 3.1.  Please use splitdrive() instead;]
+os.path.stat:: [module]
+os.path.supports_unicode_filenames
+os.path.sys:: [module]
+pad(??) [doc: Pads a tensor.]
+parallel_stack(??) [doc: Stacks a list of rank-`R` tensors into one rank-`(R+1)` tensor in parallel.]
+parse_example(??) [doc: Parses `Example` protos into a `dict` of tensors.]
+parse_single_example(??) [doc: Parses a single `Example` proto.]
+parse_single_sequence_example(??) [doc: Parses a single `SequenceExample` proto.]
+parse_tensor(??) [doc: Transforms a serialized tensorflow.TensorProto proto into a Tensor.]
+parser.ParserError(??) [class]
+parser.STType(??) [doc: Intermediate representation of a Python parse tree.]
+parser.__copyright__
+parser.__doc__
+parser.__loader__(??) [doc: Meta path import for built-in modules.]
+parser.__name__
+parser.__package__
+parser.__spec__
+parser.__version__
+parser._pickler
+parser.compilest
+parser.expr
+parser.isexpr
+parser.issuite
+parser.sequence2st
+parser.st2list
+parser.st2tuple
+parser.suite
+parser.tuple2st
+pass
+placeholder(??) [doc: Inserts a placeholder for a tensor that will be always fed.]
+placeholder_with_default(??) [doc: A placeholder op that passes through `input` when its output is not fed.]
+polygamma(??) [doc: Compute the polygamma function \\(\psi^{(n)}(x)\\).]
+pow(??) [doc: Computes the power of one value to another.]
+profiler:: [module]
+property(fget=None, fset=None, fdel=None, doc=None) -> property attribute
+py_func(??) [doc: Wraps a python function and uses it as a TensorFlow op.]
+python_io:: [module]
+pywrap_tensorflow:: [module]
+qint16
+qint32
+qint8
+qr(??) [doc: Computes the QR decompositions of one or more matrices.]
+quantize_v2(??) [doc: Quantize the 'input' tensor of type float to 'output' tensor of type 'T'.]
+quantized_concat(??) [doc: Concatenates quantized tensors along one dimension.]
+quint16
+quint8
+quit
+raise
+random_crop(??) [doc: Randomly crops a tensor to a given size.]
+random_gamma(??) [doc: Draws `shape` samples from each of the given Gamma distribution(s).]
+random_normal(??) [doc: Outputs random values from a normal distribution.]
+random_normal_initializer(??) [doc: Initializer that generates tensors with a normal distribution.]
+random_poisson(??) [doc: Draws `shape` samples from each of the given Poisson distribution(s).]
+random_shuffle(??) [doc: Randomly shuffles a tensor along its first dimension.]
+random_uniform(??) [doc: Outputs random values from a uniform distribution.]
+random_uniform_initializer(??) [doc: Initializer that generates tensors with a uniform distribution.]
+range(??) [doc: Creates a sequence of numbers.]
+rank(??) [doc: Returns the rank of a tensor.]
+read_file(??) [doc: Reads and outputs the entire contents of the input filename.]
+real(??) [doc: Returns the real part of a complex number.]
+realdiv(??) [doc: Returns x / y element-wise for real types.]
+reciprocal(??) [doc: Computes the reciprocal of x element-wise.]
+reduce_all(??) [doc: Computes the "logical and" of elements across dimensions of a tensor.]
+reduce_any(??) [doc: Computes the "logical or" of elements across dimensions of a tensor.]
+reduce_join(??) [doc: Joins a string Tensor across the given dimensions.]
+reduce_logsumexp(??) [doc: Computes log(sum(exp(elements across dimensions of a tensor))).]
+reduce_max(??) [doc: Computes the maximum of elements across dimensions of a tensor.]
+reduce_mean(??) [doc: Computes the mean of elements across dimensions of a tensor.]
+reduce_min(??) [doc: Computes the minimum of elements across dimensions of a tensor.]
+reduce_prod(??) [doc: Computes the product of elements across dimensions of a tensor.]
+reduce_sum(??) [doc: Computes the sum of elements across dimensions of a tensor.]
+register_tensor_conversion_function(??) [doc: Registers a function for converting objects of `base_type` to `Tensor`.]
+report_uninitialized_variables(??) [doc: Adds ops to list the names of uninitialized variables.]
+repr
+required_space_to_batch_paddings(??) [doc: Calculate padding required to make block_shape divide input_shape.]
+reset_default_graph(??) [doc: Clears the default graph stack and resets the global default graph.]
+reshape(??) [doc: Reshapes a tensor.]
+resource
+resource_loader:: [module]
+return
+reverse(??) [doc: Reverses specific dimensions of a tensor.]
+reverse_sequence(??) [doc: Reverses variable length slices.]
+reverse_v2(??) [doc: Reverses specific dimensions of a tensor.]
+reversed(sequence) -> reverse iterator over values of the sequence
+rint(??) [doc: Returns element-wise integer closest to x.]
+round(??) [doc: Rounds the values of a tensor to the nearest integer, element-wise.]
+rsqrt(??) [doc: Computes reciprocal of square root of x element-wise.]
+saturate_cast(??) [doc: Performs a safe saturating cast of `value` to `dtype`.]
+saved_model:: [module]
+scalar_mul(??) [doc: Multiplies a scalar times a `Tensor` or `IndexedSlices` object.]
+scan(??) [doc: scan on the list of tensors unpacked from `elems` on dimension 0.]
+scatter_add(??) [doc: Adds sparse updates to a variable reference.]
+scatter_div(??) [doc: Divides a variable reference by sparse updates.]
+scatter_mul(??) [doc: Multiplies sparse updates into a variable reference.]
+scatter_nd(??) [doc: Scatter `updates` into a new (initially zero) tensor according to `indices`.]
+scatter_nd_add(??) [doc: Applies sparse addition between `updates` and individual values or slices]
+scatter_nd_sub(??) [doc: Applies sparse subtraction between `updates` and individual values or slices]
+scatter_nd_update(??) [doc: Applies sparse `updates` to individual values or slices within a given]
+scatter_sub(??) [doc: Subtracts sparse updates to a variable reference.]
+scatter_update(??) [doc: Applies sparse updates to a variable reference.]
+segment_max(??) [doc: Computes the maximum along segments of a tensor.]
+segment_mean(??) [doc: Computes the mean along segments of a tensor.]
+segment_min(??) [doc: Computes the minimum along segments of a tensor.]
+segment_prod(??) [doc: Computes the product along segments of a tensor.]
+segment_sum(??) [doc: Computes the sum along segments of a tensor.]
+self_adjoint_eig(??) [doc: Computes the eigen decomposition of a batch of self-adjoint matrices.]
+self_adjoint_eigvals(??) [doc: Computes the eigenvalues of one or more self-adjoint matrices.]
+sequence_mask(??) [doc: Return a mask tensor representing the first N positions of each row.]
+serialize_many_sparse(??) [doc: Serialize an `N`-minibatch `SparseTensor` into an `[N, 3]` string `Tensor`.]
+serialize_sparse(??) [doc: Serialize a `SparseTensor` into a string 3-vector (1-D `Tensor`) object.]
+set() -> new empty set object
+set_random_seed(??) [doc: Sets the graph-level random seed.]
+setattr
+setdiff1d(??) [doc: Computes the difference between two lists of numbers or strings.]
+sets:: [module]
+shape(??) [doc: Returns the shape of a tensor.]
+shape_n(??) [doc: Returns shape of tensors.]
+sigmoid(??) [doc: Computes sigmoid of `x` element-wise.]
+sign(??) [doc: Returns an element-wise indication of the sign of a number.]
+sin(??) [doc: Computes sin of x element-wise.]
+sinh(??) [doc: Computes hyperbolic sine of x element-wise.]
+size(??) [doc: Returns the size of a tensor.]
+slice(??) [doc: Extracts a slice from a tensor.]
+sorted
+space_to_batch(??) [doc: SpaceToBatch for 4-D tensors of type T.]
+space_to_batch_nd(??) [doc: SpaceToBatch for N-D tensors of type T.]
+space_to_depth(??) [doc: SpaceToDepth for tensors of type T.]
+sparse_add(??) [doc: Adds two tensors, at least one of each is a `SparseTensor`.]
+sparse_concat(??) [doc: Concatenates a list of `SparseTensor` along the specified dimension.]
+sparse_fill_empty_rows(??) [doc: Fills empty rows in the input 2-D `SparseTensor` with a default value.]
+sparse_mask(??) [doc: Masks elements of `IndexedSlices`.]
+sparse_matmul(??) [doc: Multiply matrix "a" by matrix "b".]
+sparse_maximum(??) [doc: Returns the element-wise max of two SparseTensors.]
+sparse_merge(??) [doc: Combines a batch of feature ids and values into a single `SparseTensor`.]
+sparse_minimum(??) [doc: Returns the element-wise min of two SparseTensors.]
+sparse_placeholder(??) [doc: Inserts a placeholder for a sparse tensor that will be always fed.]
+sparse_reduce_max(??) [doc: Computes the max of elements across dimensions of a SparseTensor.]
+sparse_reduce_max_sparse(??) [doc: Computes the max of elements across dimensions of a SparseTensor.]
+sparse_reduce_sum(??) [doc: Computes the sum of elements across dimensions of a SparseTensor.]
+sparse_reduce_sum_sparse(??) [doc: Computes the sum of elements across dimensions of a SparseTensor.]
+sparse_reorder(??) [doc: Reorders a `SparseTensor` into the canonical, row-major ordering.]
+sparse_reset_shape(??) [doc: Resets the shape of a `SparseTensor` with indices and values unchanged.]
+sparse_reshape(??) [doc: Reshapes a `SparseTensor` to represent values in a new dense shape.]
+sparse_retain(??) [doc: Retains specified non-empty values within a `SparseTensor`.]
+sparse_segment_mean(??) [doc: Computes the mean along sparse segments of a tensor.]
+sparse_segment_sqrt_n(??) [doc: Computes the sum along sparse segments of a tensor divided by the sqrt of N.]
+sparse_segment_sum(??) [doc: Computes the sum along sparse segments of a tensor.]
+sparse_slice(??) [doc: Slice a `SparseTensor` based on the `start` and `size.]
+sparse_softmax(??) [doc: Applies softmax to a batched N-D `SparseTensor`.]
+sparse_split(??) [doc: Split a `SparseTensor` into `num_split` tensors along `axis`.]
+sparse_tensor_dense_matmul(??) [doc: Multiply SparseTensor (of rank 2) "A" by dense matrix "B".]
+sparse_tensor_to_dense(??) [doc: Converts a `SparseTensor` into a dense tensor.]
+sparse_to_dense(??) [doc: Converts a sparse representation into a dense tensor.]
+sparse_to_indicator(??) [doc: Converts a `SparseTensor` of ids into a dense bool indicator tensor.]
+sparse_transpose(??) [doc: Transposes a `SparseTensor`]
+spectral:: [module]
+split(??) [doc: Splits a tensor into sub tensors.]
+sqrt(??) [doc: Computes square root of x element-wise.]
+square(??) [doc: Computes square of x element-wise.]
+squared_difference(??) [doc: Returns (x - y)(x - y) element-wise.]
+squeeze(??) [doc: Removes dimensions of size 1 from the shape of a tensor.]
+stack(??) [doc: Stacks a list of rank-`R` tensors into one rank-`(R+1)` tensor.]
+staticmethod(function) -> method
+stop_gradient(??) [doc: Stops gradient computation.]
+str(object='') -> str
+strided_slice(??) [doc: Extracts a strided slice of a tensor (generalized python array indexing).]
+string
+string_join(??) [doc: Joins the strings in the given list of string tensors into one tensor;]
+string_split(??) [doc: Split elements of `source` based on `delimiter` into a `SparseTensor`.]
+string_to_hash_bucket(??) [doc: Converts each string in the input Tensor to its hash mod by a number of buckets.]
+string_to_hash_bucket_fast(??) [doc: Converts each string in the input Tensor to its hash mod by a number of buckets.]
+string_to_hash_bucket_strong(??) [doc: Converts each string in the input Tensor to its hash mod by a number of buckets.]
+string_to_number(??) [doc: Converts each string in the input Tensor to the specified numeric type.]
+substr(??) [doc: Return substrings from `Tensor` of strings.]
+subtract(??) [doc: Returns x - y element-wise.]
+sum
+summary:: [module]
+super() -> same as super(__class__, <first argument>)
+svd(??) [doc: Computes the singular value decompositions of one or more matrices.]
+sys.__displayhook__
+sys.__doc__
+sys.__excepthook__
+sys.__interactivehook__(??) [function]
+sys.__loader__(??) [doc: Meta path import for built-in modules.]
+sys.__name__
+sys.__package__
+sys.__spec__
+sys.__stderr__
+sys.__stdin__
+sys.__stdout__
+sys._clear_type_cache() -> None
+sys._current_frames() -> dictionary
+sys._debugmallocstats()
+sys._enablelegacywindowsfsencoding()
+sys._getframe([depth]) -> frameobject
+sys._git
+sys._home
+sys._xoptions
+sys.api_version
+sys.argv
+sys.base_exec_prefix
+sys.base_prefix
+sys.builtin_module_names
+sys.byteorder
+sys.call_tracing(func, args) -> object
+sys.callstats() -> tuple of integers
+sys.copyright
+sys.displayhook(object) -> None
+sys.dllhandle
+sys.dont_write_bytecode
+sys.exc_info() -> (type, value, traceback)
+sys.excepthook(exctype, value, traceback) -> None
+sys.exec_prefix
+sys.executable
+sys.exit([status])
+sys.flags
+sys.float_info
+sys.float_repr_style
+sys.get_asyncgen_hooks()
+sys.get_coroutine_wrapper()
+sys.getallocatedblocks() -> integer
+sys.getcheckinterval() -> current check interval; see setcheckinterval().
+sys.getdefaultencoding() -> string
+sys.getfilesystemencodeerrors() -> string
+sys.getfilesystemencoding() -> string
+sys.getprofile()
+sys.getrecursionlimit()
+sys.getrefcount(object) -> integer
+sys.getsizeof(object, default) -> int
+sys.getswitchinterval() -> current thread switch interval; see setswitchinterval().
+sys.gettrace()
+sys.getwindowsversion()
+sys.hash_info
+sys.hexversion
+sys.implementation
+sys.int_info
+sys.intern(string) -> string
+sys.is_finalizing()
+sys.maxsize
+sys.maxunicode
+sys.meta_path
+sys.modules
+sys.path
+sys.path_hooks
+sys.path_importer_cache
+sys.platform
+sys.prefix
+sys.set_asyncgen_hooks(*, firstiter=None, finalizer=None)
+sys.set_coroutine_wrapper(wrapper)
+sys.setcheckinterval(n)
+sys.setprofile(function)
+sys.setrecursionlimit(n)
+sys.setswitchinterval(n)
+sys.settrace(function)
+sys.stderr
+sys.stdin
+sys.stdout
+sys.thread_info
+sys.version
+sys.version_info
+sys.warnoptions
+sys.winver
+sysconfig:: [module]
+tables_initializer(??) [doc: Returns an Op that initializes all tables of the default graph.]
+tan(??) [doc: Computes tan of x element-wise.]
+tanh(??) [doc: Computes hyperbolic tangent of `x` element-wise.]
+tensordot(??) [doc: Tensor contraction of a and b along specified axes.]
+test:: [module]
+tile(??) [doc: Constructs a tensor by tiling a given tensor.]
+time._STRUCT_TM_ITEMS
+time.__doc__
+time.__loader__(??) [doc: Meta path import for built-in modules.]
+time.__name__
+time.__package__
+time.__spec__
+time.altzone
+time.asctime([tuple]) -> string
+time.clock() -> floating point number
+time.ctime(seconds) -> string
+time.daylight
+time.get_clock_info(name: str) -> dict
+time.gmtime([seconds]) -> (tm_year, tm_mon, tm_mday, tm_hour, tm_min,
+time.localtime([seconds]) -> (tm_year,tm_mon,tm_mday,tm_hour,tm_min,
+time.mktime(tuple) -> floating point number
+time.monotonic() -> float
+time.perf_counter() -> float
+time.process_time() -> float
+time.sleep(seconds)
+time.strftime(format[, tuple]) -> string
+time.strptime(string, format) -> struct_time
+time.struct_time(??) [doc: The time value as returned by gmtime(), localtime(), and strptime(), and]
+time.time() -> floating point number
+time.timezone
+time.tzname
+to_bfloat16(??) [doc: Casts a tensor to type `bfloat16`.]
+to_double(??) [doc: Casts a tensor to type `float64`.]
+to_float(??) [doc: Casts a tensor to type `float32`.]
+to_int32(??) [doc: Casts a tensor to type `int32`.]
+to_int64(??) [doc: Casts a tensor to type `int64`.]
+trace(??) [doc: Compute the trace of a tensor `x`.]
+train:: [module]
+trainable_variables(??) [doc: Returns all variables created with `trainable=True`.]
+transpose(??) [doc: Transposes `a`. Permutes the dimensions according to `perm`.]
+truediv(??) [doc: Divides x / y elementwise (using Python 3 division operator semantics).]
+truncated_normal(??) [doc: Outputs random values from a truncated normal distribution.]
+truncated_normal_initializer(??) [doc: Initializer that generates a truncated normal distribution.]
+truncatediv(??) [doc: Returns x / y element-wise for integer types.]
+truncatemod(??) [doc: Returns element-wise remainder of division. This emulates C semantics in that]
+try
+tuple(??) [doc: Group tensors together.]
+type(object_or_name, bases, dict)
+uint16
+uint8
+uniform_unit_scaling_initializer(??) [doc: Initializer that generates tensors without scaling variance.]
+unique(??) [doc: Finds unique elements in a 1-D tensor.]
+unique_with_counts(??) [doc: Finds unique elements in a 1-D tensor.]
+unsorted_segment_max(??) [doc: Computes the Max along segments of a tensor.]
+unsorted_segment_sum(??) [doc: Computes the sum along segments of a tensor.]
+unstack(??) [doc: Unpacks the given dimension of a rank-`R` tensor into rank-`(R-1)` tensors.]
+user_ops:: [module]
+variable_axis_size_partitioner(??) [doc: Get a partitioner for VariableScope to keep shards below `max_shard_bytes`.]
+variable_op_scope(??) [doc: Deprecated: context manager for defining an op that creates variables.]
+variable_scope(??) [doc: Returns a context manager for defining ops that creates variables (layers).]
+variables_initializer(??) [doc: Returns an Op that initializes a list of variables.]
+variance_scaling_initializer(??) [doc: Initializer capable of adapting its scale to the shape of weights tensors.]
+vars([object]) -> dictionary
+verify_tensor_all_finite(??) [doc: Assert that the tensor does not contain any NaN's or Inf's.]
+where(??) [doc: Return the elements, either from `x` or `y`, depending on the `condition`.]
+while
+while_loop(??) [doc: Repeat `body` while the condition `cond` is true.]
+winreg.CloseKey
+winreg.ConnectRegistry
+winreg.CreateKey
+winreg.CreateKeyEx
+winreg.DeleteKey
+winreg.DeleteKeyEx
+winreg.DeleteValue
+winreg.DisableReflectionKey
+winreg.EnableReflectionKey
+winreg.EnumKey
+winreg.EnumValue
+winreg.ExpandEnvironmentStrings
+winreg.FlushKey
+winreg.HKEYType(??) [doc: PyHKEY Object - A Python object, representing a win32 registry key.]
+winreg.HKEY_CLASSES_ROOT
+winreg.HKEY_CURRENT_CONFIG
+winreg.HKEY_CURRENT_USER
+winreg.HKEY_DYN_DATA
+winreg.HKEY_LOCAL_MACHINE
+winreg.HKEY_PERFORMANCE_DATA
+winreg.HKEY_USERS
+winreg.KEY_ALL_ACCESS
+winreg.KEY_CREATE_LINK
+winreg.KEY_CREATE_SUB_KEY
+winreg.KEY_ENUMERATE_SUB_KEYS
+winreg.KEY_EXECUTE
+winreg.KEY_NOTIFY
+winreg.KEY_QUERY_VALUE
+winreg.KEY_READ
+winreg.KEY_SET_VALUE
+winreg.KEY_WOW64_32KEY
+winreg.KEY_WOW64_64KEY
+winreg.KEY_WRITE
+winreg.LoadKey
+winreg.OpenKey
+winreg.OpenKeyEx
+winreg.QueryInfoKey
+winreg.QueryReflectionKey
+winreg.QueryValue
+winreg.QueryValueEx
+winreg.REG_BINARY
+winreg.REG_CREATED_NEW_KEY
+winreg.REG_DWORD
+winreg.REG_DWORD_BIG_ENDIAN
+winreg.REG_DWORD_LITTLE_ENDIAN
+winreg.REG_EXPAND_SZ
+winreg.REG_FULL_RESOURCE_DESCRIPTOR
+winreg.REG_LEGAL_CHANGE_FILTER
+winreg.REG_LEGAL_OPTION
+winreg.REG_LINK
+winreg.REG_MULTI_SZ
+winreg.REG_NONE
+winreg.REG_NOTIFY_CHANGE_ATTRIBUTES
+winreg.REG_NOTIFY_CHANGE_LAST_SET
+winreg.REG_NOTIFY_CHANGE_NAME
+winreg.REG_NOTIFY_CHANGE_SECURITY
+winreg.REG_NO_LAZY_FLUSH
+winreg.REG_OPENED_EXISTING_KEY
+winreg.REG_OPTION_BACKUP_RESTORE
+winreg.REG_OPTION_CREATE_LINK
+winreg.REG_OPTION_NON_VOLATILE
+winreg.REG_OPTION_OPEN_LINK
+winreg.REG_OPTION_RESERVED
+winreg.REG_OPTION_VOLATILE
+winreg.REG_QWORD
+winreg.REG_QWORD_LITTLE_ENDIAN
+winreg.REG_REFRESH_HIVE
+winreg.REG_RESOURCE_LIST
+winreg.REG_RESOURCE_REQUIREMENTS_LIST
+winreg.REG_SZ
+winreg.REG_WHOLE_HIVE_VOLATILE
+winreg.SaveKey
+winreg.SetValue
+winreg.SetValueEx
+winreg.__doc__
+winreg.__loader__(??) [doc: Meta path import for built-in modules.]
+winreg.__name__
+winreg.__package__
+winreg.__spec__
+winreg.error(??) [doc: Base class for I/O related errors.]
+with
+write_file(??) [doc: Writes contents to the file at input filename. Creates file and recursively]
+xxsubtype.__doc__
+xxsubtype.__loader__(??) [doc: Meta path import for built-in modules.]
+xxsubtype.__name__
+xxsubtype.__package__
+xxsubtype.__spec__
+xxsubtype.bench
+xxsubtype.spamdict(??) [class]
+xxsubtype.spamlist(??) [class]
+yield
+zeros(??) [doc: Creates a tensor with all elements set to zero.]
+zeros_initializer(??) [doc: Initializer that generates tensors initialized to 0.]
+zeros_like(??) [doc: Creates a tensor with all elements set to zero.]
+zeta(??) [doc: Compute the Hurwitz zeta function \\(\zeta(x, q)\\).]
+zip(iter1 [,iter2 [...]]) --> zip object
+zipimport.ZipImportError(??) [class]
+zipimport.__doc__
+zipimport.__loader__(??) [doc: Meta path import for built-in modules.]
+zipimport.__name__
+zipimport.__package__
+zipimport.__spec__
+zipimport._zip_directory_cache
+zipimport.zipimporter(archivepath) -> zipimporter object
+zlib.DEFLATED
+zlib.DEF_BUF_SIZE
+zlib.DEF_MEM_LEVEL
+zlib.MAX_WBITS
+zlib.ZLIB_RUNTIME_VERSION
+zlib.ZLIB_VERSION
+zlib.Z_BEST_COMPRESSION
+zlib.Z_BEST_SPEED
+zlib.Z_DEFAULT_COMPRESSION
+zlib.Z_DEFAULT_STRATEGY
+zlib.Z_FILTERED
+zlib.Z_FINISH
+zlib.Z_FULL_FLUSH
+zlib.Z_HUFFMAN_ONLY
+zlib.Z_NO_FLUSH
+zlib.Z_SYNC_FLUSH
+zlib.__doc__
+zlib.__loader__(??) [doc: Meta path import for built-in modules.]
+zlib.__name__
+zlib.__package__
+zlib.__spec__
+zlib.__version__
+zlib.adler32
+zlib.compress
+zlib.compressobj
+zlib.crc32
+zlib.decompress
+zlib.decompressobj
+zlib.error(??) [class]
