@@ -3,4 +3,4 @@ from __future__ import division
 from __future__ import print_function
 
 from AIStudio import *
-import IVStudio
+from IVStudio import *
