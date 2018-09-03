@@ -3,7 +3,6 @@ from __future__ import division
 from __future__ import print_function
 
 import numpy as np
-import tensorflow as tf
 import IVStudio as iv
 import re
 import importlib
@@ -14,6 +13,9 @@ def load_class(full_class_string):
     class_str = class_data[-1]
     module = importlib.import_module(module_path)
     return getattr(module, class_str)
+
+def MakeColor(r, g, b, a = 255):
+    return (a << 24) | (r << 16) | (g << 8) | b
 
 class AIDataType:
     Variable = 1
@@ -26,27 +28,23 @@ class AIDataType:
 class AIStudio(iv.IPStudio):
     def __init__(self, name):
         iv.IPStudio.__init__(self)
-        self.Framework = load_class("AIPlatform.tensorflow.tensorflow_graph.TensorflowGraph")(self)
-    def RecordVariable(self, vname, var):
-        if vname is None:
-            if(not isinstance(var, tf.Variable)):
-                raise TypeError('RecordVariable must be a tf.Variable, but got %s' % type(var))
-            name = var.name
-            data = var.eval()
-            self.RecordNArray(name, AIDataType.Variable, data)
-        else:
-            if(not isinstance(var, np.ndarray)):
-                raise TypeError('RecordVariable must be a np.narray, but got %s' % type(var))
-            name = vname
-            self.RecordNArray(name, AIDataType.Variable, var)
+        self.Framework = load_class("AIPlatform.tensorflow.tensorflow_framework.TensorflowFramework")(self)
 
-    def RecordScalar(self, name, value):
-        if(isinstance(value, tf.Variable)):
-            data = value.eval()
-        elif(isinstance(value, tf.Tensor)):
-            data = value.eval()
-        else:
-            data = value
+    def AddRecordVariable(self, var, name = None):
+        self.Framework.AddRecordVariable(var, name)
+
+    def RecordVariable(self, var, name = None):
+        if (isinstance(var, np.ndarray)):
+            self.RecordNArray(name, AIDataType.Variable, var)
+            return
+        data, vname = self.Framework.RecordVariable(var, name)
+        self.RecordNArray(vname, AIDataType.Variable, var)
+
+    def AddRecordScalar(self, value, name = None):
+        self.Framework.AddRecordScalar(value, name)
+
+    def RecordScalar(self, value, name):
+        data, vname = self.Framework.RecordScalar(value, name)
         if(not isinstance(data, np.float64) and
            not isinstance(data, np.float32) and
            not isinstance(data, np.int32) and
@@ -56,28 +54,27 @@ class AIStudio(iv.IPStudio):
            not isinstance(data, np.uint8)):
                 raise TypeError('RecordScalar has invalid data type')
                 return
-        self.SaveScalar(name, data.item())
+        self.SaveScalar(vname, data.item())
 
-    def RecordImage(self, name, image):
-        if(isinstance(image, tf.Variable)):
-            data = image.eval()
-        elif(isinstance(image, np.ndarray)):
-            data = image
-        elif(isinstance(image, tf.Tensor)):
-            data = image.eval()
-        else:
-            raise TypeError('RecordImage has invalid data type')
+    def AddRecordImage(self, image, name = None):
+        self.Framework.AddRecordImage(image, name)
+
+    def RecordImage(self, image, name):
+        if(isinstance(image, np.ndarray)):
+            self.RecordNArray(name, AIDataType.Image, image)
             return
-        self.RecordNArray(name, AIDataType.Image, data)
+        else:
+            data, vname = self.Framework.RecordImage(image, name)
+            self.RecordNArray(vname, AIDataType.Image, data)
 
-    def RecordWaveform(self, name, waveform, samplerate):
+    def AddRecordWaveform(self, waveform, name = None):
+        self.Framework.AddRecordWaveform(waveform, name)
+
+    def RecordWaveform(self, waveform, name, samplerate):
         if(isinstance(waveform, np.ndarray)):
             data = waveform
-        elif(isinstance(waveform, tf.Tensor)):
-            data = waveform.eval()
         else:
-            raise TypeError('RecordWaveform has invalid data type')
-            return
+            data = self.Framework.RecordWaveform(waveform)
         if data.ndim == 1:
             if data.dtype == np.float64:
                 self.SaveWaveform1(name, data, samplerate)
@@ -111,14 +108,14 @@ class AIStudio(iv.IPStudio):
     def RecordText(self, name, text):
         self.SaveText(name, text)
 
-    def RecordTensor(self, name, tensor):
-        if(isinstance(tensor, tf.Tensor)):
-            data = tensor.eval()
-        elif(not isinstance(tensor, np.narray)):
-            data = tensor;
+    def AddRecordTensor(self, tensor, name = None):
+        self.Framework.AddRecordTensor(tensor, name)
+
+    def RecordTensor(self, tensor, name):
+        if(isinstance(tensor, np.ndarray)):
+            data = tensor
         else:
-            raise TypeError('RecordTensor has invalid data type')
-            return
+            data = self.Framework.RecordTensor(tensor, name)
         self.RecordNArray(name, AIDataType.Tensor, data)
 
     def RecordNArray(self, name, type, data):
@@ -175,5 +172,11 @@ class AIStudio(iv.IPStudio):
             else:
                 self.SaveTensor4(name, type, data)
 
-    def RecordGraphDef(self, graph):
-        self.Framework.ViewGraphDef(graph)
+    def RecordGraphDef(self, graph, name):
+        self.Framework.ViewGraphDef(graph, name)
+
+    def GetRecordList(self):
+        return self.Framework.GetRecordList()
+
+    def SaveRecordList(self, summary):
+        self.Framework.SaveRecordList(summary)

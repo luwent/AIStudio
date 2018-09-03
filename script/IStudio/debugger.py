@@ -45,4 +45,5 @@ class Idb(bdb.Bdb):
         filename = frame.f_code.co_filename
         if not self.gui.isbreakname(filename):
             return False
-        return bdb.Bdb.break_anywhere(self, frame) 
+        return True
+       #return bdb.Bdb.break_anywhere(self, frame) 

@@ -52,22 +52,9 @@ class Debugger:
         self.interp.setdebugger(self);
         self.frame = None
         self.interacting = 0
-
-        self.save_stdout = sys.stdout
-        self.save_stderr = sys.stderr
-        #self.save_stdin = sys.stdin
-
-        self.stdout = PYRunOutput(0)
-        self.stderr = PYRunOutput(1)
-        sys.stdout = self.stdout
-        sys.stderr = self.stderr
-        #sys.stdin = self.stdin
    
     def close(self):
         self.idb.set_quit()
-        sys.stdout = self.save_stdout
-        sys.stderr = self.save_stderr
-        #sys.stdin = self.save_stdin
         return
      
     def start(self, filename):
@@ -292,6 +279,13 @@ class Debugger:
         return _runconsole.IsBreakPoint(name, lineno)
 
 def main(filename, mode):
+    save_stdout = sys.stdout
+    save_stderr = sys.stderr
+    #save_stdin = sys.stdin
+    sys.stdout = PYRunOutput(0)
+    sys.stderr = PYRunOutput(1)
+    #sys.stdin = self.stdin
+
     if(mode == '-d'):
         _runconsole.DebugStart()
         debugrun = Debugger()
@@ -301,6 +295,9 @@ def main(filename, mode):
         print("Running...")
         interp = ip.PYInterpreter()
         interp.execfile(filename)
+    sys.stdout = save_stdout
+    sys.stderr = save_stderr
+    #sys.stdin = save_stdin
 
 if __name__ == "__main__":
     if len (sys.argv) == 3:

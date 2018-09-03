@@ -5,6 +5,8 @@ from __future__ import division
 from __future__ import print_function
 
 import sys
+import os
+import os.path
 from platform import python_version
 import IVStudio as IP
 import interpreter
@@ -133,4 +135,7 @@ def main():
     console.close()
 
 if __name__ == "__main__":
+    path0, filename0 = os.path.split(sys.argv[0])
+    path1, filename1 = os.path.split(path0)
+    sys.path.append(path1)
     main()
