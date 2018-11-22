@@ -164,6 +164,232 @@ class SwigPyIterator(_object):
 SwigPyIterator_swigregister = _IVStudio.SwigPyIterator_swigregister
 SwigPyIterator_swigregister(SwigPyIterator)
 
+class ComplexVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ComplexVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, ComplexVector, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _IVStudio.ComplexVector_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _IVStudio.ComplexVector___nonzero__(self)
+
+    def __bool__(self):
+        return _IVStudio.ComplexVector___bool__(self)
+
+    def __len__(self):
+        return _IVStudio.ComplexVector___len__(self)
+
+    def __getslice__(self, i, j):
+        return _IVStudio.ComplexVector___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _IVStudio.ComplexVector___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _IVStudio.ComplexVector___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _IVStudio.ComplexVector___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _IVStudio.ComplexVector___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _IVStudio.ComplexVector___setitem__(self, *args)
+
+    def pop(self):
+        return _IVStudio.ComplexVector_pop(self)
+
+    def append(self, x):
+        return _IVStudio.ComplexVector_append(self, x)
+
+    def empty(self):
+        return _IVStudio.ComplexVector_empty(self)
+
+    def size(self):
+        return _IVStudio.ComplexVector_size(self)
+
+    def swap(self, v):
+        return _IVStudio.ComplexVector_swap(self, v)
+
+    def begin(self):
+        return _IVStudio.ComplexVector_begin(self)
+
+    def end(self):
+        return _IVStudio.ComplexVector_end(self)
+
+    def rbegin(self):
+        return _IVStudio.ComplexVector_rbegin(self)
+
+    def rend(self):
+        return _IVStudio.ComplexVector_rend(self)
+
+    def clear(self):
+        return _IVStudio.ComplexVector_clear(self)
+
+    def get_allocator(self):
+        return _IVStudio.ComplexVector_get_allocator(self)
+
+    def pop_back(self):
+        return _IVStudio.ComplexVector_pop_back(self)
+
+    def erase(self, *args):
+        return _IVStudio.ComplexVector_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _IVStudio.new_ComplexVector(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def push_back(self, x):
+        return _IVStudio.ComplexVector_push_back(self, x)
+
+    def front(self):
+        return _IVStudio.ComplexVector_front(self)
+
+    def back(self):
+        return _IVStudio.ComplexVector_back(self)
+
+    def assign(self, n, x):
+        return _IVStudio.ComplexVector_assign(self, n, x)
+
+    def resize(self, *args):
+        return _IVStudio.ComplexVector_resize(self, *args)
+
+    def insert(self, *args):
+        return _IVStudio.ComplexVector_insert(self, *args)
+
+    def reserve(self, n):
+        return _IVStudio.ComplexVector_reserve(self, n)
+
+    def capacity(self):
+        return _IVStudio.ComplexVector_capacity(self)
+    __swig_destroy__ = _IVStudio.delete_ComplexVector
+    __del__ = lambda self: None
+ComplexVector_swigregister = _IVStudio.ComplexVector_swigregister
+ComplexVector_swigregister(ComplexVector)
+
+class ShortVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, ShortVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, ShortVector, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _IVStudio.ShortVector_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _IVStudio.ShortVector___nonzero__(self)
+
+    def __bool__(self):
+        return _IVStudio.ShortVector___bool__(self)
+
+    def __len__(self):
+        return _IVStudio.ShortVector___len__(self)
+
+    def __getslice__(self, i, j):
+        return _IVStudio.ShortVector___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _IVStudio.ShortVector___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _IVStudio.ShortVector___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _IVStudio.ShortVector___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _IVStudio.ShortVector___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _IVStudio.ShortVector___setitem__(self, *args)
+
+    def pop(self):
+        return _IVStudio.ShortVector_pop(self)
+
+    def append(self, x):
+        return _IVStudio.ShortVector_append(self, x)
+
+    def empty(self):
+        return _IVStudio.ShortVector_empty(self)
+
+    def size(self):
+        return _IVStudio.ShortVector_size(self)
+
+    def swap(self, v):
+        return _IVStudio.ShortVector_swap(self, v)
+
+    def begin(self):
+        return _IVStudio.ShortVector_begin(self)
+
+    def end(self):
+        return _IVStudio.ShortVector_end(self)
+
+    def rbegin(self):
+        return _IVStudio.ShortVector_rbegin(self)
+
+    def rend(self):
+        return _IVStudio.ShortVector_rend(self)
+
+    def clear(self):
+        return _IVStudio.ShortVector_clear(self)
+
+    def get_allocator(self):
+        return _IVStudio.ShortVector_get_allocator(self)
+
+    def pop_back(self):
+        return _IVStudio.ShortVector_pop_back(self)
+
+    def erase(self, *args):
+        return _IVStudio.ShortVector_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _IVStudio.new_ShortVector(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def push_back(self, x):
+        return _IVStudio.ShortVector_push_back(self, x)
+
+    def front(self):
+        return _IVStudio.ShortVector_front(self)
+
+    def back(self):
+        return _IVStudio.ShortVector_back(self)
+
+    def assign(self, n, x):
+        return _IVStudio.ShortVector_assign(self, n, x)
+
+    def resize(self, *args):
+        return _IVStudio.ShortVector_resize(self, *args)
+
+    def insert(self, *args):
+        return _IVStudio.ShortVector_insert(self, *args)
+
+    def reserve(self, n):
+        return _IVStudio.ShortVector_reserve(self, n)
+
+    def capacity(self):
+        return _IVStudio.ShortVector_capacity(self)
+    __swig_destroy__ = _IVStudio.delete_ShortVector
+    __del__ = lambda self: None
+ShortVector_swigregister = _IVStudio.ShortVector_swigregister
+ShortVector_swigregister(ShortVector)
+
 class IntVector(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, IntVector, name, value)
@@ -276,6 +502,119 @@ class IntVector(_object):
     __del__ = lambda self: None
 IntVector_swigregister = _IVStudio.IntVector_swigregister
 IntVector_swigregister(IntVector)
+
+class FloatVector(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, FloatVector, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, FloatVector, name)
+    __repr__ = _swig_repr
+
+    def iterator(self):
+        return _IVStudio.FloatVector_iterator(self)
+    def __iter__(self):
+        return self.iterator()
+
+    def __nonzero__(self):
+        return _IVStudio.FloatVector___nonzero__(self)
+
+    def __bool__(self):
+        return _IVStudio.FloatVector___bool__(self)
+
+    def __len__(self):
+        return _IVStudio.FloatVector___len__(self)
+
+    def __getslice__(self, i, j):
+        return _IVStudio.FloatVector___getslice__(self, i, j)
+
+    def __setslice__(self, *args):
+        return _IVStudio.FloatVector___setslice__(self, *args)
+
+    def __delslice__(self, i, j):
+        return _IVStudio.FloatVector___delslice__(self, i, j)
+
+    def __delitem__(self, *args):
+        return _IVStudio.FloatVector___delitem__(self, *args)
+
+    def __getitem__(self, *args):
+        return _IVStudio.FloatVector___getitem__(self, *args)
+
+    def __setitem__(self, *args):
+        return _IVStudio.FloatVector___setitem__(self, *args)
+
+    def pop(self):
+        return _IVStudio.FloatVector_pop(self)
+
+    def append(self, x):
+        return _IVStudio.FloatVector_append(self, x)
+
+    def empty(self):
+        return _IVStudio.FloatVector_empty(self)
+
+    def size(self):
+        return _IVStudio.FloatVector_size(self)
+
+    def swap(self, v):
+        return _IVStudio.FloatVector_swap(self, v)
+
+    def begin(self):
+        return _IVStudio.FloatVector_begin(self)
+
+    def end(self):
+        return _IVStudio.FloatVector_end(self)
+
+    def rbegin(self):
+        return _IVStudio.FloatVector_rbegin(self)
+
+    def rend(self):
+        return _IVStudio.FloatVector_rend(self)
+
+    def clear(self):
+        return _IVStudio.FloatVector_clear(self)
+
+    def get_allocator(self):
+        return _IVStudio.FloatVector_get_allocator(self)
+
+    def pop_back(self):
+        return _IVStudio.FloatVector_pop_back(self)
+
+    def erase(self, *args):
+        return _IVStudio.FloatVector_erase(self, *args)
+
+    def __init__(self, *args):
+        this = _IVStudio.new_FloatVector(*args)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+
+    def push_back(self, x):
+        return _IVStudio.FloatVector_push_back(self, x)
+
+    def front(self):
+        return _IVStudio.FloatVector_front(self)
+
+    def back(self):
+        return _IVStudio.FloatVector_back(self)
+
+    def assign(self, n, x):
+        return _IVStudio.FloatVector_assign(self, n, x)
+
+    def resize(self, *args):
+        return _IVStudio.FloatVector_resize(self, *args)
+
+    def insert(self, *args):
+        return _IVStudio.FloatVector_insert(self, *args)
+
+    def reserve(self, n):
+        return _IVStudio.FloatVector_reserve(self, n)
+
+    def capacity(self):
+        return _IVStudio.FloatVector_capacity(self)
+    __swig_destroy__ = _IVStudio.delete_FloatVector
+    __del__ = lambda self: None
+FloatVector_swigregister = _IVStudio.FloatVector_swigregister
+FloatVector_swigregister(FloatVector)
 
 class DoubleVector(_object):
     __swig_setmethods__ = {}
@@ -1565,6 +1904,21 @@ class IPPlot(_object):
     def ImageColor1_C(self, IN_ARRAY1, DIM1, image_width, image_height):
         return _IVStudio.IPPlot_ImageColor1_C(self, IN_ARRAY1, DIM1, image_width, image_height)
 
+    def ImageColor4(self, IN_ARRAY4):
+        return _IVStudio.IPPlot_ImageColor4(self, IN_ARRAY4)
+
+    def ImageColor4_F(self, IN_ARRAY4):
+        return _IVStudio.IPPlot_ImageColor4_F(self, IN_ARRAY4)
+
+    def ImageColor4_I(self, IN_ARRAY4):
+        return _IVStudio.IPPlot_ImageColor4_I(self, IN_ARRAY4)
+
+    def ImageColor4_S(self, IN_ARRAY4):
+        return _IVStudio.IPPlot_ImageColor4_S(self, IN_ARRAY4)
+
+    def ImageColor4_C(self, IN_ARRAY4, DIM1, DIM2, DIM3, DIM4):
+        return _IVStudio.IPPlot_ImageColor4_C(self, IN_ARRAY4, DIM1, DIM2, DIM3, DIM4)
+
     def Bar(self, labels, array):
         return _IVStudio.IPPlot_Bar(self, labels, array)
 
@@ -1715,6 +2069,19 @@ class IPPlot(_object):
                 val = selfImageColor1_C(*args)
               else:
                 val = self.ImageColor1(*args)
+          elif args[0].ndim == 4:
+              if args[0].dtype == np.float64:
+                val = self.ImageColor4(*args)
+              elif args[0].dtype == np.float32:
+                val = self.ImageColor4_F(*args)
+              elif args[0].dtype == np.int32:
+                val = self.ImageColor4_I(*args)
+              elif args[0].dtype == np.int16 or args[0].dtype == np.uint16:
+                val = self.ImageColor4_S(*args)
+              elif args[0].dtype == np.int8 or args[0].dtype == np.uint8:
+                val = selfImageColor4_C(*args)
+              else:
+                val = self.ImageColor4(*args)
           else:
             val = 0
        else:
@@ -2615,6 +2982,213 @@ class IPDataGrid(_object):
 IPDataGrid_swigregister = _IVStudio.IPDataGrid_swigregister
 IPDataGrid_swigregister(IPDataGrid)
 
+class IPCamera(IPGraph):
+    __swig_setmethods__ = {}
+    for _s in [IPGraph]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IPCamera, name, value)
+    __swig_getmethods__ = {}
+    for _s in [IPGraph]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, IPCamera, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, id):
+        this = _IVStudio.new_IPCamera(id)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _IVStudio.delete_IPCamera
+    __del__ = lambda self: None
+
+    def GetImage(self, INPLACE_ARRAY4):
+        return _IVStudio.IPCamera_GetImage(self, INPLACE_ARRAY4)
+
+    def GetImage_uint8(self, INPLACE_ARRAY4):
+        return _IVStudio.IPCamera_GetImage_uint8(self, INPLACE_ARRAY4)
+
+    def ClearBoundingBox(self):
+        return _IVStudio.IPCamera_ClearBoundingBox(self)
+
+    def DrawBoundingBox(self, *args):
+        return _IVStudio.IPCamera_DrawBoundingBox(self, *args)
+
+    def DrawMaskImage(self, IN_ARRAY2, threshold, color, x0, y0, x1, y1, bNormalized):
+        return _IVStudio.IPCamera_DrawMaskImage(self, IN_ARRAY2, threshold, color, x0, y0, x1, y1, bNormalized)
+IPCamera_swigregister = _IVStudio.IPCamera_swigregister
+IPCamera_swigregister(IPCamera)
+
+class IPAudio(IPGraph):
+    __swig_setmethods__ = {}
+    for _s in [IPGraph]:
+        __swig_setmethods__.update(getattr(_s, '__swig_setmethods__', {}))
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IPAudio, name, value)
+    __swig_getmethods__ = {}
+    for _s in [IPGraph]:
+        __swig_getmethods__.update(getattr(_s, '__swig_getmethods__', {}))
+    __getattr__ = lambda self, name: _swig_getattr(self, IPAudio, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, id):
+        this = _IVStudio.new_IPAudio(id)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _IVStudio.delete_IPAudio
+    __del__ = lambda self: None
+
+    def GetWaveform(self, INPLACE_ARRAY1):
+        return _IVStudio.IPAudio_GetWaveform(self, INPLACE_ARRAY1)
+IPAudio_swigregister = _IVStudio.IPAudio_swigregister
+IPAudio_swigregister(IPAudio)
+
+class PWindowType(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, PWindowType, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, PWindowType, name)
+    __repr__ = _swig_repr
+    WindowIdeal = _IVStudio.PWindowType_WindowIdeal
+    WindowHanning = _IVStudio.PWindowType_WindowHanning
+    WindowHamming = _IVStudio.PWindowType_WindowHamming
+    WindowBlackman = _IVStudio.PWindowType_WindowBlackman
+    WindowBartlett = _IVStudio.PWindowType_WindowBartlett
+    WindowGaussian = _IVStudio.PWindowType_WindowGaussian
+
+    def __init__(self):
+        this = _IVStudio.new_PWindowType()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _IVStudio.delete_PWindowType
+    __del__ = lambda self: None
+PWindowType_swigregister = _IVStudio.PWindowType_swigregister
+PWindowType_swigregister(PWindowType)
+
+class PPaddingType(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, PPaddingType, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, PPaddingType, name)
+    __repr__ = _swig_repr
+    PaddingZero = _IVStudio.PPaddingType_PaddingZero
+    PaddingPeodic = _IVStudio.PPaddingType_PaddingPeodic
+    PaddingSymmetric = _IVStudio.PPaddingType_PaddingSymmetric
+
+    def __init__(self):
+        this = _IVStudio.new_PPaddingType()
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _IVStudio.delete_PPaddingType
+    __del__ = lambda self: None
+PPaddingType_swigregister = _IVStudio.PPaddingType_swigregister
+PPaddingType_swigregister(PPaddingType)
+
+class IPFFTTransform(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IPFFTTransform, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, IPFFTTransform, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, spectrumLen, window_type=0, padding_type=0):
+        this = _IVStudio.new_IPFFTTransform(spectrumLen, window_type, padding_type)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_destroy__ = _IVStudio.delete_IPFFTTransform
+    __del__ = lambda self: None
+    __swig_setmethods__["spectrum_length"] = _IVStudio.IPFFTTransform_spectrum_length_set
+    __swig_getmethods__["spectrum_length"] = _IVStudio.IPFFTTransform_spectrum_length_get
+    if _newclass:
+        spectrum_length = _swig_property(_IVStudio.IPFFTTransform_spectrum_length_get, _IVStudio.IPFFTTransform_spectrum_length_set)
+
+    def CosTransform(self, data, cosCoeff):
+        return _IVStudio.IPFFTTransform_CosTransform(self, data, cosCoeff)
+
+    def SinTransform(self, data, sinCoeff):
+        return _IVStudio.IPFFTTransform_SinTransform(self, data, sinCoeff)
+
+    def SetupFFT(self, spectrumLen, window_type=0, padding_type=0):
+        return _IVStudio.IPFFTTransform_SetupFFT(self, spectrumLen, window_type, padding_type)
+
+    def FFT(self, *args):
+        return _IVStudio.IPFFTTransform_FFT(self, *args)
+
+    def InverseFFT(self, *args):
+        return _IVStudio.IPFFTTransform_InverseFFT(self, *args)
+
+    def SetupFFT2D(self, spectrumLenX, spectrumLenY, window_type=0, padding_type=0):
+        return _IVStudio.IPFFTTransform_SetupFFT2D(self, spectrumLenX, spectrumLenY, window_type, padding_type)
+
+    def FFT2D(self, *args):
+        return _IVStudio.IPFFTTransform_FFT2D(self, *args)
+
+    def InverseFFT2D(self, *args):
+        return _IVStudio.IPFFTTransform_InverseFFT2D(self, *args)
+
+    def SwapQuadrant2D(self, spectrum, spectrumLenX, spectrumLenY):
+        return _IVStudio.IPFFTTransform_SwapQuadrant2D(self, spectrum, spectrumLenX, spectrumLenY)
+
+    def AmplitudeSpectrum(self, data, ampSpectrum, dt):
+        return _IVStudio.IPFFTTransform_AmplitudeSpectrum(self, data, ampSpectrum, dt)
+
+    def AmpPhaseSpectrum(self, data, ampSpectrum, phaseSpectrum, unwrapPhase, dt):
+        return _IVStudio.IPFFTTransform_AmpPhaseSpectrum(self, data, ampSpectrum, phaseSpectrum, unwrapPhase, dt)
+
+    def PowerSpectrum(self, data, powerSpectrum, dt):
+        return _IVStudio.IPFFTTransform_PowerSpectrum(self, data, powerSpectrum, dt)
+
+    def FastHilbertTransform(self, *args):
+        return _IVStudio.IPFFTTransform_FastHilbertTransform(self, *args)
+
+    def InverseFastHilbertTransform(self, data):
+        return _IVStudio.IPFFTTransform_InverseFastHilbertTransform(self, data)
+
+    def SetupSTFFT(self, spectrumLen, winSize=64, window_type=0, padding_type=0):
+        return _IVStudio.IPFFTTransform_SetupSTFFT(self, spectrumLen, winSize, window_type, padding_type)
+
+    def STFFT(self, *args):
+        return _IVStudio.IPFFTTransform_STFFT(self, *args)
+IPFFTTransform_swigregister = _IVStudio.IPFFTTransform_swigregister
+IPFFTTransform_swigregister(IPFFTTransform)
+
+class CNumpy(_object):
+    __swig_setmethods__ = {}
+    __setattr__ = lambda self, name, value: _swig_setattr(self, CNumpy, name, value)
+    __swig_getmethods__ = {}
+    __getattr__ = lambda self, name: _swig_getattr(self, CNumpy, name)
+    __repr__ = _swig_repr
+
+    def __init__(self, data, nm, type):
+        this = _IVStudio.new_CNumpy(data, nm, type)
+        try:
+            self.this.append(this)
+        except __builtin__.Exception:
+            self.this = this
+    __swig_setmethods__["pData"] = _IVStudio.CNumpy_pData_set
+    __swig_getmethods__["pData"] = _IVStudio.CNumpy_pData_get
+    if _newclass:
+        pData = _swig_property(_IVStudio.CNumpy_pData_get, _IVStudio.CNumpy_pData_set)
+    __swig_setmethods__["data_size"] = _IVStudio.CNumpy_data_size_set
+    __swig_getmethods__["data_size"] = _IVStudio.CNumpy_data_size_get
+    if _newclass:
+        data_size = _swig_property(_IVStudio.CNumpy_data_size_get, _IVStudio.CNumpy_data_size_set)
+    __swig_setmethods__["data_type"] = _IVStudio.CNumpy_data_type_set
+    __swig_getmethods__["data_type"] = _IVStudio.CNumpy_data_type_get
+    if _newclass:
+        data_type = _swig_property(_IVStudio.CNumpy_data_type_get, _IVStudio.CNumpy_data_type_set)
+    __swig_destroy__ = _IVStudio.delete_CNumpy
+    __del__ = lambda self: None
+CNumpy_swigregister = _IVStudio.CNumpy_swigregister
+CNumpy_swigregister(CNumpy)
+
 class IPStudio(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, IPStudio, name, value)
@@ -2771,6 +3345,30 @@ class IPStudio(_object):
 
     def LogOutput(self, type, name):
         return _IVStudio.IPStudio_LogOutput(self, type, name)
+
+    def GetKeyState(self, key):
+        return _IVStudio.IPStudio_GetKeyState(self, key)
+
+    def ToNumpy(self, *args):
+        return _IVStudio.IPStudio_ToNumpy(self, *args)
+
+    def WriteVideo(self, filename, dataFormat, frame_rate, channel, width, height, data):
+        return _IVStudio.IPStudio_WriteVideo(self, filename, dataFormat, frame_rate, channel, width, height, data)
+
+    def LoadVideo(self, filename, dataFormat, data):
+        return _IVStudio.IPStudio_LoadVideo(self, filename, dataFormat, data)
+
+    def WriteAudio(self, *args):
+        return _IVStudio.IPStudio_WriteAudio(self, *args)
+
+    def LoadAudio(self, *args):
+        return _IVStudio.IPStudio_LoadAudio(self, *args)
+
+    def GetAudioStream(self, *args):
+        return _IVStudio.IPStudio_GetAudioStream(self, *args)
+
+    def GetInputText(self, name):
+        return _IVStudio.IPStudio_GetInputText(self, name)
 IPStudio_swigregister = _IVStudio.IPStudio_swigregister
 IPStudio_swigregister(IPStudio)
 

@@ -86,7 +86,7 @@ def CreatePolarDemo2():
     plot.SetPlotStyle( vi.PPlotStyle.PolarCurve )
     plot.ChartXRange(0, 1, 360)
 
-#CreatePolarDemo()    
+CreatePolarDemo()    
 CreatePolarDemo2()
 
 polarindex = 0

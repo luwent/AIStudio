@@ -28,7 +28,7 @@ class AIDataType:
 class AIStudio(iv.IPStudio):
     def __init__(self, name):
         iv.IPStudio.__init__(self)
-        self.Framework = load_class("AIPlatform.tensorflow.tensorflow_framework.TensorflowFramework")(self)
+        self.Framework = load_class("AIPlatform." + name + "." + name + "_framework." + name + "framework")(self)
 
     def AddRecordVariable(self, var, name = None):
         self.Framework.AddRecordVariable(var, name)
@@ -172,11 +172,25 @@ class AIStudio(iv.IPStudio):
             else:
                 self.SaveTensor4(name, type, data)
 
-    def RecordGraphDef(self, graph, name):
-        self.Framework.ViewGraphDef(graph, name)
+    def RecordGraphDef(self, graph, name, para = None):
+        self.Framework.ViewGraphDef(graph, name, para)
 
     def GetRecordList(self):
         return self.Framework.GetRecordList()
 
     def SaveRecordList(self, summary):
         self.Framework.SaveRecordList(summary)
+
+    def SetupCheckpoint(self, var_list=None):
+        self.Framework.SetupCheckpoint(var_list)
+
+    def SaveCheckpoint(self, sess, name):
+        fullname = self.DataFolder + name + "_PT_"
+        self.Framework.SaveCheckpoint(sess, fullname)
+
+    def RestoreCheckpoint(self, sess, name):
+        fullname = self.DataFolder + name + "_PT_"
+        self.Framework.RestoreCheckpoint(sess, fullname)
+
+    def LoadGraphDef(self, name):
+        self.Framework.LoadGraphDef(name)

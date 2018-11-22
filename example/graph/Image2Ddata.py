@@ -74,4 +74,4 @@ for iy in range(200):
     i = 0
     for ix in range(100):
         dataxy[ix + iy * 100] = np.sin(ix / 10.0) * np.sin(iy / 10.0)
-        plot.ImageColor(dataxy, 100, 200)
+    plot.ImageColor(dataxy, 100, 200)

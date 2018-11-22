@@ -285,7 +285,7 @@ def main(filename, mode):
     sys.stdout = PYRunOutput(0)
     sys.stderr = PYRunOutput(1)
     #sys.stdin = self.stdin
-
+    print(sys.argv)
     if(mode == '-d'):
         _runconsole.DebugStart()
         debugrun = Debugger()
@@ -300,9 +300,13 @@ def main(filename, mode):
     #sys.stdin = save_stdin
 
 if __name__ == "__main__":
-    if len (sys.argv) == 3:
+    if len (sys.argv) >= 3:
         sys.path.append(os.path.dirname(sys.argv[1]))
         path0, filename0 = os.path.split(sys.argv[0])
         path1, filename1 = os.path.split(path0)
         sys.path.append(path1)
-        main(sys.argv[1], sys.argv[2])
+        rfile = sys.argv[1]
+        mode = sys.argv[2]
+        del sys.argv[2]
+        del sys.argv[0]
+        main(rfile, mode)
