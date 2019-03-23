@@ -11,8 +11,6 @@ from platform import python_version
 import IVStudio as IP
 import interpreter
 
-_console = IP.IPShell();
-
 class PYOutput:
     def __init__(self, type):
         self.type = type;
@@ -135,6 +133,7 @@ def main():
     console.close()
 
 if __name__ == "__main__":
+    _console = IP.IPShell(sys.argv[1])
     path0, filename0 = os.path.split(sys.argv[0])
     path1, filename1 = os.path.split(path0)
     sys.path.append(path1)

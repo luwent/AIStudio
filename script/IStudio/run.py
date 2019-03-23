@@ -3,18 +3,25 @@
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
-
+remote_run = False
+remote_port = 0
 import sys
+if(sys.argv[1] == '-w'):
+    remote_port = int(sys.argv[2])
+    del sys.argv[2]
+    del sys.argv[1]
+    remote_run = True
 import interpreter as ip
 import os
 import os.path
 import pprint
 import inspect
 import traceback
-import IVStudio as iv
+if(remote_run):
+    import RIVRun as iv
+else:
+    import IVStudio as iv	
 import debugger
-
-_runconsole = iv.IPRun();
 
 class _rstr(str):
     """String that doesn't quote its repr."""
@@ -136,15 +143,23 @@ class Debugger:
             _runconsole.DebugInfoOutput(type, name + ":"  + svalue)
 
     def show_variable(self):
-        index = 0;
-        name = _runconsole.GetWatchVariable(index)
-        while name != "":
-            value = self._getval_except(name)
-            type = self._gettype(value)
-            n = self._getlength(value)
-            _runconsole.DebugInfoOutput(3, name + ":"  + type + ":" + str(n) + ":" + repr(value))
+        if(remote_run):
+            all_names = _runconsole.GetWatchVariable(0)
+            for name in all_names:
+                value = self._getval_except(name)
+                type = self._gettype(value)
+                n = self._getlength(value)
+                _runconsole.DebugInfoOutput(3, name + ":"  + type + ":" + str(n) + ":" + repr(value))
+        else:        
+            index = 0;
             name = _runconsole.GetWatchVariable(index)
-            index = index + 1
+            while name != "":
+                value = self._getval_except(name)
+                type = self._gettype(value)
+                n = self._getlength(value)
+                _runconsole.DebugInfoOutput(3, name + ":"  + type + ":" + str(n) + ":" + repr(value))
+                name = _runconsole.GetWatchVariable(index)
+                index = index + 1
 
     def update_variable(self, status):
         name = _runconsole.GetWatchVariable(-1)
@@ -229,48 +244,51 @@ class Debugger:
             pass
 
     def interaction(self, frame, info=None):
-        self.frame = frame
-        code = frame.f_code
-        filename = code.co_filename
-        lineno = frame.f_lineno
-        basename = os.path.basename(filename)
-        self.show_stack();
-        self.show_locals();
-        self.show_globals();
-        self.show_variable()
-        more = True
-        while(more):
-            more = False
-            status = _runconsole.WaitAtBreakPoint(filename, lineno)
-            if status == 1:
-                self.idb.set_step() #Stop after one line of code
-            elif status == 2:
-                self.idb.set_next(self.frame) #Stop on the next line in or below the given frame.
-            elif status == 3:
-                self.idb.set_return(self.frame) #Stop when returning from the given frame
-            elif status == 99: #quit debug
-                self.idb.set_quit()
-            elif status == -99: #exit running program
-                self.idb.set_quit()
-                os._exit(0)
-            elif status >= 3000 and status <= 3100: #updae new watch variable
-                self.update_variable(status - 3000)
-                #lineno = -1
-                more = True
-            elif status >= 1000 and status < 2000: #change calling stack
-                self.show_frame(status - 1000)
-                code = self.frame.f_code
-                filename = code.co_filename
-                lineno = self.frame.f_lineno
-                basename = os.path.basename(filename)
-                more = True
-            else:
-                if not self.idb.breaks:
-                    name, line = _runconsole.GetBreakPoint()
-                    if(line >= 0):
-                        self.idb.set_break(name, line);
-                self.idb.set_continue()
-        self.frame = None
+        try:
+            self.frame = frame
+            code = frame.f_code
+            filename = code.co_filename
+            lineno = frame.f_lineno
+            basename = os.path.basename(filename)
+            self.show_stack();
+            self.show_locals();
+            self.show_globals();
+            self.show_variable()
+            more = True
+            while(more):
+                more = False
+                status = _runconsole.WaitAtBreakPoint(filename, lineno)
+                if status == 1:
+                    self.idb.set_step() #Stop after one line of code
+                elif status == 2:
+                    self.idb.set_next(self.frame) #Stop on the next line in or below the given frame.
+                elif status == 3:
+                    self.idb.set_return(self.frame) #Stop when returning from the given frame
+                elif status == 99: #quit debug
+                    self.idb.set_quit()
+                elif status == -99: #exit running program
+                    self.idb.set_quit()
+                    os._exit(0)
+                elif status >= 3000 and status <= 3100: #updae new watch variable
+                    self.update_variable(status - 3000)
+                    #lineno = -1
+                    more = True
+                elif status >= 1000 and status < 2000: #change calling stack
+                    self.show_frame(status - 1000)
+                    code = self.frame.f_code
+                    filename = code.co_filename
+                    lineno = self.frame.f_lineno
+                    basename = os.path.basename(filename)
+                    more = True
+                else:
+                    if not self.idb.breaks:
+                        name, line = _runconsole.GetBreakPoint()
+                        if(line >= 0):
+                            self.idb.set_break(name, line);
+                    self.idb.set_continue()
+            self.frame = None
+        except:
+            print("except in run:", sys.exc_info()[0])
 
     def isbreakname(self, name):
         return _runconsole.IsBreakPoint(name, -1)
@@ -285,28 +303,41 @@ def main(filename, mode):
     sys.stdout = PYRunOutput(0)
     sys.stderr = PYRunOutput(1)
     #sys.stdin = self.stdin
-    print(sys.argv)
     if(mode == '-d'):
+        print("Debugging...", filename)
         _runconsole.DebugStart()
         debugrun = Debugger()
-        debugrun.start(filename)
+        try:
+            debugrun.start(filename)
+        except SystemExit:
+            print("Exit...", filename)
         debugrun.close()
     else:
-        print("Running...")
+        print("Running...", filename)
         interp = ip.PYInterpreter()
-        interp.execfile(filename)
+        try:
+            interp.execfile(filename)
+        except SystemExit:
+            print("Exit...", filename)
+    if(remote_run):
+        print("Remote run end\n")
+        _runconsole.stop_serve()
+    #sys.stdin = save_stdin
     sys.stdout = save_stdout
     sys.stderr = save_stderr
-    #sys.stdin = save_stdin
 
 if __name__ == "__main__":
-    if len (sys.argv) >= 3:
+    if len (sys.argv) >= 4:
         sys.path.append(os.path.dirname(sys.argv[1]))
         path0, filename0 = os.path.split(sys.argv[0])
         path1, filename1 = os.path.split(path0)
         sys.path.append(path1)
         rfile = sys.argv[1]
         mode = sys.argv[2]
+        _runconsole = iv.IPRun(remote_port, sys.argv[3])
+        if(remote_run):
+            iv.IPRun.console_output_ = sys.stdout
+        del sys.argv[3]
         del sys.argv[2]
         del sys.argv[0]
         main(rfile, mode)

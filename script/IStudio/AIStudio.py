@@ -3,7 +3,11 @@ from __future__ import division
 from __future__ import print_function
 
 import numpy as np
-import IVStudio as iv
+from RemoteServer import config
+if(config.is_remote_run):
+    import RIVStudio as iv
+else:
+    import IVStudio as iv
 import re
 import importlib
 

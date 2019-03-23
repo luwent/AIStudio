@@ -7,8 +7,8 @@ import IStudio as vi
 import numpy as np
 
 graph1 = vi.IPGraph("Plot-1")
-graph1.SetFrameColor(vi.PFillType.FillType_Solid, [0xFFFF0000])
-graph1.SetPlotAreaColor(vi.PFillType.FillType_Solid, [0xFF00FF00])
+graph1.SetFrameColor(vi.FillType.FillType_Solid, [0xFFFF0000])
+graph1.SetPlotAreaColor(vi.FillType.FillType_Solid, [0xFF00FF00])
 graph1.SetCaption("Simple Plot-Graph Example")
 #xaxis
 xaxis = graph1.Axes(0)

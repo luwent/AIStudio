@@ -8,20 +8,20 @@ import numpy as np
 import random
 import time
 
-def MakeCursor( graphname, name, xpos=50, ypos=5, color = vi.MakeColor(255,0,0), style = vi.PCursorLineShape.CursorMajorXMajorY, snap = vi.PGraphObjSnapModes.SnapFloating):
+def MakeCursor( graphname, name, xpos=50, ypos=5, color = vi.MakeColor(255,0,0), style = vi.CursorLineShape.CursorMajorXMajorY, snap = vi.GraphObjSnapModes.SnapFloating):
     graph = vi.IPGraph( graphname )
-    cursor = graph.AddCursor(name)
+    cursor = graph.NewCursor(name)
     cursor.SetColor(color)
     cursor.SetCursorStyle(style)
     cursor.SetSnapMode(snap)
     cursor.SetCursorPos(xpos,ypos)
-    cursor.ModifyOption(vi.PCursorOptions.CursorShowLabel, True)
+    cursor.ModifyOption(vi.CursorOptions.CursorShowLabel, True)
     return cursor
 
 def CreateBubbleDemo():
     graph = vi.IPGraph("Image-5")
-    graph.SetFrameColor(vi.PFillType.FillType_Solid, [vi.MakeColor(200,200,200)])
-    graph.SetPlotAreaColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255,255,255)])
+    graph.SetFrameColor(vi.FillType.FillType_Solid, [vi.MakeColor(200,200,200)])
+    graph.SetPlotAreaColor(vi.FillType.FillType_Solid, [vi.MakeColor(255,255,255)])
 
     #palette
     palette = graph.SetPalette(0,1,True)
@@ -31,20 +31,20 @@ def CreateBubbleDemo():
     xaxis.SetMinimum(0)
     xaxis.SetMaximum(1)
     xaxis.SetTitle("X")
-    xaxis.ModifyOption(vi.PAxisOptions.MajorGrid, False)
+    xaxis.ModifyOption(vi.AxisOptions.MajorGrid, False)
     #yaxis
     yaxis = graph.Axes(1)
     yaxis.SetMinimum(0)
     yaxis.SetMaximum(1)
     yaxis.SetTitle("Y")
-    graph.SetMouseTrackingMode(vi.PGraphMouseTrackingMode.TrackingMode_ZoomX |vi.PGraphMouseTrackingMode.TrackingMode_PanX, True )
+    graph.SetMouseTrackingMode(vi.GraphMouseTrackingMode.TrackingMode_ZoomX |vi.GraphMouseTrackingMode.TrackingMode_PanX, True )
     
     #bubble plot
     plotnum = graph.GetPlotCount()
     for i in range(plotnum):
         graph.RemovePlot(0)
     bubble1 = graph.NewPlot("bubble1")
-    bubble1.SetPlotStyle(vi.PPlotStyle.XYBubble)
+    bubble1.SetPlotStyle(vi.PlotStyle.XYBubble)
     bubble1.SetBubblePara(20)
 
     #cursor
@@ -57,28 +57,28 @@ def CreateBubbleDemo():
 
 def CreateVectorDemo():
     graph = vi.IPGraph("Image-6")
-    graph.SetFrameColor(vi.PFillType.FillType_Solid, [vi.MakeColor(200,200,200)])
-    graph.SetPlotAreaColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255,255,255)])
+    graph.SetFrameColor(vi.FillType.FillType_Solid, [vi.MakeColor(200,200,200)])
+    graph.SetPlotAreaColor(vi.FillType.FillType_Solid, [vi.MakeColor(255,255,255)])
     
     #xaxis
     xaxis = graph.Axes(0)
     xaxis.SetMinimum(-10)
     xaxis.SetMaximum(10)
     xaxis.SetTitle("X")
-    xaxis.ModifyOption(vi.PAxisOptions.MajorGrid, False)
+    xaxis.ModifyOption(vi.AxisOptions.MajorGrid, False)
     #yaxis
     yaxis = graph.Axes(1)
     yaxis.SetMinimum(-10)
     yaxis.SetMaximum(10)
     yaxis.SetTitle("Y")
-    graph.SetMouseTrackingMode(vi.PGraphMouseTrackingMode.TrackingMode_ZoomX |vi.PGraphMouseTrackingMode.TrackingMode_PanX, True )
+    graph.SetMouseTrackingMode(vi.GraphMouseTrackingMode.TrackingMode_ZoomX |vi.GraphMouseTrackingMode.TrackingMode_PanX, True )
     
     #vector plot
     plotnum = graph.GetPlotCount()
     for i in range(plotnum):
         graph.RemovePlot(0)
     vector1 = graph.NewPlot("vect1")
-    vector1.SetPlotStyle(vi.PPlotStyle.XYVector)
+    vector1.SetPlotStyle(vi.PlotStyle.XYVector)
     
 
 CreateBubbleDemo()

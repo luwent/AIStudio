@@ -9,8 +9,8 @@ import random
 
 #topgraph
 graph = vi.IPGraph("Image-1")
-graph.SetFrameColor(vi.PFillType.FillType_Solid, [vi.MakeColor(200,200,200)])
-graph.SetPlotAreaColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255,255,255)])
+graph.SetFrameColor(vi.FillType.FillType_Solid, [vi.MakeColor(200,200,200)])
+graph.SetPlotAreaColor(vi.FillType.FillType_Solid, [vi.MakeColor(255,255,255)])
 graph.SetCaption("Image Graph")
 palette = graph.SetPalette(0,1,True)
 
@@ -19,21 +19,21 @@ xaxis = graph.Axes(0)
 xaxis.SetMinimum(0)
 xaxis.SetMaximum(60)
 xaxis.SetTitle("Time")
-xaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+xaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
 #yaxis
 yaxis = graph.Axes(1)
 yaxis.SetTitle("Amplitude")
 yaxis.SetMaximum(10)
 yaxis.SetMinimum(0)
-yaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
-graph.SetMouseTrackingMode(vi.PGraphMouseTrackingMode.TrackingMode_ZoomX |vi.PGraphMouseTrackingMode.TrackingMode_PanX, True )
+yaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
+graph.SetMouseTrackingMode(vi.GraphMouseTrackingMode.TrackingMode_ZoomX |vi.GraphMouseTrackingMode.TrackingMode_PanX, True )
     
 
 plotnum = graph.GetPlotCount()
 for i in range(plotnum):
     graph.RemovePlot(0)
 plotA = graph.NewPlot("sin")
-plotA.SetPlotStyle(vi.PPlotStyle.XYImage)
+plotA.SetPlotStyle(vi.PlotStyle.XYImage)
 plotA.PlotXRange(0, 0.05*np.pi)
 y = [1*np.sin(i*0.05*np.pi) for i in range(1000)]
 plotA.SetDataOffset(0,1)
@@ -43,7 +43,7 @@ plotnum = graph.GetPlotCount()
 for i in range(plotnum):
     graph.RemovePlot(1)
 plotB = graph.NewPlot("cos")
-plotB.SetPlotStyle(vi.PPlotStyle.XYImage)
+plotB.SetPlotStyle(vi.PlotStyle.XYImage)
 plotB.PlotXRange(0, 0.05*np.pi)
 by = [1*np.cos(i*0.05*np.pi) for i in range(1000)]
 plotB.SetDataOffset(0,3)
@@ -53,7 +53,7 @@ plotnum = graph.GetPlotCount()
 for i in range(plotnum):
     graph.RemovePlot(2)
 plotC = graph.NewPlot("sawtooth")
-plotC.SetPlotStyle(vi.PPlotStyle.XYImage)
+plotC.SetPlotStyle(vi.PlotStyle.XYImage)
 plotC.PlotXRange(0, 1)
 f = 100
 fs = 10
@@ -98,7 +98,7 @@ plotnum = graph.GetPlotCount()
 for i in range(plotnum):
     graph.RemovePlot(3)
 plotD = graph.NewPlot("back-sawtooth")
-plotD.SetPlotStyle(vi.PPlotStyle.XYImage)
+plotD.SetPlotStyle(vi.PlotStyle.XYImage)
 plotD.PlotXRange(0, 1)
 df = 100
 dfs = 10
@@ -125,7 +125,7 @@ for i in range(plotnum):
     graph.RemovePlot(4)
 plotE = graph.NewPlot("sqaure")
 plotE.PlotXRange(0, 1)
-plotE.SetPlotStyle(vi.PPlotStyle.XYImage)
+plotE.SetPlotStyle(vi.PlotStyle.XYImage)
 fs = 100 # sample rate 
 fss = 10
 xx = np.arange(fss)
@@ -144,8 +144,8 @@ plotE.PlotY(ey)
 
 
 graph2 = vi.IPGraph("Image-2")
-graph2.SetFrameColor(vi.PFillType.FillType_Solid, [vi.MakeColor(200,200,200)])
-graph2.SetPlotAreaColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255,255,255)])
+graph2.SetFrameColor(vi.FillType.FillType_Solid, [vi.MakeColor(200,200,200)])
+graph2.SetPlotAreaColor(vi.FillType.FillType_Solid, [vi.MakeColor(255,255,255)])
 graph2.SetCaption("Image2 chart")
 palette = graph2.SetPalette(-5,5,True)
 
@@ -154,24 +154,24 @@ xaxis = graph2.Axes(0)
 xaxis.SetMinimum(0)
 xaxis.SetMaximum(60)
 xaxis.SetTitle("Time")
-xaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+xaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
 #yaxis
 yaxis = graph2.Axes(1)
 yaxis.SetTitle("Amplitude")
 yaxis.SetMaximum(10)
 yaxis.SetMinimum(0)
-yaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
-graph2.SetMouseTrackingMode(vi.PGraphMouseTrackingMode.TrackingMode_ZoomX |vi.PGraphMouseTrackingMode.TrackingMode_PanX, True )
+yaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
+graph2.SetMouseTrackingMode(vi.GraphMouseTrackingMode.TrackingMode_ZoomX |vi.GraphMouseTrackingMode.TrackingMode_PanX, True )
 
 
 plotnum = graph2.GetPlotCount()
 for i in range(plotnum):
     graph2.RemovePlot(0)
 chart = graph2.NewPlot("sin")
-chart.SetPlotStyle(vi.PPlotStyle.XYImage)
+chart.SetPlotStyle(vi.PlotStyle.XYImage)
 chart.ChartXRange(0, 0.1*np.pi,1000)
 chart.SetDataOffset(0,5)
-while(j < 10000):
+while(j < 1000):
     y = [ 4*np.sin(0.1*j*0.1*np.pi)] 
     chart.ChartY(y)
     j = j +1

@@ -9,8 +9,8 @@ import random
 
 #topgraph
 graph = vi.IPGraph("Plot-3")
-graph.SetFrameColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255, 235, 164)])
-graph.SetPlotAreaColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
+graph.SetFrameColor(vi.FillType.FillType_Solid, [vi.MakeColor(255, 235, 164)])
+graph.SetPlotAreaColor(vi.FillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
 graph.SetCaption("Multiple-Plot Graphs")
 
 #xaxis
@@ -18,13 +18,13 @@ xaxis = graph.Axes(0)
 xaxis.SetMinimum(0)
 xaxis.SetMaximum(100)
 xaxis.SetTitle("Time")
-xaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+xaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
 #yaxis
 yaxis = graph.Axes(1)
 yaxis.SetMinimum(0)
 yaxis.SetMaximum(10)
 yaxis.SetTitle("Amplitude")
-yaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+yaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
 #y axis on the other side
 axisnum = graph.GetAxisCount()
 if axisnum < 3:
@@ -39,7 +39,7 @@ y2axis.ModifyOption(0x1 << 6 | 0x1 << 7, False)
 
 #add a value pair for sin graph
 y2axis.AddValuePair("Sin", 1, vi.MakeColor(0,0,0))
-y2axis.ModifyValuePairOption(vi.PValuePairOption.VPGridLine, True)
+y2axis.ModifyValuePairOption(vi.ValuePairOption.VPGridLine, True)
 plotnum = graph.GetPlotCount()
 if plotnum < 1:
     plotA = graph.NewPlot("Sin")
@@ -58,7 +58,7 @@ plotA.PlotY(y)
 
 #add a value pair for Cos graph
 y2axis.AddValuePair("cos", 3, vi.MakeColor(0, 0, 0))
-y2axis.ModifyValuePairOption(vi.PValuePairOption.VPGridLine, True)
+y2axis.ModifyValuePairOption(vi.ValuePairOption.VPGridLine, True)
 plotnum = graph.GetPlotCount()
 if plotnum < 2:
     plotB = graph.NewPlot("Cos")
@@ -73,7 +73,7 @@ plotB.PlotY(by)
 
 #add a value pair for tan graph
 y2axis.AddValuePair("tan", 5, vi.MakeColor(0, 0, 0))
-y2axis.ModifyValuePairOption(vi.PValuePairOption.VPGridLine, True)
+y2axis.ModifyValuePairOption(vi.ValuePairOption.VPGridLine, True)
 plotnum = graph.GetPlotCount()
 if plotnum < 3:
     plotC = graph.NewPlot("Tan")
@@ -88,7 +88,7 @@ plotC.PlotY(cy)
 
 #~ #add a value pair for sq graph
 y2axis.AddValuePair("square", 7, vi.MakeColor(0, 0, 0))
-y2axis.ModifyValuePairOption(vi.PValuePairOption.VPGridLine, True)
+y2axis.ModifyValuePairOption(vi.ValuePairOption.VPGridLine, True)
 plotnum = graph.GetPlotCount()
 if plotnum < 4:
     plotD = graph.NewPlot("Square")
@@ -111,7 +111,7 @@ plotD.PlotY(dy)
 
 #add a value pair for cos tan graph
 y2axis.AddValuePair("cos tan", 9, vi.MakeColor(0, 0, 0))
-y2axis.ModifyValuePairOption(vi.PValuePairOption.VPGridLine, True)
+y2axis.ModifyValuePairOption(vi.ValuePairOption.VPGridLine, True)
 plotnum = graph.GetPlotCount()
 if plotnum < 5:
     plotE = graph.NewPlot("Cos-Tan")
@@ -126,8 +126,8 @@ plotE.PlotY(ey)
 
 #bottom graph
 graph2 = vi.IPGraph("Plot-4")
-graph2.SetFrameColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255, 235, 164)])
-graph2.SetPlotAreaColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
+graph2.SetFrameColor(vi.FillType.FillType_Solid, [vi.MakeColor(255, 235, 164)])
+graph2.SetPlotAreaColor(vi.FillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
 graph2.SetCaption("Multiple-Axis Graph")
 
 #xaxis
@@ -135,34 +135,34 @@ xaxis = graph2.Axes(0)
 xaxis.SetMinimum(0)
 xaxis.SetMaximum(100)
 xaxis.SetTitle("Time")
-xaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+xaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
 #yaxis
 yaxis = graph2.Axes(1)
 yaxis.SetTitle("Amplitude")
 yaxis.SetMaximum(10)
 yaxis.SetMinimum(0)
-yaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+yaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
 
 #x2 axis
 axisnum2 = graph2.GetAxisCount()
 if axisnum2 < 3:
-    x2axis = graph2.NewAxis("Distance",vi.PAxisType.AxisX)
+    x2axis = graph2.NewAxis("Distance",vi.AxisType.AxisX)
 else:
     x2axis = graph2.Axes(2)
 x2axis.SetMinimum(0)
 x2axis.SetMaximum(100)
 x2axis.SetTitle("Distance")
-x2axis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+x2axis.ModifyOption(vi.AxisOptions.AutoScale, False)
 #y2axis
 if axisnum2 < 4:
-    y2axis = graph2.NewAxis("Log",vi.PAxisType.AxisY)
+    y2axis = graph2.NewAxis("Log",vi.AxisType.AxisY)
 else:
     y2axis = graph2.Axes(3)
 y2axis.SetMinimum(0)
 y2axis.SetMaximum(100)
 y2axis.SetTitle("Log")
-y2axis.ModifyOption(vi.PAxisOptions.AutoScale, False)
-y2axis.ModifyOption(vi.PAxisOptions.LogScale,True)
+y2axis.ModifyOption(vi.AxisOptions.AutoScale, False)
+y2axis.ModifyOption(vi.AxisOptions.LogScale,True)
 
 plotnum = graph2.GetPlotCount()
 if plotnum < 1:

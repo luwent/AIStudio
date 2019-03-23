@@ -38,7 +38,6 @@ class PYInterpreter(InteractiveInterpreter):
             print('*** Error in script or command!\n'
                  'Traceback (most recent call last):')
             InteractiveInterpreter.showsyntaxerror(self, filename)
-            self.showprompt()
         else:
             self.runcode(code)
 

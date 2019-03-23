@@ -7,19 +7,19 @@ import IStudio as vi
 import numpy as np
 import random
 
-def MakeCursor(name, xpos=50, ypos=5, color = vi.MakeColor(255,0,0), style = vi.PCursorLineShape.CursorMajorXMajorY, snap = vi.PGraphObjSnapModes.SnapFloating):
-    cursor = graph.AddCursor(name)
+def MakeCursor(name, xpos=50, ypos=5, color = vi.MakeColor(255,0,0), style = vi.CursorLineShape.CursorMajorXMajorY, snap = vi.GraphObjSnapModes.SnapFloating):
+    cursor = graph.NewCursor(name)
     cursor.SetColor(color)
     cursor.SetCursorStyle(style)
     cursor.SetSnapMode(snap)
     cursor.SetCursorPos(xpos, ypos)
-    cursor.ModifyOption(vi.PCursorOptions.CursorShowLabel, True)
+    cursor.ModifyOption(vi.CursorOptions.CursorShowLabel, True)
     return cursor
     
 #topgraph
 graph = vi.IPGraph("Plot-5")
-graph.SetFrameColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255, 213, 235)])
-graph.SetPlotAreaColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
+graph.SetFrameColor(vi.FillType.FillType_Solid, [vi.MakeColor(255, 213, 235)])
+graph.SetPlotAreaColor(vi.FillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
 graph.SetCaption("Cursor Graphs")
 
 #xaxis
@@ -27,13 +27,13 @@ xaxis = graph.Axes(0)
 xaxis.SetMinimum(0)
 xaxis.SetMaximum(100)
 xaxis.SetTitle("Time")
-xaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+xaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
 #yaxis
 yaxis = graph.Axes(1)
 yaxis.SetTitle("Amplitude")
 yaxis.SetMaximum(10)
 yaxis.SetMinimum(0)
-yaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+yaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
 
 legend = graph.GetLegend()
 legend.SetVisible(True)
@@ -49,19 +49,19 @@ else:
 #Cursor 2
 cursorcount = graph.GetCursorCount()
 if cursorcount < 2:
-    smallcursor = MakeCursor("smallpoint", 20, 8, vi.MakeColor(0,255,255),vi.PCursorLineShape.CursorMinorXMinorY)
+    smallcursor = MakeCursor("smallpoint", 20, 8, vi.MakeColor(0,255,255),vi.CursorLineShape.CursorMinorXMinorY)
 else:
     graph.RemoveCursor("smallpoint")
-    smallcursor = MakeCursor("smallpoint", 20, 8, vi.MakeColor(0,255,255),vi.PCursorLineShape.CursorMinorXMinorY)
+    smallcursor = MakeCursor("smallpoint", 20, 8, vi.MakeColor(0,255,255),vi.CursorLineShape.CursorMinorXMinorY)
 
 #Cursor3
 cursorcount = graph.GetCursorCount()
 if cursorcount < 3:
-    followcursor = MakeCursor("followpoint", 80, 3, vi.MakeColor(255, 0, 255), vi.PCursorLineShape.CursorMajorXMajorY,vi.PGraphObjSnapModes.SnapPointsOnPlot)
+    followcursor = MakeCursor("followpoint", 80, 3, vi.MakeColor(255, 0, 255), vi.CursorLineShape.CursorMajorXMajorY,vi.GraphObjSnapModes.SnapPointsOnPlot)
     followcursor.SetSnapPlot(0)
 else:
     graph.RemoveCursor("followpoint")
-    followcursor = MakeCursor("followpoint", 80, 3, vi.MakeColor(255, 0, 255), vi.PCursorLineShape.CursorMajorXMajorY,vi.PGraphObjSnapModes.SnapPointsOnPlot)
+    followcursor = MakeCursor("followpoint", 80, 3, vi.MakeColor(255, 0, 255), vi.CursorLineShape.CursorMajorXMajorY,vi.GraphObjSnapModes.SnapPointsOnPlot)
     followcursor.SetSnapPlot(0)
     
 plotnum = graph.GetPlotCount()
@@ -138,38 +138,38 @@ plotE.PlotY(ey)
 
 #bottomgraph
 graph2 = vi.IPGraph("Plot-6")
-graph2.SetFrameColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255, 213, 235)])
-graph2.SetPlotAreaColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
+graph2.SetFrameColor(vi.FillType.FillType_Solid, [vi.MakeColor(255, 213, 235)])
+graph2.SetPlotAreaColor(vi.FillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
 graph2.SetCaption("Annotated Graphs")
-graph2.SetMouseTrackingMode(vi.PGraphMouseTrackingMode.TrackingMode_ZoomX |vi.PGraphMouseTrackingMode.TrackingMode_PanX, True )
+graph2.SetMouseTrackingMode(vi.GraphMouseTrackingMode.TrackingMode_ZoomX |vi.GraphMouseTrackingMode.TrackingMode_PanX, True )
 
 #xaxis
 xaxis = graph2.Axes(0)
 xaxis.SetMinimum(0)
 xaxis.SetMaximum(100)
 xaxis.SetTitle("Time")
-xaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+xaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
 #yaxis
 yaxis = graph2.Axes(1)
 yaxis.SetTitle("Amplitude")
 yaxis.SetMaximum(10)
 yaxis.SetMinimum(0)
-yaxis.ModifyOption(vi.PAxisOptions.AutoScale, False)
+yaxis.ModifyOption(vi.AxisOptions.AutoScale, False)
 
 anncount = graph2.GetAnnotationCount()
 
 for i in range(anncount):
     graph2.RemoveAnnotation("a1")
-annotation1 = graph2.AddAnnotation("a1")
+annotation1 = graph2.NewAnnotation("a1")
 annotation1.SetCaption("Multiple Line Rotated Text", 1,1)
 annotation1.SetCaptionLocation(15, 2.5)
 annotation1.SetCaptionColor(vi.MakeColor(0, 0, 0))
-annotation1.SetCaptionBorder(vi.PLineType.LineType_Solid, vi.MakeColor(255, 0, 255),2, 10)
+annotation1.SetCaptionBorder(vi.LineType.LineType_Solid, vi.MakeColor(255, 0, 255),2, 10)
 
 for i in range(anncount):
     graph2.RemoveAnnotation("a2")
-annotation2 = graph2.AddAnnotation("a2")
-circle = annotation2.SetDrawType( vi.PDrawItemType.DrawItem_Circle )
+annotation2 = graph2.NewAnnotation("a2")
+circle = annotation2.SetDrawType( vi.DrawItemType.DrawItem_Circle )
 circle.SetFillColor(vi.MakeColor(255, 0, 0))
 circle.SetCoordinates(45, 0, 0)
 
@@ -190,9 +190,9 @@ plot.SetLineColor(vi.MakeColor(0,0,255))
 
 for i in range(anncount):
     graph2.RemoveAnnotation("a3")
-arrowannotation = graph2.AddAnnotation("a3")
+arrowannotation = graph2.NewAnnotation("a3")
 arrowannotation.SetCaption("Data Comment",1,1)
 arrowannotation.SetCaptionLocation(50,7)
 arrowannotation.SetCaptionColor(vi.MakeColor(0, 0, 0))
-arrowannotation.SetCaptionBorder(vi.PLineType.LineType_Solid, vi.MakeColor(255, 0, 0),2, 10)
+arrowannotation.SetCaptionBorder(vi.LineType.LineType_Solid, vi.MakeColor(255, 0, 0),2, 10)
 arrowannotation.SetArrowLineColor(vi.MakeColor(255, 0, 0))

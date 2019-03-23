@@ -1,6 +1,3 @@
-# from https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
-#to downalod rcnn_ssdlite_mobile.pb, rcnn_resnet50.pb, mask_rcnn_inceptionv2.pb
-
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function

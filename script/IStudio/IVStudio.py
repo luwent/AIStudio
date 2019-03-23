@@ -6,6 +6,9 @@
 
 
 import numpy as np
+import os, sys
+moduleDir =os.path.abspath(os.path.realpath(os.path.dirname(__file__)) + os.sep + "../../binary")
+sys.path.append(moduleDir)
 
 
 
@@ -100,1704 +103,10 @@ except __builtin__.Exception:
         pass
     _newclass = 0
 
-class SwigPyIterator(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, SwigPyIterator, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, SwigPyIterator, name)
 
-    def __init__(self, *args, **kwargs):
-        raise AttributeError("No constructor defined - class is abstract")
-    __repr__ = _swig_repr
-    __swig_destroy__ = _IVStudio.delete_SwigPyIterator
-    __del__ = lambda self: None
-
-    def value(self):
-        return _IVStudio.SwigPyIterator_value(self)
-
-    def incr(self, n=1):
-        return _IVStudio.SwigPyIterator_incr(self, n)
-
-    def decr(self, n=1):
-        return _IVStudio.SwigPyIterator_decr(self, n)
-
-    def distance(self, x):
-        return _IVStudio.SwigPyIterator_distance(self, x)
-
-    def equal(self, x):
-        return _IVStudio.SwigPyIterator_equal(self, x)
-
-    def copy(self):
-        return _IVStudio.SwigPyIterator_copy(self)
-
-    def next(self):
-        return _IVStudio.SwigPyIterator_next(self)
-
-    def __next__(self):
-        return _IVStudio.SwigPyIterator___next__(self)
-
-    def previous(self):
-        return _IVStudio.SwigPyIterator_previous(self)
-
-    def advance(self, n):
-        return _IVStudio.SwigPyIterator_advance(self, n)
-
-    def __eq__(self, x):
-        return _IVStudio.SwigPyIterator___eq__(self, x)
-
-    def __ne__(self, x):
-        return _IVStudio.SwigPyIterator___ne__(self, x)
-
-    def __iadd__(self, n):
-        return _IVStudio.SwigPyIterator___iadd__(self, n)
-
-    def __isub__(self, n):
-        return _IVStudio.SwigPyIterator___isub__(self, n)
-
-    def __add__(self, n):
-        return _IVStudio.SwigPyIterator___add__(self, n)
-
-    def __sub__(self, *args):
-        return _IVStudio.SwigPyIterator___sub__(self, *args)
-    def __iter__(self):
-        return self
-SwigPyIterator_swigregister = _IVStudio.SwigPyIterator_swigregister
-SwigPyIterator_swigregister(SwigPyIterator)
-
-class ComplexVector(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, ComplexVector, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, ComplexVector, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _IVStudio.ComplexVector_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _IVStudio.ComplexVector___nonzero__(self)
-
-    def __bool__(self):
-        return _IVStudio.ComplexVector___bool__(self)
-
-    def __len__(self):
-        return _IVStudio.ComplexVector___len__(self)
-
-    def __getslice__(self, i, j):
-        return _IVStudio.ComplexVector___getslice__(self, i, j)
-
-    def __setslice__(self, *args):
-        return _IVStudio.ComplexVector___setslice__(self, *args)
-
-    def __delslice__(self, i, j):
-        return _IVStudio.ComplexVector___delslice__(self, i, j)
-
-    def __delitem__(self, *args):
-        return _IVStudio.ComplexVector___delitem__(self, *args)
-
-    def __getitem__(self, *args):
-        return _IVStudio.ComplexVector___getitem__(self, *args)
-
-    def __setitem__(self, *args):
-        return _IVStudio.ComplexVector___setitem__(self, *args)
-
-    def pop(self):
-        return _IVStudio.ComplexVector_pop(self)
-
-    def append(self, x):
-        return _IVStudio.ComplexVector_append(self, x)
-
-    def empty(self):
-        return _IVStudio.ComplexVector_empty(self)
-
-    def size(self):
-        return _IVStudio.ComplexVector_size(self)
-
-    def swap(self, v):
-        return _IVStudio.ComplexVector_swap(self, v)
-
-    def begin(self):
-        return _IVStudio.ComplexVector_begin(self)
-
-    def end(self):
-        return _IVStudio.ComplexVector_end(self)
-
-    def rbegin(self):
-        return _IVStudio.ComplexVector_rbegin(self)
-
-    def rend(self):
-        return _IVStudio.ComplexVector_rend(self)
-
-    def clear(self):
-        return _IVStudio.ComplexVector_clear(self)
-
-    def get_allocator(self):
-        return _IVStudio.ComplexVector_get_allocator(self)
-
-    def pop_back(self):
-        return _IVStudio.ComplexVector_pop_back(self)
-
-    def erase(self, *args):
-        return _IVStudio.ComplexVector_erase(self, *args)
-
-    def __init__(self, *args):
-        this = _IVStudio.new_ComplexVector(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-
-    def push_back(self, x):
-        return _IVStudio.ComplexVector_push_back(self, x)
-
-    def front(self):
-        return _IVStudio.ComplexVector_front(self)
-
-    def back(self):
-        return _IVStudio.ComplexVector_back(self)
-
-    def assign(self, n, x):
-        return _IVStudio.ComplexVector_assign(self, n, x)
-
-    def resize(self, *args):
-        return _IVStudio.ComplexVector_resize(self, *args)
-
-    def insert(self, *args):
-        return _IVStudio.ComplexVector_insert(self, *args)
-
-    def reserve(self, n):
-        return _IVStudio.ComplexVector_reserve(self, n)
-
-    def capacity(self):
-        return _IVStudio.ComplexVector_capacity(self)
-    __swig_destroy__ = _IVStudio.delete_ComplexVector
-    __del__ = lambda self: None
-ComplexVector_swigregister = _IVStudio.ComplexVector_swigregister
-ComplexVector_swigregister(ComplexVector)
-
-class ShortVector(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, ShortVector, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, ShortVector, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _IVStudio.ShortVector_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _IVStudio.ShortVector___nonzero__(self)
-
-    def __bool__(self):
-        return _IVStudio.ShortVector___bool__(self)
-
-    def __len__(self):
-        return _IVStudio.ShortVector___len__(self)
-
-    def __getslice__(self, i, j):
-        return _IVStudio.ShortVector___getslice__(self, i, j)
-
-    def __setslice__(self, *args):
-        return _IVStudio.ShortVector___setslice__(self, *args)
-
-    def __delslice__(self, i, j):
-        return _IVStudio.ShortVector___delslice__(self, i, j)
-
-    def __delitem__(self, *args):
-        return _IVStudio.ShortVector___delitem__(self, *args)
-
-    def __getitem__(self, *args):
-        return _IVStudio.ShortVector___getitem__(self, *args)
-
-    def __setitem__(self, *args):
-        return _IVStudio.ShortVector___setitem__(self, *args)
-
-    def pop(self):
-        return _IVStudio.ShortVector_pop(self)
-
-    def append(self, x):
-        return _IVStudio.ShortVector_append(self, x)
-
-    def empty(self):
-        return _IVStudio.ShortVector_empty(self)
-
-    def size(self):
-        return _IVStudio.ShortVector_size(self)
-
-    def swap(self, v):
-        return _IVStudio.ShortVector_swap(self, v)
-
-    def begin(self):
-        return _IVStudio.ShortVector_begin(self)
-
-    def end(self):
-        return _IVStudio.ShortVector_end(self)
-
-    def rbegin(self):
-        return _IVStudio.ShortVector_rbegin(self)
-
-    def rend(self):
-        return _IVStudio.ShortVector_rend(self)
-
-    def clear(self):
-        return _IVStudio.ShortVector_clear(self)
-
-    def get_allocator(self):
-        return _IVStudio.ShortVector_get_allocator(self)
-
-    def pop_back(self):
-        return _IVStudio.ShortVector_pop_back(self)
-
-    def erase(self, *args):
-        return _IVStudio.ShortVector_erase(self, *args)
-
-    def __init__(self, *args):
-        this = _IVStudio.new_ShortVector(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-
-    def push_back(self, x):
-        return _IVStudio.ShortVector_push_back(self, x)
-
-    def front(self):
-        return _IVStudio.ShortVector_front(self)
-
-    def back(self):
-        return _IVStudio.ShortVector_back(self)
-
-    def assign(self, n, x):
-        return _IVStudio.ShortVector_assign(self, n, x)
-
-    def resize(self, *args):
-        return _IVStudio.ShortVector_resize(self, *args)
-
-    def insert(self, *args):
-        return _IVStudio.ShortVector_insert(self, *args)
-
-    def reserve(self, n):
-        return _IVStudio.ShortVector_reserve(self, n)
-
-    def capacity(self):
-        return _IVStudio.ShortVector_capacity(self)
-    __swig_destroy__ = _IVStudio.delete_ShortVector
-    __del__ = lambda self: None
-ShortVector_swigregister = _IVStudio.ShortVector_swigregister
-ShortVector_swigregister(ShortVector)
-
-class IntVector(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, IntVector, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, IntVector, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _IVStudio.IntVector_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _IVStudio.IntVector___nonzero__(self)
-
-    def __bool__(self):
-        return _IVStudio.IntVector___bool__(self)
-
-    def __len__(self):
-        return _IVStudio.IntVector___len__(self)
-
-    def __getslice__(self, i, j):
-        return _IVStudio.IntVector___getslice__(self, i, j)
-
-    def __setslice__(self, *args):
-        return _IVStudio.IntVector___setslice__(self, *args)
-
-    def __delslice__(self, i, j):
-        return _IVStudio.IntVector___delslice__(self, i, j)
-
-    def __delitem__(self, *args):
-        return _IVStudio.IntVector___delitem__(self, *args)
-
-    def __getitem__(self, *args):
-        return _IVStudio.IntVector___getitem__(self, *args)
-
-    def __setitem__(self, *args):
-        return _IVStudio.IntVector___setitem__(self, *args)
-
-    def pop(self):
-        return _IVStudio.IntVector_pop(self)
-
-    def append(self, x):
-        return _IVStudio.IntVector_append(self, x)
-
-    def empty(self):
-        return _IVStudio.IntVector_empty(self)
-
-    def size(self):
-        return _IVStudio.IntVector_size(self)
-
-    def swap(self, v):
-        return _IVStudio.IntVector_swap(self, v)
-
-    def begin(self):
-        return _IVStudio.IntVector_begin(self)
-
-    def end(self):
-        return _IVStudio.IntVector_end(self)
-
-    def rbegin(self):
-        return _IVStudio.IntVector_rbegin(self)
-
-    def rend(self):
-        return _IVStudio.IntVector_rend(self)
-
-    def clear(self):
-        return _IVStudio.IntVector_clear(self)
-
-    def get_allocator(self):
-        return _IVStudio.IntVector_get_allocator(self)
-
-    def pop_back(self):
-        return _IVStudio.IntVector_pop_back(self)
-
-    def erase(self, *args):
-        return _IVStudio.IntVector_erase(self, *args)
-
-    def __init__(self, *args):
-        this = _IVStudio.new_IntVector(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-
-    def push_back(self, x):
-        return _IVStudio.IntVector_push_back(self, x)
-
-    def front(self):
-        return _IVStudio.IntVector_front(self)
-
-    def back(self):
-        return _IVStudio.IntVector_back(self)
-
-    def assign(self, n, x):
-        return _IVStudio.IntVector_assign(self, n, x)
-
-    def resize(self, *args):
-        return _IVStudio.IntVector_resize(self, *args)
-
-    def insert(self, *args):
-        return _IVStudio.IntVector_insert(self, *args)
-
-    def reserve(self, n):
-        return _IVStudio.IntVector_reserve(self, n)
-
-    def capacity(self):
-        return _IVStudio.IntVector_capacity(self)
-    __swig_destroy__ = _IVStudio.delete_IntVector
-    __del__ = lambda self: None
-IntVector_swigregister = _IVStudio.IntVector_swigregister
-IntVector_swigregister(IntVector)
-
-class FloatVector(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, FloatVector, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, FloatVector, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _IVStudio.FloatVector_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _IVStudio.FloatVector___nonzero__(self)
-
-    def __bool__(self):
-        return _IVStudio.FloatVector___bool__(self)
-
-    def __len__(self):
-        return _IVStudio.FloatVector___len__(self)
-
-    def __getslice__(self, i, j):
-        return _IVStudio.FloatVector___getslice__(self, i, j)
-
-    def __setslice__(self, *args):
-        return _IVStudio.FloatVector___setslice__(self, *args)
-
-    def __delslice__(self, i, j):
-        return _IVStudio.FloatVector___delslice__(self, i, j)
-
-    def __delitem__(self, *args):
-        return _IVStudio.FloatVector___delitem__(self, *args)
-
-    def __getitem__(self, *args):
-        return _IVStudio.FloatVector___getitem__(self, *args)
-
-    def __setitem__(self, *args):
-        return _IVStudio.FloatVector___setitem__(self, *args)
-
-    def pop(self):
-        return _IVStudio.FloatVector_pop(self)
-
-    def append(self, x):
-        return _IVStudio.FloatVector_append(self, x)
-
-    def empty(self):
-        return _IVStudio.FloatVector_empty(self)
-
-    def size(self):
-        return _IVStudio.FloatVector_size(self)
-
-    def swap(self, v):
-        return _IVStudio.FloatVector_swap(self, v)
-
-    def begin(self):
-        return _IVStudio.FloatVector_begin(self)
-
-    def end(self):
-        return _IVStudio.FloatVector_end(self)
-
-    def rbegin(self):
-        return _IVStudio.FloatVector_rbegin(self)
-
-    def rend(self):
-        return _IVStudio.FloatVector_rend(self)
-
-    def clear(self):
-        return _IVStudio.FloatVector_clear(self)
-
-    def get_allocator(self):
-        return _IVStudio.FloatVector_get_allocator(self)
-
-    def pop_back(self):
-        return _IVStudio.FloatVector_pop_back(self)
-
-    def erase(self, *args):
-        return _IVStudio.FloatVector_erase(self, *args)
-
-    def __init__(self, *args):
-        this = _IVStudio.new_FloatVector(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-
-    def push_back(self, x):
-        return _IVStudio.FloatVector_push_back(self, x)
-
-    def front(self):
-        return _IVStudio.FloatVector_front(self)
-
-    def back(self):
-        return _IVStudio.FloatVector_back(self)
-
-    def assign(self, n, x):
-        return _IVStudio.FloatVector_assign(self, n, x)
-
-    def resize(self, *args):
-        return _IVStudio.FloatVector_resize(self, *args)
-
-    def insert(self, *args):
-        return _IVStudio.FloatVector_insert(self, *args)
-
-    def reserve(self, n):
-        return _IVStudio.FloatVector_reserve(self, n)
-
-    def capacity(self):
-        return _IVStudio.FloatVector_capacity(self)
-    __swig_destroy__ = _IVStudio.delete_FloatVector
-    __del__ = lambda self: None
-FloatVector_swigregister = _IVStudio.FloatVector_swigregister
-FloatVector_swigregister(FloatVector)
-
-class DoubleVector(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, DoubleVector, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, DoubleVector, name)
-    __repr__ = _swig_repr
-
-    def iterator(self):
-        return _IVStudio.DoubleVector_iterator(self)
-    def __iter__(self):
-        return self.iterator()
-
-    def __nonzero__(self):
-        return _IVStudio.DoubleVector___nonzero__(self)
-
-    def __bool__(self):
-        return _IVStudio.DoubleVector___bool__(self)
-
-    def __len__(self):
-        return _IVStudio.DoubleVector___len__(self)
-
-    def __getslice__(self, i, j):
-        return _IVStudio.DoubleVector___getslice__(self, i, j)
-
-    def __setslice__(self, *args):
-        return _IVStudio.DoubleVector___setslice__(self, *args)
-
-    def __delslice__(self, i, j):
-        return _IVStudio.DoubleVector___delslice__(self, i, j)
-
-    def __delitem__(self, *args):
-        return _IVStudio.DoubleVector___delitem__(self, *args)
-
-    def __getitem__(self, *args):
-        return _IVStudio.DoubleVector___getitem__(self, *args)
-
-    def __setitem__(self, *args):
-        return _IVStudio.DoubleVector___setitem__(self, *args)
-
-    def pop(self):
-        return _IVStudio.DoubleVector_pop(self)
-
-    def append(self, x):
-        return _IVStudio.DoubleVector_append(self, x)
-
-    def empty(self):
-        return _IVStudio.DoubleVector_empty(self)
-
-    def size(self):
-        return _IVStudio.DoubleVector_size(self)
-
-    def swap(self, v):
-        return _IVStudio.DoubleVector_swap(self, v)
-
-    def begin(self):
-        return _IVStudio.DoubleVector_begin(self)
-
-    def end(self):
-        return _IVStudio.DoubleVector_end(self)
-
-    def rbegin(self):
-        return _IVStudio.DoubleVector_rbegin(self)
-
-    def rend(self):
-        return _IVStudio.DoubleVector_rend(self)
-
-    def clear(self):
-        return _IVStudio.DoubleVector_clear(self)
-
-    def get_allocator(self):
-        return _IVStudio.DoubleVector_get_allocator(self)
-
-    def pop_back(self):
-        return _IVStudio.DoubleVector_pop_back(self)
-
-    def erase(self, *args):
-        return _IVStudio.DoubleVector_erase(self, *args)
-
-    def __init__(self, *args):
-        this = _IVStudio.new_DoubleVector(*args)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-
-    def push_back(self, x):
-        return _IVStudio.DoubleVector_push_back(self, x)
-
-    def front(self):
-        return _IVStudio.DoubleVector_front(self)
-
-    def back(self):
-        return _IVStudio.DoubleVector_back(self)
-
-    def assign(self, n, x):
-        return _IVStudio.DoubleVector_assign(self, n, x)
-
-    def resize(self, *args):
-        return _IVStudio.DoubleVector_resize(self, *args)
-
-    def insert(self, *args):
-        return _IVStudio.DoubleVector_insert(self, *args)
-
-    def reserve(self, n):
-        return _IVStudio.DoubleVector_reserve(self, n)
-
-    def capacity(self):
-        return _IVStudio.DoubleVector_capacity(self)
-    __swig_destroy__ = _IVStudio.delete_DoubleVector
-    __del__ = lambda self: None
-DoubleVector_swigregister = _IVStudio.DoubleVector_swigregister
-DoubleVector_swigregister(DoubleVector)
-
-class PLocationSide(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PLocationSide, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PLocationSide, name)
-    __repr__ = _swig_repr
-    Location_Left = _IVStudio.PLocationSide_Location_Left
-    Location_Right = _IVStudio.PLocationSide_Location_Right
-    Location_Top = _IVStudio.PLocationSide_Location_Top
-    Location_Bottom = _IVStudio.PLocationSide_Location_Bottom
-    Location_TopLeft = _IVStudio.PLocationSide_Location_TopLeft
-    Location_TopRight = _IVStudio.PLocationSide_Location_TopRight
-    Location_BottomLeft = _IVStudio.PLocationSide_Location_BottomLeft
-    Location_BottomRight = _IVStudio.PLocationSide_Location_BottomRight
-    Location_Center = _IVStudio.PLocationSide_Location_Center
-    Location_TopCenter = _IVStudio.PLocationSide_Location_TopCenter
-    Location_BottomCenter = _IVStudio.PLocationSide_Location_BottomCenter
-    LocationSide_Left = _IVStudio.PLocationSide_LocationSide_Left
-    LocationSide_Right = _IVStudio.PLocationSide_LocationSide_Right
-    LocationSide_Top = _IVStudio.PLocationSide_LocationSide_Top
-    LocationSide_Bottom = _IVStudio.PLocationSide_LocationSide_Bottom
-    LocationSide_All = _IVStudio.PLocationSide_LocationSide_All
-
-    def __init__(self):
-        this = _IVStudio.new_PLocationSide()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PLocationSide
-    __del__ = lambda self: None
-PLocationSide_swigregister = _IVStudio.PLocationSide_swigregister
-PLocationSide_swigregister(PLocationSide)
-
-class PFillType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PFillType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PFillType, name)
-    __repr__ = _swig_repr
-    FillType_None = _IVStudio.PFillType_FillType_None
-    FillType_Solid = _IVStudio.PFillType_FillType_Solid
-    FillType_Texture = _IVStudio.PFillType_FillType_Texture
-    FillType_Hatch = _IVStudio.PFillType_FillType_Hatch
-    FillType_HoriGradient = _IVStudio.PFillType_FillType_HoriGradient
-    FillType_VertGradient = _IVStudio.PFillType_FillType_VertGradient
-    FillType_FDiagonalGradient = _IVStudio.PFillType_FillType_FDiagonalGradient
-    FillType_BDiagonalGradient = _IVStudio.PFillType_FillType_BDiagonalGradient
-    FillType_RadialGradient = _IVStudio.PFillType_FillType_RadialGradient
-    FillType_PathGradient = _IVStudio.PFillType_FillType_PathGradient
-
-    def __init__(self):
-        this = _IVStudio.new_PFillType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PFillType
-    __del__ = lambda self: None
-PFillType_swigregister = _IVStudio.PFillType_swigregister
-PFillType_swigregister(PFillType)
-
-class PLineType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PLineType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PLineType, name)
-    __repr__ = _swig_repr
-    LineType_None = _IVStudio.PLineType_LineType_None
-    LineType_Solid = _IVStudio.PLineType_LineType_Solid
-    LineType_Dash = _IVStudio.PLineType_LineType_Dash
-    LineType_Dot = _IVStudio.PLineType_LineType_Dot
-    LineType_DashDot = _IVStudio.PLineType_LineType_DashDot
-    LineType_DashDotDot = _IVStudio.PLineType_LineType_DashDotDot
-    LineType_Custom = _IVStudio.PLineType_LineType_Custom
-    LineType_3DBeam = _IVStudio.PLineType_LineType_3DBeam
-    LineType_3DCylinder = _IVStudio.PLineType_LineType_3DCylinder
-
-    def __init__(self):
-        this = _IVStudio.new_PLineType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PLineType
-    __del__ = lambda self: None
-PLineType_swigregister = _IVStudio.PLineType_swigregister
-PLineType_swigregister(PLineType)
-
-class PLineCapType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PLineCapType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PLineCapType, name)
-    __repr__ = _swig_repr
-    LineCapType_Butt = _IVStudio.PLineCapType_LineCapType_Butt
-    LineCapType_Square = _IVStudio.PLineCapType_LineCapType_Square
-    LineCapType_Round = _IVStudio.PLineCapType_LineCapType_Round
-    LineCapType_Triangle = _IVStudio.PLineCapType_LineCapType_Triangle
-    LineCapType_Arrow = _IVStudio.PLineCapType_LineCapType_Arrow
-    LineCapType_Diamond = _IVStudio.PLineCapType_LineCapType_Diamond
-    LineCapType_Circle = _IVStudio.PLineCapType_LineCapType_Circle
-    LineCapType_Custom = _IVStudio.PLineCapType_LineCapType_Custom
-    LineCapType_3DBox = _IVStudio.PLineCapType_LineCapType_3DBox
-    LineCapType_3DSphere = _IVStudio.PLineCapType_LineCapType_3DSphere
-    LineCapType_3DCone = _IVStudio.PLineCapType_LineCapType_3DCone
-    LineCapType_3DTetrahedron = _IVStudio.PLineCapType_LineCapType_3DTetrahedron
-
-    def __init__(self):
-        this = _IVStudio.new_PLineCapType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PLineCapType
-    __del__ = lambda self: None
-PLineCapType_swigregister = _IVStudio.PLineCapType_swigregister
-PLineCapType_swigregister(PLineCapType)
-
-class PIconType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PIconType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PIconType, name)
-    __repr__ = _swig_repr
-    Icon_None = _IVStudio.PIconType_Icon_None
-    Icon_DropDown = _IVStudio.PIconType_Icon_DropDown
-    Icon_DropUp = _IVStudio.PIconType_Icon_DropUp
-    Icon_DropDown2 = _IVStudio.PIconType_Icon_DropDown2
-    Icon_PopDown = _IVStudio.PIconType_Icon_PopDown
-    Icon_ExpanDown = _IVStudio.PIconType_Icon_ExpanDown
-    Icon_ArrowDown = _IVStudio.PIconType_Icon_ArrowDown
-    Icon_ArrowUp = _IVStudio.PIconType_Icon_ArrowUp
-    Icon_ArrowLeft = _IVStudio.PIconType_Icon_ArrowLeft
-    Icon_ArrowRight = _IVStudio.PIconType_Icon_ArrowRight
-    Icon_DropLeft = _IVStudio.PIconType_Icon_DropLeft
-    Icon_DropRight = _IVStudio.PIconType_Icon_DropRight
-    Icon_DropLeftStop = _IVStudio.PIconType_Icon_DropLeftStop
-    Icon_DropRightStop = _IVStudio.PIconType_Icon_DropRightStop
-    Icon_DropUpStop = _IVStudio.PIconType_Icon_DropUpStop
-    Icon_DropDownStop = _IVStudio.PIconType_Icon_DropDownStop
-    Icon_RectCross = _IVStudio.PIconType_Icon_RectCross
-    Icon_CrossHair = _IVStudio.PIconType_Icon_CrossHair
-    Icon_SolidCircle = _IVStudio.PIconType_Icon_SolidCircle
-    Icon_MinBar = _IVStudio.PIconType_Icon_MinBar
-    Icon_Hide = _IVStudio.PIconType_Icon_Hide
-    Icon_Show = _IVStudio.PIconType_Icon_Show
-    Icon_Cross = _IVStudio.PIconType_Icon_Cross
-    Icon_Correct = _IVStudio.PIconType_Icon_Correct
-    Icon_Close = _IVStudio.PIconType_Icon_Close
-    Icon_Star4 = _IVStudio.PIconType_Icon_Star4
-    Icon_Star5 = _IVStudio.PIconType_Icon_Star5
-    Icon_Star6 = _IVStudio.PIconType_Icon_Star6
-    Icon_CStar4 = _IVStudio.PIconType_Icon_CStar4
-    Icon_CStar5 = _IVStudio.PIconType_Icon_CStar5
-    Icon_CStar6 = _IVStudio.PIconType_Icon_CStar6
-    Icon_Question = _IVStudio.PIconType_Icon_Question
-    Icon_CQuestion = _IVStudio.PIconType_Icon_CQuestion
-    Icon_RectEmpty = _IVStudio.PIconType_Icon_RectEmpty
-    Icon_RectSolid = _IVStudio.PIconType_Icon_RectSolid
-    Icon_RectDot = _IVStudio.PIconType_Icon_RectDot
-    Icon_RectCross2 = _IVStudio.PIconType_Icon_RectCross2
-    Icon_RectPlus = _IVStudio.PIconType_Icon_RectPlus
-    Icon_RectHLine = _IVStudio.PIconType_Icon_RectHLine
-    Icon_RectVLine = _IVStudio.PIconType_Icon_RectVLine
-    Icon_RectHLFill = _IVStudio.PIconType_Icon_RectHLFill
-    Icon_RectHRFill = _IVStudio.PIconType_Icon_RectHRFill
-    Icon_RectVTFill = _IVStudio.PIconType_Icon_RectVTFill
-    Icon_RectVBFill = _IVStudio.PIconType_Icon_RectVBFill
-    Icon_CircleEmpty = _IVStudio.PIconType_Icon_CircleEmpty
-    Icon_CircleSolid = _IVStudio.PIconType_Icon_CircleSolid
-    Icon_CircleDot = _IVStudio.PIconType_Icon_CircleDot
-    Icon_CircleCross = _IVStudio.PIconType_Icon_CircleCross
-    Icon_CirclePlus = _IVStudio.PIconType_Icon_CirclePlus
-    Icon_CircleHLine = _IVStudio.PIconType_Icon_CircleHLine
-    Icon_CircleVLine = _IVStudio.PIconType_Icon_CircleVLine
-    Icon_CircleHLFill = _IVStudio.PIconType_Icon_CircleHLFill
-    Icon_CircleHRFill = _IVStudio.PIconType_Icon_CircleHRFill
-    Icon_CircleVTFill = _IVStudio.PIconType_Icon_CircleVTFill
-    Icon_CircleVBFill = _IVStudio.PIconType_Icon_CircleVBFill
-    Icon_UTriangleEmpty = _IVStudio.PIconType_Icon_UTriangleEmpty
-    Icon_UTriangleSolid = _IVStudio.PIconType_Icon_UTriangleSolid
-    Icon_UTriangleDot = _IVStudio.PIconType_Icon_UTriangleDot
-    Icon_UTriangleCross = _IVStudio.PIconType_Icon_UTriangleCross
-    Icon_UTrianglePlus = _IVStudio.PIconType_Icon_UTrianglePlus
-    Icon_UTriangleHLine = _IVStudio.PIconType_Icon_UTriangleHLine
-    Icon_UTriangleVLine = _IVStudio.PIconType_Icon_UTriangleVLine
-    Icon_UTriangleHLFill = _IVStudio.PIconType_Icon_UTriangleHLFill
-    Icon_UTriangleHRFill = _IVStudio.PIconType_Icon_UTriangleHRFill
-    Icon_UTriangleVTFill = _IVStudio.PIconType_Icon_UTriangleVTFill
-    Icon_UTriangleVBFill = _IVStudio.PIconType_Icon_UTriangleVBFill
-    Icon_DTriangleEmpty = _IVStudio.PIconType_Icon_DTriangleEmpty
-    Icon_DTriangleSolid = _IVStudio.PIconType_Icon_DTriangleSolid
-    Icon_DTriangleDot = _IVStudio.PIconType_Icon_DTriangleDot
-    Icon_DTriangleCross = _IVStudio.PIconType_Icon_DTriangleCross
-    Icon_DTrianglePlus = _IVStudio.PIconType_Icon_DTrianglePlus
-    Icon_DTriangleHLine = _IVStudio.PIconType_Icon_DTriangleHLine
-    Icon_DTriangleVLine = _IVStudio.PIconType_Icon_DTriangleVLine
-    Icon_DTriangleHLFill = _IVStudio.PIconType_Icon_DTriangleHLFill
-    Icon_DTriangleHRFill = _IVStudio.PIconType_Icon_DTriangleHRFill
-    Icon_DTriangleVTFill = _IVStudio.PIconType_Icon_DTriangleVTFill
-    Icon_DTriangleVBFill = _IVStudio.PIconType_Icon_DTriangleVBFill
-    Icon_LTriangleEmpty = _IVStudio.PIconType_Icon_LTriangleEmpty
-    Icon_LTriangleSolid = _IVStudio.PIconType_Icon_LTriangleSolid
-    Icon_LTriangleDot = _IVStudio.PIconType_Icon_LTriangleDot
-    Icon_LTriangleCross = _IVStudio.PIconType_Icon_LTriangleCross
-    Icon_LTrianglePlus = _IVStudio.PIconType_Icon_LTrianglePlus
-    Icon_LTriangleHLine = _IVStudio.PIconType_Icon_LTriangleHLine
-    Icon_LTriangleVLine = _IVStudio.PIconType_Icon_LTriangleVLine
-    Icon_LTriangleHLFill = _IVStudio.PIconType_Icon_LTriangleHLFill
-    Icon_LTriangleHRFill = _IVStudio.PIconType_Icon_LTriangleHRFill
-    Icon_LTriangleVTFill = _IVStudio.PIconType_Icon_LTriangleVTFill
-    Icon_LTriangleVBFill = _IVStudio.PIconType_Icon_LTriangleVBFill
-    Icon_RTriangleEmpty = _IVStudio.PIconType_Icon_RTriangleEmpty
-    Icon_RTriangleSolid = _IVStudio.PIconType_Icon_RTriangleSolid
-    Icon_RTriangleDot = _IVStudio.PIconType_Icon_RTriangleDot
-    Icon_RTriangleCross = _IVStudio.PIconType_Icon_RTriangleCross
-    Icon_RTrianglePlus = _IVStudio.PIconType_Icon_RTrianglePlus
-    Icon_RTriangleHLine = _IVStudio.PIconType_Icon_RTriangleHLine
-    Icon_RTriangleVLine = _IVStudio.PIconType_Icon_RTriangleVLine
-    Icon_RTriangleHLFill = _IVStudio.PIconType_Icon_RTriangleHLFill
-    Icon_RTriangleHRFill = _IVStudio.PIconType_Icon_RTriangleHRFill
-    Icon_RTriangleVTFill = _IVStudio.PIconType_Icon_RTriangleVTFill
-    Icon_RTriangleVBFill = _IVStudio.PIconType_Icon_RTriangleVBFill
-    Icon_DiamondEmpty = _IVStudio.PIconType_Icon_DiamondEmpty
-    Icon_DiamondSolid = _IVStudio.PIconType_Icon_DiamondSolid
-    Icon_DiamondDot = _IVStudio.PIconType_Icon_DiamondDot
-    Icon_DiamondCross = _IVStudio.PIconType_Icon_DiamondCross
-    Icon_DiamondPlus = _IVStudio.PIconType_Icon_DiamondPlus
-    Icon_DiamondHLine = _IVStudio.PIconType_Icon_DiamondHLine
-    Icon_DiamondVLine = _IVStudio.PIconType_Icon_DiamondVLine
-    Icon_DiamondHLFill = _IVStudio.PIconType_Icon_DiamondHLFill
-    Icon_DiamondHRFill = _IVStudio.PIconType_Icon_DiamondHRFill
-    Icon_DiamondVTFill = _IVStudio.PIconType_Icon_DiamondVTFill
-    Icon_DiamondVBFill = _IVStudio.PIconType_Icon_DiamondVBFill
-    Icon_StarEmpty = _IVStudio.PIconType_Icon_StarEmpty
-    Icon_StarSolid = _IVStudio.PIconType_Icon_StarSolid
-    Icon_StarDot = _IVStudio.PIconType_Icon_StarDot
-    Icon_StarCross = _IVStudio.PIconType_Icon_StarCross
-    Icon_StarPlus = _IVStudio.PIconType_Icon_StarPlus
-    Icon_StarHLine = _IVStudio.PIconType_Icon_StarHLine
-    Icon_StarVLine = _IVStudio.PIconType_Icon_StarVLine
-    Icon_StarHLFill = _IVStudio.PIconType_Icon_StarHLFill
-    Icon_StarHRFill = _IVStudio.PIconType_Icon_StarHRFill
-    Icon_StarVTFill = _IVStudio.PIconType_Icon_StarVTFill
-    Icon_StarVBFill = _IVStudio.PIconType_Icon_StarVBFill
-    Icon_Poly5Empty = _IVStudio.PIconType_Icon_Poly5Empty
-    Icon_Poly5Solid = _IVStudio.PIconType_Icon_Poly5Solid
-    Icon_Poly5Dot = _IVStudio.PIconType_Icon_Poly5Dot
-    Icon_Poly5Cross = _IVStudio.PIconType_Icon_Poly5Cross
-    Icon_Poly5Plus = _IVStudio.PIconType_Icon_Poly5Plus
-    Icon_Poly5HLine = _IVStudio.PIconType_Icon_Poly5HLine
-    Icon_Poly5VLine = _IVStudio.PIconType_Icon_Poly5VLine
-    Icon_Poly5HLFill = _IVStudio.PIconType_Icon_Poly5HLFill
-    Icon_Poly5HRFill = _IVStudio.PIconType_Icon_Poly5HRFill
-    Icon_Poly5VTFill = _IVStudio.PIconType_Icon_Poly5VTFill
-    Icon_Poly5VBFill = _IVStudio.PIconType_Icon_Poly5VBFill
-    Icon_Poly6Empty = _IVStudio.PIconType_Icon_Poly6Empty
-    Icon_Poly6Solid = _IVStudio.PIconType_Icon_Poly6Solid
-    Icon_Poly6Dot = _IVStudio.PIconType_Icon_Poly6Dot
-    Icon_Poly6Cross = _IVStudio.PIconType_Icon_Poly6Cross
-    Icon_Poly6Plus = _IVStudio.PIconType_Icon_Poly6Plus
-    Icon_Poly6HLine = _IVStudio.PIconType_Icon_Poly6HLine
-    Icon_Poly6VLine = _IVStudio.PIconType_Icon_Poly6VLine
-    Icon_Poly6HLFill = _IVStudio.PIconType_Icon_Poly6HLFill
-    Icon_Poly6HRFill = _IVStudio.PIconType_Icon_Poly6HRFill
-    Icon_Poly6VTFill = _IVStudio.PIconType_Icon_Poly6VTFill
-    Icon_Poly6VBFill = _IVStudio.PIconType_Icon_Poly6VBFill
-    Icon_3DBox = _IVStudio.PIconType_Icon_3DBox
-    Icon_3DSphere = _IVStudio.PIconType_Icon_3DSphere
-    Icon_3DCone = _IVStudio.PIconType_Icon_3DCone
-    Icon_3DCylinder = _IVStudio.PIconType_Icon_3DCylinder
-    Icon_3DTorus = _IVStudio.PIconType_Icon_3DTorus
-    Icon_3DDodecahedron = _IVStudio.PIconType_Icon_3DDodecahedron
-    Icon_3DOctahedron = _IVStudio.PIconType_Icon_3DOctahedron
-    Icon_3DIcosahedron = _IVStudio.PIconType_Icon_3DIcosahedron
-    Icon_3DTetrahedron = _IVStudio.PIconType_Icon_3DTetrahedron
-    Icon_3DPie = _IVStudio.PIconType_Icon_3DPie
-
-    def __init__(self):
-        this = _IVStudio.new_PIconType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PIconType
-    __del__ = lambda self: None
-PIconType_swigregister = _IVStudio.PIconType_swigregister
-PIconType_swigregister(PIconType)
-
-class PGraphCategory(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PGraphCategory, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PGraphCategory, name)
-    __repr__ = _swig_repr
-    XY = _IVStudio.PGraphCategory_XY
-    Pie = _IVStudio.PGraphCategory_Pie
-    Bar = _IVStudio.PGraphCategory_Bar
-    Polar = _IVStudio.PGraphCategory_Polar
-    Ternary = _IVStudio.PGraphCategory_Ternary
-    Pie3D = _IVStudio.PGraphCategory_Pie3D
-    Bar3D = _IVStudio.PGraphCategory_Bar3D
-    Cylindrical = _IVStudio.PGraphCategory_Cylindrical
-
-    def __init__(self):
-        this = _IVStudio.new_PGraphCategory()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PGraphCategory
-    __del__ = lambda self: None
-PGraphCategory_swigregister = _IVStudio.PGraphCategory_swigregister
-PGraphCategory_swigregister(PGraphCategory)
-
-class PPlotStyle(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PPlotStyle, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PPlotStyle, name)
-    __repr__ = _swig_repr
-    XYCurve = _IVStudio.PPlotStyle_XYCurve
-    XYImage = _IVStudio.PPlotStyle_XYImage
-    XYContour = _IVStudio.PPlotStyle_XYContour
-    XYVector = _IVStudio.PPlotStyle_XYVector
-    XYBubble = _IVStudio.PPlotStyle_XYBubble
-    XYScroll = _IVStudio.PPlotStyle_XYScroll
-    XYZCurve = _IVStudio.PPlotStyle_XYZCurve
-    XYZContour = _IVStudio.PPlotStyle_XYZContour
-    XYZVector = _IVStudio.PPlotStyle_XYZVector
-    XYZBubble = _IVStudio.PPlotStyle_XYZBubble
-    XYZUV = _IVStudio.PPlotStyle_XYZUV
-    XYZSurface = _IVStudio.PPlotStyle_XYZSurface
-    XYZTriangulation = _IVStudio.PPlotStyle_XYZTriangulation
-    XYZ4DVolumn = _IVStudio.PPlotStyle_XYZ4DVolumn
-    BarVBar = _IVStudio.PPlotStyle_BarVBar
-    BarHBar = _IVStudio.PPlotStyle_BarHBar
-    BarCurve = _IVStudio.PPlotStyle_BarCurve
-    PieDoughnut = _IVStudio.PPlotStyle_PieDoughnut
-    PiePie = _IVStudio.PPlotStyle_PiePie
-    PieDoughnut3D = _IVStudio.PPlotStyle_PieDoughnut3D
-    PiePie3D = _IVStudio.PPlotStyle_PiePie3D
-    TernaryCurve = _IVStudio.PPlotStyle_TernaryCurve
-    TernaryImage = _IVStudio.PPlotStyle_TernaryImage
-    TernaryContour = _IVStudio.PPlotStyle_TernaryContour
-    PolarCurve = _IVStudio.PPlotStyle_PolarCurve
-    PolarImage = _IVStudio.PPlotStyle_PolarImage
-    PolarContour = _IVStudio.PPlotStyle_PolarContour
-    Polar3DCurve = _IVStudio.PPlotStyle_Polar3DCurve
-    Polar3DImage = _IVStudio.PPlotStyle_Polar3DImage
-    Polar3DContour = _IVStudio.PPlotStyle_Polar3DContour
-    Polar3DSurface = _IVStudio.PPlotStyle_Polar3DSurface
-    Polar4DVolumn = _IVStudio.PPlotStyle_Polar4DVolumn
-    Cylindrical3DCurve = _IVStudio.PPlotStyle_Cylindrical3DCurve
-    Cylindrical3DImage = _IVStudio.PPlotStyle_Cylindrical3DImage
-    Cylindrical3DContour = _IVStudio.PPlotStyle_Cylindrical3DContour
-    Cylindrical3DSurface = _IVStudio.PPlotStyle_Cylindrical3DSurface
-    Cylindrical4DVolumn = _IVStudio.PPlotStyle_Cylindrical4DVolumn
-
-    def __init__(self):
-        this = _IVStudio.new_PPlotStyle()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PPlotStyle
-    __del__ = lambda self: None
-PPlotStyle_swigregister = _IVStudio.PPlotStyle_swigregister
-PPlotStyle_swigregister(PPlotStyle)
-
-class PErrBarDir(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PErrBarDir, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PErrBarDir, name)
-    __repr__ = _swig_repr
-    IVErrBarDir_None = _IVStudio.PErrBarDir_IVErrBarDir_None
-    IVErrBarDir_YBoth = _IVStudio.PErrBarDir_IVErrBarDir_YBoth
-    IVErrBarDir_YPos = _IVStudio.PErrBarDir_IVErrBarDir_YPos
-    IVErrBarDir_YNeg = _IVStudio.PErrBarDir_IVErrBarDir_YNeg
-    IVErrBarDir_XBoth = _IVStudio.PErrBarDir_IVErrBarDir_XBoth
-    IVErrBarDir_XPos = _IVStudio.PErrBarDir_IVErrBarDir_XPos
-    IVErrBarDir_XNeg = _IVStudio.PErrBarDir_IVErrBarDir_XNeg
-    IVErrBarDir_XYBoth = _IVStudio.PErrBarDir_IVErrBarDir_XYBoth
-
-    def __init__(self):
-        this = _IVStudio.new_PErrBarDir()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PErrBarDir
-    __del__ = lambda self: None
-PErrBarDir_swigregister = _IVStudio.PErrBarDir_swigregister
-PErrBarDir_swigregister(PErrBarDir)
-
-class PErrBarSource(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PErrBarSource, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PErrBarSource, name)
-    __repr__ = _swig_repr
-    IVErrBarSource_Per = _IVStudio.PErrBarSource_IVErrBarSource_Per
-    IVErrBarSource_Fix = _IVStudio.PErrBarSource_IVErrBarSource_Fix
-    IVErrBarSource_SE = _IVStudio.PErrBarSource_IVErrBarSource_SE
-    IVErrBarSource_STD = _IVStudio.PErrBarSource_IVErrBarSource_STD
-    IVErrBarSource_User = _IVStudio.PErrBarSource_IVErrBarSource_User
-
-    def __init__(self):
-        this = _IVStudio.new_PErrBarSource()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PErrBarSource
-    __del__ = lambda self: None
-PErrBarSource_swigregister = _IVStudio.PErrBarSource_swigregister
-PErrBarSource_swigregister(PErrBarSource)
-
-class PErrBarDis(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PErrBarDis, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PErrBarDis, name)
-    __repr__ = _swig_repr
-    IVErrBarDis_Cap = _IVStudio.PErrBarDis_IVErrBarDis_Cap
-    IVErrBarDis_NoCap = _IVStudio.PErrBarDis_IVErrBarDis_NoCap
-
-    def __init__(self):
-        this = _IVStudio.new_PErrBarDis()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PErrBarDis
-    __del__ = lambda self: None
-PErrBarDis_swigregister = _IVStudio.PErrBarDis_swigregister
-PErrBarDis_swigregister(PErrBarDis)
-
-class PPlotOptions(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PPlotOptions, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PPlotOptions, name)
-    __repr__ = _swig_repr
-    Fill = _IVStudio.PPlotOptions_Fill
-    CircularPie = _IVStudio.PPlotOptions_CircularPie
-    PercentLabel = _IVStudio.PPlotOptions_PercentLabel
-    LineLabel = _IVStudio.PPlotOptions_LineLabel
-    ProjectXY = _IVStudio.PPlotOptions_ProjectXY
-    ProjectXZ = _IVStudio.PPlotOptions_ProjectXZ
-    ProjectYZ = _IVStudio.PPlotOptions_ProjectYZ
-    Wireframe = _IVStudio.PPlotOptions_Wireframe
-
-    def __init__(self):
-        this = _IVStudio.new_PPlotOptions()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PPlotOptions
-    __del__ = lambda self: None
-PPlotOptions_swigregister = _IVStudio.PPlotOptions_swigregister
-PPlotOptions_swigregister(PPlotOptions)
-
-class PAxisOptions(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PAxisOptions, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PAxisOptions, name)
-    __repr__ = _swig_repr
-    ShowTitle = _IVStudio.PAxisOptions_ShowTitle
-    LogScale = _IVStudio.PAxisOptions_LogScale
-    Reversed = _IVStudio.PAxisOptions_Reversed
-    AutoScale = _IVStudio.PAxisOptions_AutoScale
-    AxisLine = _IVStudio.PAxisOptions_AxisLine
-    TickLabel = _IVStudio.PAxisOptions_TickLabel
-    MajorTick = _IVStudio.PAxisOptions_MajorTick
-    MinorTick = _IVStudio.PAxisOptions_MinorTick
-    InsideTick = _IVStudio.PAxisOptions_InsideTick
-    OutsideTick = _IVStudio.PAxisOptions_OutsideTick
-    AllsideTick = _IVStudio.PAxisOptions_AllsideTick
-    MajorGrid = _IVStudio.PAxisOptions_MajorGrid
-    MinorGrid = _IVStudio.PAxisOptions_MinorGrid
-    ShowTick = _IVStudio.PAxisOptions_ShowTick
-    ShowPeerAxisLine = _IVStudio.PAxisOptions_ShowPeerAxisLine
-    ShowPeerTick = _IVStudio.PAxisOptions_ShowPeerTick
-    ShowPeerLabel = _IVStudio.PAxisOptions_ShowPeerLabel
-    AutoTickNum = _IVStudio.PAxisOptions_AutoTickNum
-    FixTickNum = _IVStudio.PAxisOptions_FixTickNum
-    Discrete = _IVStudio.PAxisOptions_Discrete
-    Break = _IVStudio.PAxisOptions_Break
-    BreakLog = _IVStudio.PAxisOptions_BreakLog
-    BreakAutoTickNum = _IVStudio.PAxisOptions_BreakAutoTickNum
-    AutoScroll = _IVStudio.PAxisOptions_AutoScroll
-    FixPadding = _IVStudio.PAxisOptions_FixPadding
-    ValuePairOnly = _IVStudio.PAxisOptions_ValuePairOnly
-
-    def __init__(self):
-        this = _IVStudio.new_PAxisOptions()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PAxisOptions
-    __del__ = lambda self: None
-PAxisOptions_swigregister = _IVStudio.PAxisOptions_swigregister
-PAxisOptions_swigregister(PAxisOptions)
-
-class PAxisType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PAxisType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PAxisType, name)
-    __repr__ = _swig_repr
-    AxisY = _IVStudio.PAxisType_AxisY
-    AxisY1 = _IVStudio.PAxisType_AxisY1
-    AxisX = _IVStudio.PAxisType_AxisX
-    AxisX1 = _IVStudio.PAxisType_AxisX1
-    AxisZ = _IVStudio.PAxisType_AxisZ
-    AxisZ1 = _IVStudio.PAxisType_AxisZ1
-    AxisArc = _IVStudio.PAxisType_AxisArc
-    AxisRadius = _IVStudio.PAxisType_AxisRadius
-    AxisTernary1 = _IVStudio.PAxisType_AxisTernary1
-    AxisTernary2 = _IVStudio.PAxisType_AxisTernary2
-    AxisTernary3 = _IVStudio.PAxisType_AxisTernary3
-    AxisLeft3D = _IVStudio.PAxisType_AxisLeft3D
-    AxisBottom3D = _IVStudio.PAxisType_AxisBottom3D
-    AxisLongitude = _IVStudio.PAxisType_AxisLongitude
-    AxisLatidute = _IVStudio.PAxisType_AxisLatidute
-    AxisPolarHeight = _IVStudio.PAxisType_AxisPolarHeight
-    AxisCylindricalHeight = _IVStudio.PAxisType_AxisCylindricalHeight
-
-    def __init__(self):
-        this = _IVStudio.new_PAxisType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PAxisType
-    __del__ = lambda self: None
-PAxisType_swigregister = _IVStudio.PAxisType_swigregister
-PAxisType_swigregister(PAxisType)
-
-class PValuePairOption(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PValuePairOption, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PValuePairOption, name)
-    __repr__ = _swig_repr
-    VPGridLine = _IVStudio.PValuePairOption_VPGridLine
-    VPMajorTick = _IVStudio.PValuePairOption_VPMajorTick
-    VPShowName = _IVStudio.PValuePairOption_VPShowName
-    VPShowValue = _IVStudio.PValuePairOption_VPShowValue
-
-    def __init__(self):
-        this = _IVStudio.new_PValuePairOption()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PValuePairOption
-    __del__ = lambda self: None
-PValuePairOption_swigregister = _IVStudio.PValuePairOption_swigregister
-PValuePairOption_swigregister(PValuePairOption)
-
-class PGraphObjSnapModes(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PGraphObjSnapModes, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PGraphObjSnapModes, name)
-    __repr__ = _swig_repr
-    SnapFloating = _IVStudio.PGraphObjSnapModes_SnapFloating
-    SnapNearestPoint = _IVStudio.PGraphObjSnapModes_SnapNearestPoint
-    SnapPointsOnPlot = _IVStudio.PGraphObjSnapModes_SnapPointsOnPlot
-    SnapNearestYForFixedX = _IVStudio.PGraphObjSnapModes_SnapNearestYForFixedX
-
-    def __init__(self):
-        this = _IVStudio.new_PGraphObjSnapModes()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PGraphObjSnapModes
-    __del__ = lambda self: None
-PGraphObjSnapModes_swigregister = _IVStudio.PGraphObjSnapModes_swigregister
-PGraphObjSnapModes_swigregister(PGraphObjSnapModes)
-
-class PCursorLineShape(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PCursorLineShape, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PCursorLineShape, name)
-    __repr__ = _swig_repr
-    CursorNone = _IVStudio.PCursorLineShape_CursorNone
-    CursorMinorX = _IVStudio.PCursorLineShape_CursorMinorX
-    CursorMajorX = _IVStudio.PCursorLineShape_CursorMajorX
-    CursorMinorY = _IVStudio.PCursorLineShape_CursorMinorY
-    CursorMajorY = _IVStudio.PCursorLineShape_CursorMajorY
-    CursorMajorXMajorY = _IVStudio.PCursorLineShape_CursorMajorXMajorY
-    CursorMinorXMinorY = _IVStudio.PCursorLineShape_CursorMinorXMinorY
-    CursorMajorXMinorY = _IVStudio.PCursorLineShape_CursorMajorXMinorY
-    CursorMinorXMajorY = _IVStudio.PCursorLineShape_CursorMinorXMajorY
-    CursorMinorLX = _IVStudio.PCursorLineShape_CursorMinorLX
-    CursorMinorLY = _IVStudio.PCursorLineShape_CursorMinorLY
-    CursorMinorLXMinorLY = _IVStudio.PCursorLineShape_CursorMinorLXMinorLY
-    CursorMajorXMinorLY = _IVStudio.PCursorLineShape_CursorMajorXMinorLY
-    CursorMinorLXMajorY = _IVStudio.PCursorLineShape_CursorMinorLXMajorY
-
-    def __init__(self):
-        this = _IVStudio.new_PCursorLineShape()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PCursorLineShape
-    __del__ = lambda self: None
-PCursorLineShape_swigregister = _IVStudio.PCursorLineShape_swigregister
-PCursorLineShape_swigregister(PCursorLineShape)
-
-class PCursorOptions(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PCursorOptions, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PCursorOptions, name)
-    __repr__ = _swig_repr
-    CursorVisible = _IVStudio.PCursorOptions_CursorVisible
-    CursorSavable = _IVStudio.PCursorOptions_CursorSavable
-    CursorPointTest = _IVStudio.PCursorOptions_CursorPointTest
-    CursorShowLabel = _IVStudio.PCursorOptions_CursorShowLabel
-    CursorShowName = _IVStudio.PCursorOptions_CursorShowName
-    CursorMajorLabel = _IVStudio.PCursorOptions_CursorMajorLabel
-    CursorSynchronization = _IVStudio.PCursorOptions_CursorSynchronization
-    CursorCenter = _IVStudio.PCursorOptions_CursorCenter
-    CursorXYPlane = _IVStudio.PCursorOptions_CursorXYPlane
-    CursorXZPlane = _IVStudio.PCursorOptions_CursorXZPlane
-    CursorYZPlane = _IVStudio.PCursorOptions_CursorYZPlane
-    Cursor2D = _IVStudio.PCursorOptions_Cursor2D
-
-    def __init__(self):
-        this = _IVStudio.new_PCursorOptions()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PCursorOptions
-    __del__ = lambda self: None
-PCursorOptions_swigregister = _IVStudio.PCursorOptions_swigregister
-PCursorOptions_swigregister(PCursorOptions)
-
-class PAnnotationOptions(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PAnnotationOptions, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PAnnotationOptions, name)
-    __repr__ = _swig_repr
-    AnnVisible = _IVStudio.PAnnotationOptions_AnnVisible
-    AnnClip = _IVStudio.PAnnotationOptions_AnnClip
-    AnnEditable = _IVStudio.PAnnotationOptions_AnnEditable
-    AnnSavable = _IVStudio.PAnnotationOptions_AnnSavable
-    AnnDeletable = _IVStudio.PAnnotationOptions_AnnDeletable
-    AnnArrowHidden = _IVStudio.PAnnotationOptions_AnnArrowHidden
-    AnnTextHidden = _IVStudio.PAnnotationOptions_AnnTextHidden
-
-    def __init__(self):
-        this = _IVStudio.new_PAnnotationOptions()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PAnnotationOptions
-    __del__ = lambda self: None
-PAnnotationOptions_swigregister = _IVStudio.PAnnotationOptions_swigregister
-PAnnotationOptions_swigregister(PAnnotationOptions)
-
-class PAnnotationCoordinate(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PAnnotationCoordinate, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PAnnotationCoordinate, name)
-    __repr__ = _swig_repr
-    AxisCoordinate = _IVStudio.PAnnotationCoordinate_AxisCoordinate
-    PlotAreaCoordinate = _IVStudio.PAnnotationCoordinate_PlotAreaCoordinate
-
-    def __init__(self):
-        this = _IVStudio.new_PAnnotationCoordinate()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PAnnotationCoordinate
-    __del__ = lambda self: None
-PAnnotationCoordinate_swigregister = _IVStudio.PAnnotationCoordinate_swigregister
-PAnnotationCoordinate_swigregister(PAnnotationCoordinate)
-
-class PDrawItemType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PDrawItemType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PDrawItemType, name)
-    __repr__ = _swig_repr
-    DrawItem_None = _IVStudio.PDrawItemType_DrawItem_None
-    DrawItem_Line = _IVStudio.PDrawItemType_DrawItem_Line
-    DrawItem_Circle = _IVStudio.PDrawItemType_DrawItem_Circle
-    DrawItem_Arc = _IVStudio.PDrawItemType_DrawItem_Arc
-    DrawItem_Curve = _IVStudio.PDrawItemType_DrawItem_Curve
-    DrawItem_Rect = _IVStudio.PDrawItemType_DrawItem_Rect
-    DrawItem_RoundRect = _IVStudio.PDrawItemType_DrawItem_RoundRect
-    DrawItem_Polygon = _IVStudio.PDrawItemType_DrawItem_Polygon
-    DrawItem_SPolygon = _IVStudio.PDrawItemType_DrawItem_SPolygon
-    DrawItem_Text = _IVStudio.PDrawItemType_DrawItem_Text
-    DrawItem_RichText = _IVStudio.PDrawItemType_DrawItem_RichText
-    DrawItem_VLine = _IVStudio.PDrawItemType_DrawItem_VLine
-    DrawItem_HLine = _IVStudio.PDrawItemType_DrawItem_HLine
-    DrawItem_Image = _IVStudio.PDrawItemType_DrawItem_Image
-    DrawItem_Cube = _IVStudio.PDrawItemType_DrawItem_Cube
-    DrawItem_Cylinder = _IVStudio.PDrawItemType_DrawItem_Cylinder
-    DrawItem_Cone = _IVStudio.PDrawItemType_DrawItem_Cone
-    DrawItem_Torus = _IVStudio.PDrawItemType_DrawItem_Torus
-    DrawItem_Sphere = _IVStudio.PDrawItemType_DrawItem_Sphere
-    DrawItem_Path = _IVStudio.PDrawItemType_DrawItem_Path
-    DrawItem_Mesh = _IVStudio.PDrawItemType_DrawItem_Mesh
-    DrawItem_Field = _IVStudio.PDrawItemType_DrawItem_Field
-    DrawItem_Table = _IVStudio.PDrawItemType_DrawItem_Table
-    DrawItem_Group = _IVStudio.PDrawItemType_DrawItem_Group
-
-    def __init__(self):
-        this = _IVStudio.new_PDrawItemType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PDrawItemType
-    __del__ = lambda self: None
-PDrawItemType_swigregister = _IVStudio.PDrawItemType_swigregister
-PDrawItemType_swigregister(PDrawItemType)
-
-class PDrawItemMeshType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PDrawItemMeshType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PDrawItemMeshType, name)
-    __repr__ = _swig_repr
-    Mesh_3DTriangle = _IVStudio.PDrawItemMeshType_Mesh_3DTriangle
-    Mesh_3DQuad = _IVStudio.PDrawItemMeshType_Mesh_3DQuad
-    Mesh_3DExtrude = _IVStudio.PDrawItemMeshType_Mesh_3DExtrude
-    Mesh_3DRevolve = _IVStudio.PDrawItemMeshType_Mesh_3DRevolve
-
-    def __init__(self):
-        this = _IVStudio.new_PDrawItemMeshType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PDrawItemMeshType
-    __del__ = lambda self: None
-PDrawItemMeshType_swigregister = _IVStudio.PDrawItemMeshType_swigregister
-PDrawItemMeshType_swigregister(PDrawItemMeshType)
-
-class PPaletteOptions(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PPaletteOptions, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PPaletteOptions, name)
-    __repr__ = _swig_repr
-    PalVisible = _IVStudio.PPaletteOptions_PalVisible
-    PalShortTitle = _IVStudio.PPaletteOptions_PalShortTitle
-    PalAutoScale = _IVStudio.PPaletteOptions_PalAutoScale
-    PalChangeTitle = _IVStudio.PPaletteOptions_PalChangeTitle
-    PalContextMenu = _IVStudio.PPaletteOptions_PalContextMenu
-    PalDecrete = _IVStudio.PPaletteOptions_PalDecrete
-    PalFixSize = _IVStudio.PPaletteOptions_PalFixSize
-    PalEnableTranspency = _IVStudio.PPaletteOptions_PalEnableTranspency
-
-    def __init__(self):
-        this = _IVStudio.new_PPaletteOptions()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PPaletteOptions
-    __del__ = lambda self: None
-PPaletteOptions_swigregister = _IVStudio.PPaletteOptions_swigregister
-PPaletteOptions_swigregister(PPaletteOptions)
-
-class PPaletteLevelType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PPaletteLevelType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PPaletteLevelType, name)
-    __repr__ = _swig_repr
-    Level_Uniform = _IVStudio.PPaletteLevelType_Level_Uniform
-    Level_Gradient = _IVStudio.PPaletteLevelType_Level_Gradient
-
-    def __init__(self):
-        this = _IVStudio.new_PPaletteLevelType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PPaletteLevelType
-    __del__ = lambda self: None
-PPaletteLevelType_swigregister = _IVStudio.PPaletteLevelType_swigregister
-PPaletteLevelType_swigregister(PPaletteLevelType)
-
-class PGraphStyle(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PGraphStyle, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PGraphStyle, name)
-    __repr__ = _swig_repr
-    GraphStyle_ShowCaption = _IVStudio.PGraphStyle_GraphStyle_ShowCaption
-    GraphStyle_KeepAspectRatio = _IVStudio.PGraphStyle_GraphStyle_KeepAspectRatio
-    GraphStyle_PolarCircular = _IVStudio.PGraphStyle_GraphStyle_PolarCircular
-    GraphStyle_TernaryEquilateral = _IVStudio.PGraphStyle_GraphStyle_TernaryEquilateral
-    GraphStyle_Show2D = _IVStudio.PGraphStyle_GraphStyle_Show2D
-    GraphStyle_ShowBitmapText = _IVStudio.PGraphStyle_GraphStyle_ShowBitmapText
-
-    def __init__(self):
-        this = _IVStudio.new_PGraphStyle()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PGraphStyle
-    __del__ = lambda self: None
-PGraphStyle_swigregister = _IVStudio.PGraphStyle_swigregister
-PGraphStyle_swigregister(PGraphStyle)
-
-class PGraphDisplayOrder(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PGraphDisplayOrder, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PGraphDisplayOrder, name)
-    __repr__ = _swig_repr
-    GraphDisplayOrder_CursorAnnPlot = _IVStudio.PGraphDisplayOrder_GraphDisplayOrder_CursorAnnPlot
-    GraphDisplayOrder_AnnCursorPlot = _IVStudio.PGraphDisplayOrder_GraphDisplayOrder_AnnCursorPlot
-    GraphDisplayOrder_PlotCursorAnn = _IVStudio.PGraphDisplayOrder_GraphDisplayOrder_PlotCursorAnn
-    GraphDisplayOrder_PlotAnnCursor = _IVStudio.PGraphDisplayOrder_GraphDisplayOrder_PlotAnnCursor
-
-    def __init__(self):
-        this = _IVStudio.new_PGraphDisplayOrder()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PGraphDisplayOrder
-    __del__ = lambda self: None
-PGraphDisplayOrder_swigregister = _IVStudio.PGraphDisplayOrder_swigregister
-PGraphDisplayOrder_swigregister(PGraphDisplayOrder)
-
-class PGraphMouseTrackingMode(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PGraphMouseTrackingMode, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PGraphMouseTrackingMode, name)
-    __repr__ = _swig_repr
-    TrackingMode_Zoom = _IVStudio.PGraphMouseTrackingMode_TrackingMode_Zoom
-    TrackingMode_ZoomX = _IVStudio.PGraphMouseTrackingMode_TrackingMode_ZoomX
-    TrackingMode_ZoomY = _IVStudio.PGraphMouseTrackingMode_TrackingMode_ZoomY
-    TrackingMode_Pan = _IVStudio.PGraphMouseTrackingMode_TrackingMode_Pan
-    TrackingMode_PanX = _IVStudio.PGraphMouseTrackingMode_TrackingMode_PanX
-    TrackingMode_PanY = _IVStudio.PGraphMouseTrackingMode_TrackingMode_PanY
-    TrackingMode_ZoomPan = _IVStudio.PGraphMouseTrackingMode_TrackingMode_ZoomPan
-    TrackingMode_Rotation = _IVStudio.PGraphMouseTrackingMode_TrackingMode_Rotation
-    TrackingMode_Cursor = _IVStudio.PGraphMouseTrackingMode_TrackingMode_Cursor
-    TrackingMode_Annotion = _IVStudio.PGraphMouseTrackingMode_TrackingMode_Annotion
-    TrackingMode_Plot = _IVStudio.PGraphMouseTrackingMode_TrackingMode_Plot
-    TrackingMode_Axis = _IVStudio.PGraphMouseTrackingMode_TrackingMode_Axis
-    TrackingMode_Sizing = _IVStudio.PGraphMouseTrackingMode_TrackingMode_Sizing
-
-    def __init__(self):
-        this = _IVStudio.new_PGraphMouseTrackingMode()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PGraphMouseTrackingMode
-    __del__ = lambda self: None
-PGraphMouseTrackingMode_swigregister = _IVStudio.PGraphMouseTrackingMode_swigregister
-PGraphMouseTrackingMode_swigregister(PGraphMouseTrackingMode)
-
-class PGraphQualityType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PGraphQualityType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PGraphQualityType, name)
-    __repr__ = _swig_repr
-    GraphQualityType_HighSpeed = _IVStudio.PGraphQualityType_GraphQualityType_HighSpeed
-    GraphQualityType_HighQuality = _IVStudio.PGraphQualityType_GraphQualityType_HighQuality
-
-    def __init__(self):
-        this = _IVStudio.new_PGraphQualityType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PGraphQualityType
-    __del__ = lambda self: None
-PGraphQualityType_swigregister = _IVStudio.PGraphQualityType_swigregister
-PGraphQualityType_swigregister(PGraphQualityType)
-
-class PTextOrientationStyle(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PTextOrientationStyle, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PTextOrientationStyle, name)
-    __repr__ = _swig_repr
-    FixedAngle = _IVStudio.PTextOrientationStyle_FixedAngle
-    FaceCamera = _IVStudio.PTextOrientationStyle_FaceCamera
-    Rotation3D = _IVStudio.PTextOrientationStyle_Rotation3D
-
-    def __init__(self):
-        this = _IVStudio.new_PTextOrientationStyle()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PTextOrientationStyle
-    __del__ = lambda self: None
-PTextOrientationStyle_swigregister = _IVStudio.PTextOrientationStyle_swigregister
-PTextOrientationStyle_swigregister(PTextOrientationStyle)
-
-class PLightOptions(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PLightOptions, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PLightOptions, name)
-    __repr__ = _swig_repr
-    LightEnable = _IVStudio.PLightOptions_LightEnable
-    LightLowQuality = _IVStudio.PLightOptions_LightLowQuality
-
-    def __init__(self):
-        this = _IVStudio.new_PLightOptions()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PLightOptions
-    __del__ = lambda self: None
-PLightOptions_swigregister = _IVStudio.PLightOptions_swigregister
-PLightOptions_swigregister(PLightOptions)
-
-class PPlotVolumnDisplayType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PPlotVolumnDisplayType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PPlotVolumnDisplayType, name)
-    __repr__ = _swig_repr
-    Tile2D = _IVStudio.PPlotVolumnDisplayType_Tile2D
-    Stack = _IVStudio.PPlotVolumnDisplayType_Stack
-    Block = _IVStudio.PPlotVolumnDisplayType_Block
-    Corner001 = _IVStudio.PPlotVolumnDisplayType_Corner001
-    Corner101 = _IVStudio.PPlotVolumnDisplayType_Corner101
-    Corner011 = _IVStudio.PPlotVolumnDisplayType_Corner011
-
-    def __init__(self):
-        this = _IVStudio.new_PPlotVolumnDisplayType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PPlotVolumnDisplayType
-    __del__ = lambda self: None
-PPlotVolumnDisplayType_swigregister = _IVStudio.PPlotVolumnDisplayType_swigregister
-PPlotVolumnDisplayType_swigregister(PPlotVolumnDisplayType)
-
-class PPlotCubicPlane(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PPlotCubicPlane, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PPlotCubicPlane, name)
-    __repr__ = _swig_repr
-    Plane_X0 = _IVStudio.PPlotCubicPlane_Plane_X0
-    Plane_X1 = _IVStudio.PPlotCubicPlane_Plane_X1
-    Plane_Y0 = _IVStudio.PPlotCubicPlane_Plane_Y0
-    Plane_Y1 = _IVStudio.PPlotCubicPlane_Plane_Y1
-    Plane_Z0 = _IVStudio.PPlotCubicPlane_Plane_Z0
-    Plane_Z1 = _IVStudio.PPlotCubicPlane_Plane_Z1
-    Plane_XZ = _IVStudio.PPlotCubicPlane_Plane_XZ
-    Plane_ZX = _IVStudio.PPlotCubicPlane_Plane_ZX
-    Plane_YZ = _IVStudio.PPlotCubicPlane_Plane_YZ
-    Plane_ZY = _IVStudio.PPlotCubicPlane_Plane_ZY
-
-    def __init__(self):
-        this = _IVStudio.new_PPlotCubicPlane()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PPlotCubicPlane
-    __del__ = lambda self: None
-PPlotCubicPlane_swigregister = _IVStudio.PPlotCubicPlane_swigregister
-PPlotCubicPlane_swigregister(PPlotCubicPlane)
-
-class PProjection3DType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PProjection3DType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PProjection3DType, name)
-    __repr__ = _swig_repr
-    Orthographic = _IVStudio.PProjection3DType_Orthographic
-    Perspective = _IVStudio.PProjection3DType_Perspective
-
-    def __init__(self):
-        this = _IVStudio.new_PProjection3DType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PProjection3DType
-    __del__ = lambda self: None
-PProjection3DType_swigregister = _IVStudio.PProjection3DType_swigregister
-PProjection3DType_swigregister(PProjection3DType)
-
-class PDrawZoom_Mode(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PDrawZoom_Mode, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PDrawZoom_Mode, name)
-    __repr__ = _swig_repr
-    DrawZoom_02 = _IVStudio.PDrawZoom_Mode_DrawZoom_02
-    DrawZoom_10 = _IVStudio.PDrawZoom_Mode_DrawZoom_10
-    DrawZoom_25 = _IVStudio.PDrawZoom_Mode_DrawZoom_25
-    DrawZoom_50 = _IVStudio.PDrawZoom_Mode_DrawZoom_50
-    DrawZoom_75 = _IVStudio.PDrawZoom_Mode_DrawZoom_75
-    DrawZoom_100 = _IVStudio.PDrawZoom_Mode_DrawZoom_100
-    DrawZoom_150 = _IVStudio.PDrawZoom_Mode_DrawZoom_150
-    DrawZoom_200 = _IVStudio.PDrawZoom_Mode_DrawZoom_200
-    DrawZoom_AspectFitView = _IVStudio.PDrawZoom_Mode_DrawZoom_AspectFitView
-    DrawZoom_FitView = _IVStudio.PDrawZoom_Mode_DrawZoom_FitView
-
-    def __init__(self):
-        this = _IVStudio.new_PDrawZoom_Mode()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PDrawZoom_Mode
-    __del__ = lambda self: None
-PDrawZoom_Mode_swigregister = _IVStudio.PDrawZoom_Mode_swigregister
-PDrawZoom_Mode_swigregister(PDrawZoom_Mode)
-
-class PDrawStyle(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PDrawStyle, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PDrawStyle, name)
-    __repr__ = _swig_repr
-    DrawStyle_HRuler = _IVStudio.PDrawStyle_DrawStyle_HRuler
-    DrawStyle_VRuler = _IVStudio.PDrawStyle_DrawStyle_VRuler
-    DrawStyle_DrawBar = _IVStudio.PDrawStyle_DrawStyle_DrawBar
-    DrawStyle_FloatDrawBar = _IVStudio.PDrawStyle_DrawStyle_FloatDrawBar
-    DrawStyle_ViewOnly = _IVStudio.PDrawStyle_DrawStyle_ViewOnly
-    DrawStyle_Grid = _IVStudio.PDrawStyle_DrawStyle_Grid
-    DrawStyle_Palette = _IVStudio.PDrawStyle_DrawStyle_Palette
-
-    def __init__(self):
-        this = _IVStudio.new_PDrawStyle()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PDrawStyle
-    __del__ = lambda self: None
-PDrawStyle_swigregister = _IVStudio.PDrawStyle_swigregister
-PDrawStyle_swigregister(PDrawStyle)
-
+def capsule_cleanup(*args):
+    return _IVStudio.capsule_cleanup(*args)
+capsule_cleanup = _IVStudio.capsule_cleanup
 class IPPlot(_object):
     __swig_setmethods__ = {}
     __setattr__ = lambda self, name, value: _swig_setattr(self, IPPlot, name, value)
@@ -1808,251 +117,281 @@ class IPPlot(_object):
         raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
 
-    def SetVisible(self, bVisible):
-        return _IVStudio.IPPlot_SetVisible(self, bVisible)
+    def SetName(self, *args):
+        return _IVStudio.IPPlot_SetName(self, *args)
 
-    def SetPlotStyle(self, plotStyle):
-        return _IVStudio.IPPlot_SetPlotStyle(self, plotStyle)
+    def ModifyOption(self, *args):
+        return _IVStudio.IPPlot_ModifyOption(self, *args)
 
-    def SetLineStyle(self, type):
-        return _IVStudio.IPPlot_SetLineStyle(self, type)
+    def SetVisible(self, *args):
+        return _IVStudio.IPPlot_SetVisible(self, *args)
 
-    def SetLineColor(self, arg2):
-        return _IVStudio.IPPlot_SetLineColor(self, arg2)
+    def SetPlotStyle(self, *args):
+        return _IVStudio.IPPlot_SetPlotStyle(self, *args)
 
-    def SetLineWidth(self, arg2):
-        return _IVStudio.IPPlot_SetLineWidth(self, arg2)
+    def SetLineStyle(self, *args):
+        return _IVStudio.IPPlot_SetLineStyle(self, *args)
 
-    def SetPointStyle(self, arg2):
-        return _IVStudio.IPPlot_SetPointStyle(self, arg2)
+    def SetLineColor(self, *args):
+        return _IVStudio.IPPlot_SetLineColor(self, *args)
 
-    def SetPointColor(self, arg2):
-        return _IVStudio.IPPlot_SetPointColor(self, arg2)
+    def SetLineWidth(self, *args):
+        return _IVStudio.IPPlot_SetLineWidth(self, *args)
 
-    def SetPointBorderWidth(self, arg2):
-        return _IVStudio.IPPlot_SetPointBorderWidth(self, arg2)
+    def SetPointStyle(self, *args):
+        return _IVStudio.IPPlot_SetPointStyle(self, *args)
 
-    def SetPointFillColor(self, arg2):
-        return _IVStudio.IPPlot_SetPointFillColor(self, arg2)
+    def SetPointColor(self, *args):
+        return _IVStudio.IPPlot_SetPointColor(self, *args)
 
-    def SetPointSize(self, arg2):
-        return _IVStudio.IPPlot_SetPointSize(self, arg2)
+    def SetPointBorderWidth(self, *args):
+        return _IVStudio.IPPlot_SetPointBorderWidth(self, *args)
 
-    def SetXAxis(self, axis_name):
-        return _IVStudio.IPPlot_SetXAxis(self, axis_name)
+    def SetPointFillColor(self, *args):
+        return _IVStudio.IPPlot_SetPointFillColor(self, *args)
 
-    def SetYAxis(self, axis_name):
-        return _IVStudio.IPPlot_SetYAxis(self, axis_name)
+    def SetPointSize(self, *args):
+        return _IVStudio.IPPlot_SetPointSize(self, *args)
 
-    def PlotY(self, array):
-        return _IVStudio.IPPlot_PlotY(self, array)
+    def SetXAxis(self, *args):
+        return _IVStudio.IPPlot_SetXAxis(self, *args)
 
-    def PlotXRange(self, dataStart, dataInc):
-        return _IVStudio.IPPlot_PlotXRange(self, dataStart, dataInc)
+    def SetYAxis(self, *args):
+        return _IVStudio.IPPlot_SetYAxis(self, *args)
 
-    def PlotX(self, array):
-        return _IVStudio.IPPlot_PlotX(self, array)
+    def PlotY(self, *args):
+        return _IVStudio.IPPlot_PlotY(self, *args)
 
-    def PlotYRange(self, dataStart, dataInc):
-        return _IVStudio.IPPlot_PlotYRange(self, dataStart, dataInc)
+    def PlotXRange(self, *args):
+        return _IVStudio.IPPlot_PlotXRange(self, *args)
 
-    def PlotXY(self, xData, yData):
-        return _IVStudio.IPPlot_PlotXY(self, xData, yData)
+    def PlotX(self, *args):
+        return _IVStudio.IPPlot_PlotX(self, *args)
 
-    def ChartY(self, array):
-        return _IVStudio.IPPlot_ChartY(self, array)
+    def PlotYRange(self, *args):
+        return _IVStudio.IPPlot_PlotYRange(self, *args)
 
-    def ChartXRange(self, dataStart, dataInc, chartLength, bScroll=True, scrollPercent=1):
-        return _IVStudio.IPPlot_ChartXRange(self, dataStart, dataInc, chartLength, bScroll, scrollPercent)
+    def PlotXY(self, *args):
+        return _IVStudio.IPPlot_PlotXY(self, *args)
 
-    def ChartRollbackY(self, n):
-        return _IVStudio.IPPlot_ChartRollbackY(self, n)
+    def ChartY(self, *args):
+        return _IVStudio.IPPlot_ChartY(self, *args)
 
-    def ChartX(self, array):
-        return _IVStudio.IPPlot_ChartX(self, array)
+    def ChartXRange(self, *args):
+        return _IVStudio.IPPlot_ChartXRange(self, *args)
 
-    def ChartYRange(self, dataStart, dataInc, chartLength, bScroll=True, scrollPercent=1):
-        return _IVStudio.IPPlot_ChartYRange(self, dataStart, dataInc, chartLength, bScroll, scrollPercent)
+    def ChartRollbackY(self, *args):
+        return _IVStudio.IPPlot_ChartRollbackY(self, *args)
 
-    def ChartRollbackX(self, n):
-        return _IVStudio.IPPlot_ChartRollbackX(self, n)
+    def ChartX(self, *args):
+        return _IVStudio.IPPlot_ChartX(self, *args)
 
-    def ChartXY(self, xData, yData):
-        return _IVStudio.IPPlot_ChartXY(self, xData, yData)
+    def ChartYRange(self, *args):
+        return _IVStudio.IPPlot_ChartYRange(self, *args)
 
-    def ChartXYRange(self, chartLength, bXScroll=True, bYScroll=False, scrollPercent=1):
-        return _IVStudio.IPPlot_ChartXYRange(self, chartLength, bXScroll, bYScroll, scrollPercent)
+    def ChartRollbackX(self, *args):
+        return _IVStudio.IPPlot_ChartRollbackX(self, *args)
 
-    def SetDataOffset(self, offsetX, offsetY):
-        return _IVStudio.IPPlot_SetDataOffset(self, offsetX, offsetY)
+    def ChartXY(self, *args):
+        return _IVStudio.IPPlot_ChartXY(self, *args)
 
-    def ImageRange(self, x0, xinc, y0, yinc):
-        return _IVStudio.IPPlot_ImageRange(self, x0, xinc, y0, yinc)
+    def ChartXYRange(self, *args):
+        return _IVStudio.IPPlot_ChartXYRange(self, *args)
 
-    def ImageColor1(self, IN_ARRAY1, image_width, image_height):
-        return _IVStudio.IPPlot_ImageColor1(self, IN_ARRAY1, image_width, image_height)
+    def SetDataOffset(self, *args):
+        return _IVStudio.IPPlot_SetDataOffset(self, *args)
 
-    def ImageColor1_F(self, IN_ARRAY1, image_width, image_height):
-        return _IVStudio.IPPlot_ImageColor1_F(self, IN_ARRAY1, image_width, image_height)
+    def ImageRange(self, *args):
+        return _IVStudio.IPPlot_ImageRange(self, *args)
 
-    def ImageColor1_I(self, IN_ARRAY1, image_width, image_height):
-        return _IVStudio.IPPlot_ImageColor1_I(self, IN_ARRAY1, image_width, image_height)
+    def ImageColor1(self, *args):
+        return _IVStudio.IPPlot_ImageColor1(self, *args)
 
-    def ImageColor1_S(self, IN_ARRAY1, image_width, image_height):
-        return _IVStudio.IPPlot_ImageColor1_S(self, IN_ARRAY1, image_width, image_height)
+    def ImageColor1_F(self, *args):
+        return _IVStudio.IPPlot_ImageColor1_F(self, *args)
 
-    def ImageColor1_C(self, IN_ARRAY1, DIM1, image_width, image_height):
-        return _IVStudio.IPPlot_ImageColor1_C(self, IN_ARRAY1, DIM1, image_width, image_height)
+    def ImageColor1_I(self, *args):
+        return _IVStudio.IPPlot_ImageColor1_I(self, *args)
 
-    def ImageColor4(self, IN_ARRAY4):
-        return _IVStudio.IPPlot_ImageColor4(self, IN_ARRAY4)
+    def ImageColor1_S(self, *args):
+        return _IVStudio.IPPlot_ImageColor1_S(self, *args)
 
-    def ImageColor4_F(self, IN_ARRAY4):
-        return _IVStudio.IPPlot_ImageColor4_F(self, IN_ARRAY4)
+    def ImageColor1_C(self, *args):
+        return _IVStudio.IPPlot_ImageColor1_C(self, *args)
 
-    def ImageColor4_I(self, IN_ARRAY4):
-        return _IVStudio.IPPlot_ImageColor4_I(self, IN_ARRAY4)
+    def ImageColor2(self, *args):
+        return _IVStudio.IPPlot_ImageColor2(self, *args)
 
-    def ImageColor4_S(self, IN_ARRAY4):
-        return _IVStudio.IPPlot_ImageColor4_S(self, IN_ARRAY4)
+    def ImageColor2_F(self, *args):
+        return _IVStudio.IPPlot_ImageColor2_F(self, *args)
 
-    def ImageColor4_C(self, IN_ARRAY4, DIM1, DIM2, DIM3, DIM4):
-        return _IVStudio.IPPlot_ImageColor4_C(self, IN_ARRAY4, DIM1, DIM2, DIM3, DIM4)
+    def ImageColor2_I(self, *args):
+        return _IVStudio.IPPlot_ImageColor2_I(self, *args)
 
-    def Bar(self, labels, array):
-        return _IVStudio.IPPlot_Bar(self, labels, array)
+    def ImageColor2_S(self, *args):
+        return _IVStudio.IPPlot_ImageColor2_S(self, *args)
 
-    def BarLabel(self, labels):
-        return _IVStudio.IPPlot_BarLabel(self, labels)
+    def ImageColor2_C(self, *args):
+        return _IVStudio.IPPlot_ImageColor2_C(self, *args)
 
-    def BarData(self, array):
-        return _IVStudio.IPPlot_BarData(self, array)
+    def ImageColor4(self, *args):
+        return _IVStudio.IPPlot_ImageColor4(self, *args)
 
-    def BarColor(self, fillType, fillColor, borderWidth, borderColor):
-        return _IVStudio.IPPlot_BarColor(self, fillType, fillColor, borderWidth, borderColor)
+    def ImageColor4_F(self, *args):
+        return _IVStudio.IPPlot_ImageColor4_F(self, *args)
 
-    def SetBarPara(self, barSize, stackonplot=-1, barpadding=0):
-        return _IVStudio.IPPlot_SetBarPara(self, barSize, stackonplot, barpadding)
+    def ImageColor4_I(self, *args):
+        return _IVStudio.IPPlot_ImageColor4_I(self, *args)
 
-    def Pie(self, labels, array, color):
-        return _IVStudio.IPPlot_Pie(self, labels, array, color)
+    def ImageColor4_S(self, *args):
+        return _IVStudio.IPPlot_ImageColor4_S(self, *args)
 
-    def PieLabel(self, labels):
-        return _IVStudio.IPPlot_PieLabel(self, labels)
+    def ImageColor4_C(self, *args):
+        return _IVStudio.IPPlot_ImageColor4_C(self, *args)
 
-    def PieData(self, array):
-        return _IVStudio.IPPlot_PieData(self, array)
+    def Bar(self, *args):
+        return _IVStudio.IPPlot_Bar(self, *args)
 
-    def PieColor(self, color):
-        return _IVStudio.IPPlot_PieColor(self, color)
+    def BarLabel(self, *args):
+        return _IVStudio.IPPlot_BarLabel(self, *args)
 
-    def SetPieColor(self, highlight, bkgrColor):
-        return _IVStudio.IPPlot_SetPieColor(self, highlight, bkgrColor)
+    def BarData(self, *args):
+        return _IVStudio.IPPlot_BarData(self, *args)
 
-    def SetPieOffset(self, pie, offset):
-        return _IVStudio.IPPlot_SetPieOffset(self, pie, offset)
+    def BarColor(self, *args):
+        return _IVStudio.IPPlot_BarColor(self, *args)
 
-    def SetPieLabelOffset(self, pie, offsetX, offsetY):
-        return _IVStudio.IPPlot_SetPieLabelOffset(self, pie, offsetX, offsetY)
+    def SetBarPara(self, *args):
+        return _IVStudio.IPPlot_SetBarPara(self, *args)
 
-    def SetPiePara(self, angleStart, doughnutRatio):
-        return _IVStudio.IPPlot_SetPiePara(self, angleStart, doughnutRatio)
+    def Pie(self, *args):
+        return _IVStudio.IPPlot_Pie(self, *args)
 
-    def SetPie3DPara(self, inclneAngle, pieDepth):
-        return _IVStudio.IPPlot_SetPie3DPara(self, inclneAngle, pieDepth)
+    def PieLabel(self, *args):
+        return _IVStudio.IPPlot_PieLabel(self, *args)
 
-    def VectorXY(self, data1, data2, data3, data4):
-        return _IVStudio.IPPlot_VectorXY(self, data1, data2, data3, data4)
+    def PieData(self, *args):
+        return _IVStudio.IPPlot_PieData(self, *args)
 
-    def VectorAL(self, data1, data2, data3, data4):
-        return _IVStudio.IPPlot_VectorAL(self, data1, data2, data3, data4)
+    def PieColor(self, *args):
+        return _IVStudio.IPPlot_PieColor(self, *args)
 
-    def SetVectorPara(self, arrowSize, lenScale):
-        return _IVStudio.IPPlot_SetVectorPara(self, arrowSize, lenScale)
+    def SetPieColor(self, *args):
+        return _IVStudio.IPPlot_SetPieColor(self, *args)
 
-    def BubbleXY(self, data1, data2, data3):
-        return _IVStudio.IPPlot_BubbleXY(self, data1, data2, data3)
+    def SetPieOffset(self, *args):
+        return _IVStudio.IPPlot_SetPieOffset(self, *args)
 
-    def SetBubblePara(self, bubbleScale):
-        return _IVStudio.IPPlot_SetBubblePara(self, bubbleScale)
+    def SetPieLabelOffset(self, *args):
+        return _IVStudio.IPPlot_SetPieLabelOffset(self, *args)
 
-    def SetErrorPercent(self, err):
-        return _IVStudio.IPPlot_SetErrorPercent(self, err)
+    def SetPiePara(self, *args):
+        return _IVStudio.IPPlot_SetPiePara(self, *args)
 
-    def SetErrorUpData(self, array):
-        return _IVStudio.IPPlot_SetErrorUpData(self, array)
+    def SetPie3DPara(self, *args):
+        return _IVStudio.IPPlot_SetPie3DPara(self, *args)
 
-    def SetErrorLowData(self, array):
-        return _IVStudio.IPPlot_SetErrorLowData(self, array)
+    def VectorXY(self, *args):
+        return _IVStudio.IPPlot_VectorXY(self, *args)
 
-    def SetErrorStyle(self, errBarSource, direction, display, lineWidth, capWidth, barColor):
-        return _IVStudio.IPPlot_SetErrorStyle(self, errBarSource, direction, display, lineWidth, capWidth, barColor)
+    def VectorAL(self, *args):
+        return _IVStudio.IPPlot_VectorAL(self, *args)
 
-    def PlotZ(self, array):
-        return _IVStudio.IPPlot_PlotZ(self, array)
+    def SetVectorPara(self, *args):
+        return _IVStudio.IPPlot_SetVectorPara(self, *args)
 
-    def PlotZRange(self, dataStart, dataInc):
-        return _IVStudio.IPPlot_PlotZRange(self, dataStart, dataInc)
+    def BubbleXY(self, *args):
+        return _IVStudio.IPPlot_BubbleXY(self, *args)
 
-    def ChartZ(self, array):
-        return _IVStudio.IPPlot_ChartZ(self, array)
+    def SetBubblePara(self, *args):
+        return _IVStudio.IPPlot_SetBubblePara(self, *args)
 
-    def ChartZRange(self, dataStart, dataInc, chartLength, bScroll=True, scrollPercent=1):
-        return _IVStudio.IPPlot_ChartZRange(self, dataStart, dataInc, chartLength, bScroll, scrollPercent)
+    def SetErrorPercent(self, *args):
+        return _IVStudio.IPPlot_SetErrorPercent(self, *args)
 
-    def ChartRollbackZ(self, n):
-        return _IVStudio.IPPlot_ChartRollbackZ(self, n)
+    def SetErrorUpData(self, *args):
+        return _IVStudio.IPPlot_SetErrorUpData(self, *args)
 
-    def ChartXYZ(self, data1, data2, data3):
-        return _IVStudio.IPPlot_ChartXYZ(self, data1, data2, data3)
+    def SetErrorLowData(self, *args):
+        return _IVStudio.IPPlot_SetErrorLowData(self, *args)
 
-    def ChartXYZRange(self, chartLength, bXScroll=True, bYScroll=False, bZScroll=False, scrollPercent=1):
-        return _IVStudio.IPPlot_ChartXYZRange(self, chartLength, bXScroll, bYScroll, bZScroll, scrollPercent)
+    def SetErrorStyle(self, *args):
+        return _IVStudio.IPPlot_SetErrorStyle(self, *args)
 
-    def PlotXYZCurve(self, data1, data2, data3, data4):
-        return _IVStudio.IPPlot_PlotXYZCurve(self, data1, data2, data3, data4)
+    def PlotZ(self, *args):
+        return _IVStudio.IPPlot_PlotZ(self, *args)
 
-    def SurfaceXYZ(self, data1, data2, data3, data4):
-        return _IVStudio.IPPlot_SurfaceXYZ(self, data1, data2, data3, data4)
+    def PlotZRange(self, *args):
+        return _IVStudio.IPPlot_PlotZRange(self, *args)
 
-    def SurfaceXYZParametric(self, data1, data2, data3, data4, nu, nv):
-        return _IVStudio.IPPlot_SurfaceXYZParametric(self, data1, data2, data3, data4, nu, nv)
+    def ChartZ(self, *args):
+        return _IVStudio.IPPlot_ChartZ(self, *args)
 
-    def SurfaceZ(self, array, nx, ny):
-        return _IVStudio.IPPlot_SurfaceZ(self, array, nx, ny)
+    def ChartZRange(self, *args):
+        return _IVStudio.IPPlot_ChartZRange(self, *args)
 
-    def SurfaceRange(self, x0, xinc, y0, yinc):
-        return _IVStudio.IPPlot_SurfaceRange(self, x0, xinc, y0, yinc)
+    def ChartRollbackZ(self, *args):
+        return _IVStudio.IPPlot_ChartRollbackZ(self, *args)
 
-    def SurfaceImage(self, image, x0, y0, z0, cx, cy, cz, plotCubicPlane):
-        return _IVStudio.IPPlot_SurfaceImage(self, image, x0, y0, z0, cx, cy, cz, plotCubicPlane)
+    def ChartXYZ(self, *args):
+        return _IVStudio.IPPlot_ChartXYZ(self, *args)
 
-    def VolumnRange(self, x0, xinc, y0, yinc, z0, zinc):
-        return _IVStudio.IPPlot_VolumnRange(self, x0, xinc, y0, yinc, z0, zinc)
+    def ChartXYZRange(self, *args):
+        return _IVStudio.IPPlot_ChartXYZRange(self, *args)
 
-    def VolumnData(self, IN_ARRAY3):
-        return _IVStudio.IPPlot_VolumnData(self, IN_ARRAY3)
+    def PlotXYZCurve(self, *args):
+        return _IVStudio.IPPlot_PlotXYZCurve(self, *args)
 
-    def SetVolumnDisplayType(self, plotVolumnDisplayType):
-        return _IVStudio.IPPlot_SetVolumnDisplayType(self, plotVolumnDisplayType)
+    def SurfaceXYZ(self, *args):
+        return _IVStudio.IPPlot_SurfaceXYZ(self, *args)
 
-    def SetVolumeCutPosition(self, x, y, z):
-        return _IVStudio.IPPlot_SetVolumeCutPosition(self, x, y, z)
+    def SurfaceXYZ2(self, *args):
+        return _IVStudio.IPPlot_SurfaceXYZ2(self, *args)
 
-    def Bar3D(self, label1, label2, array, color):
-        return _IVStudio.IPPlot_Bar3D(self, label1, label2, array, color)
+    def SurfaceXYZParametric(self, *args):
+        return _IVStudio.IPPlot_SurfaceXYZParametric(self, *args)
 
-    def BarLabel3D(self, label1, label2):
-        return _IVStudio.IPPlot_BarLabel3D(self, label1, label2)
+    def SurfaceXYZParametric2(self, *args):
+        return _IVStudio.IPPlot_SurfaceXYZParametric2(self, *args)
 
-    def VectorXYZ(self, data1, data2, data3, data4, data5, data6):
-        return _IVStudio.IPPlot_VectorXYZ(self, data1, data2, data3, data4, data5, data6)
+    def SurfaceZ(self, *args):
+        return _IVStudio.IPPlot_SurfaceZ(self, *args)
 
-    def VectorABL(self, data1, data2, data3, data4, data5, data6):
-        return _IVStudio.IPPlot_VectorABL(self, data1, data2, data3, data4, data5, data6)
+    def SurfaceZ2(self, *args):
+        return _IVStudio.IPPlot_SurfaceZ2(self, *args)
 
-    def BubbleXYZ(self, data1, data2, data3, data4):
-        return _IVStudio.IPPlot_BubbleXYZ(self, data1, data2, data3, data4)
+    def SurfaceRange(self, *args):
+        return _IVStudio.IPPlot_SurfaceRange(self, *args)
+
+    def SurfaceImage(self, *args):
+        return _IVStudio.IPPlot_SurfaceImage(self, *args)
+
+    def VolumnRange(self, *args):
+        return _IVStudio.IPPlot_VolumnRange(self, *args)
+
+    def VolumnData(self, *args):
+        return _IVStudio.IPPlot_VolumnData(self, *args)
+
+    def SetVolumnDisplayType(self, *args):
+        return _IVStudio.IPPlot_SetVolumnDisplayType(self, *args)
+
+    def SetVolumeCutPosition(self, *args):
+        return _IVStudio.IPPlot_SetVolumeCutPosition(self, *args)
+
+    def Bar3D(self, *args):
+        return _IVStudio.IPPlot_Bar3D(self, *args)
+
+    def BarLabel3D(self, *args):
+        return _IVStudio.IPPlot_BarLabel3D(self, *args)
+
+    def VectorXYZ(self, *args):
+        return _IVStudio.IPPlot_VectorXYZ(self, *args)
+
+    def VectorABL(self, *args):
+        return _IVStudio.IPPlot_VectorABL(self, *args)
+
+    def BubbleXYZ(self, *args):
+        return _IVStudio.IPPlot_BubbleXYZ(self, *args)
 
     def ImageColor(self, *args):
        if isinstance(args[0], np.ndarray):
@@ -2069,6 +408,19 @@ class IPPlot(_object):
                 val = selfImageColor1_C(*args)
               else:
                 val = self.ImageColor1(*args)
+          if args[0].ndim == 2:
+              if args[0].dtype == np.float64:
+                val = self.ImageColor2(*args)
+              elif args[0].dtype == np.float32:
+                val = self.ImageColor2_F(*args)
+              elif args[0].dtype == np.int32:
+                val = self.ImageColor2_I(*args)
+              elif args[0].dtype == np.int16 or args[0].dtype == np.uint16:
+                val = self.ImageColor2_S(*args)
+              elif args[0].dtype == np.int8 or args[0].dtype == np.uint8:
+                val = selfImageColor2_C(*args)
+              else:
+                val = self.ImageColor2(*args)
           elif args[0].ndim == 4:
               if args[0].dtype == np.float64:
                 val = self.ImageColor4(*args)
@@ -2103,92 +455,92 @@ class IPAxis(_object):
         raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
 
-    def SetTitle(self, caption):
-        return _IVStudio.IPAxis_SetTitle(self, caption)
+    def SetTitle(self, *args):
+        return _IVStudio.IPAxis_SetTitle(self, *args)
 
-    def SetTitleColor(self, color):
-        return _IVStudio.IPAxis_SetTitleColor(self, color)
+    def SetTitleColor(self, *args):
+        return _IVStudio.IPAxis_SetTitleColor(self, *args)
 
-    def ModifyOption(self, axisOptions, bAdd):
-        return _IVStudio.IPAxis_ModifyOption(self, axisOptions, bAdd)
+    def ModifyOption(self, *args):
+        return _IVStudio.IPAxis_ModifyOption(self, *args)
 
-    def SetAxisType(self, axisType, bInitialize):
-        return _IVStudio.IPAxis_SetAxisType(self, axisType, bInitialize)
+    def SetAxisType(self, *args):
+        return _IVStudio.IPAxis_SetAxisType(self, *args)
 
-    def SetMinimum(self, min):
-        return _IVStudio.IPAxis_SetMinimum(self, min)
+    def SetMinimum(self, *args):
+        return _IVStudio.IPAxis_SetMinimum(self, *args)
 
-    def SetMaximum(self, max):
-        return _IVStudio.IPAxis_SetMaximum(self, max)
+    def SetMaximum(self, *args):
+        return _IVStudio.IPAxis_SetMaximum(self, *args)
 
-    def GetMinimum(self):
-        return _IVStudio.IPAxis_GetMinimum(self)
+    def GetMinimum(self, *args):
+        return _IVStudio.IPAxis_GetMinimum(self, *args)
 
-    def GetMaximum(self):
-        return _IVStudio.IPAxis_GetMaximum(self)
+    def GetMaximum(self, *args):
+        return _IVStudio.IPAxis_GetMaximum(self, *args)
 
-    def SetTickLabelFont(self, name, size, orientation=0, style=0, offsetX=0, offsetY=0):
-        return _IVStudio.IPAxis_SetTickLabelFont(self, name, size, orientation, style, offsetX, offsetY)
+    def SetTickLabelFont(self, *args):
+        return _IVStudio.IPAxis_SetTickLabelFont(self, *args)
 
-    def SetTickColor(self, color):
-        return _IVStudio.IPAxis_SetTickColor(self, color)
+    def SetTickColor(self, *args):
+        return _IVStudio.IPAxis_SetTickColor(self, *args)
 
-    def SetTickPadding(self, padding):
-        return _IVStudio.IPAxis_SetTickPadding(self, padding)
+    def SetTickPadding(self, *args):
+        return _IVStudio.IPAxis_SetTickPadding(self, *args)
 
-    def SetTickMajorSize(self, size):
-        return _IVStudio.IPAxis_SetTickMajorSize(self, size)
+    def SetTickMajorSize(self, *args):
+        return _IVStudio.IPAxis_SetTickMajorSize(self, *args)
 
-    def SetTickMinorSize(self, size):
-        return _IVStudio.IPAxis_SetTickMinorSize(self, size)
+    def SetTickMinorSize(self, *args):
+        return _IVStudio.IPAxis_SetTickMinorSize(self, *args)
 
-    def SetTickScaling(self, scale):
-        return _IVStudio.IPAxis_SetTickScaling(self, scale)
+    def SetTickScaling(self, *args):
+        return _IVStudio.IPAxis_SetTickScaling(self, *args)
 
-    def SetMajorTickRange(self, base, step):
-        return _IVStudio.IPAxis_SetMajorTickRange(self, base, step)
+    def SetMajorTickRange(self, *args):
+        return _IVStudio.IPAxis_SetMajorTickRange(self, *args)
 
-    def SetMajorTickNumber(self, number):
-        return _IVStudio.IPAxis_SetMajorTickNumber(self, number)
+    def SetMajorTickNumber(self, *args):
+        return _IVStudio.IPAxis_SetMajorTickNumber(self, *args)
 
-    def SetMinorTickNumber(self, number):
-        return _IVStudio.IPAxis_SetMinorTickNumber(self, number)
+    def SetMinorTickNumber(self, *args):
+        return _IVStudio.IPAxis_SetMinorTickNumber(self, *args)
 
-    def SetMajorGridColor(self, color):
-        return _IVStudio.IPAxis_SetMajorGridColor(self, color)
+    def SetMajorGridColor(self, *args):
+        return _IVStudio.IPAxis_SetMajorGridColor(self, *args)
 
-    def SetMajorGridStyle(self, lineType):
-        return _IVStudio.IPAxis_SetMajorGridStyle(self, lineType)
+    def SetMajorGridStyle(self, *args):
+        return _IVStudio.IPAxis_SetMajorGridStyle(self, *args)
 
-    def SetMajorGridWidth(self, width):
-        return _IVStudio.IPAxis_SetMajorGridWidth(self, width)
+    def SetMajorGridWidth(self, *args):
+        return _IVStudio.IPAxis_SetMajorGridWidth(self, *args)
 
-    def SetMinorGridColor(self, color):
-        return _IVStudio.IPAxis_SetMinorGridColor(self, color)
+    def SetMinorGridColor(self, *args):
+        return _IVStudio.IPAxis_SetMinorGridColor(self, *args)
 
-    def SetMinorGridStyle(self, lineType):
-        return _IVStudio.IPAxis_SetMinorGridStyle(self, lineType)
+    def SetMinorGridStyle(self, *args):
+        return _IVStudio.IPAxis_SetMinorGridStyle(self, *args)
 
-    def SetMinorGridWidth(self, width):
-        return _IVStudio.IPAxis_SetMinorGridWidth(self, width)
+    def SetMinorGridWidth(self, *args):
+        return _IVStudio.IPAxis_SetMinorGridWidth(self, *args)
 
-    def ModifyValuePairOption(self, valuePairOption, bAdd):
-        return _IVStudio.IPAxis_ModifyValuePairOption(self, valuePairOption, bAdd)
+    def ModifyValuePairOption(self, *args):
+        return _IVStudio.IPAxis_ModifyValuePairOption(self, *args)
 
     def AddValuePair(self, *args):
         return _IVStudio.IPAxis_AddValuePair(self, *args)
 
-    def SetValuePair(self, index, name, value, color):
-        return _IVStudio.IPAxis_SetValuePair(self, index, name, value, color)
+    def SetValuePair(self, *args):
+        return _IVStudio.IPAxis_SetValuePair(self, *args)
 
-    def RemoveVaulePair(self, index):
-        return _IVStudio.IPAxis_RemoveVaulePair(self, index)
+    def RemoveVaulePair(self, *args):
+        return _IVStudio.IPAxis_RemoveVaulePair(self, *args)
 
-    def RemoveVaulePairAll(self):
-        return _IVStudio.IPAxis_RemoveVaulePairAll(self)
+    def RemoveVaulePairAll(self, *args):
+        return _IVStudio.IPAxis_RemoveVaulePairAll(self, *args)
 
-    def SetTickLabelOrientation(self, textOrientationStyle):
-        return _IVStudio.IPAxis_SetTickLabelOrientation(self, textOrientationStyle)
+    def SetTickLabelOrientation(self, *args):
+        return _IVStudio.IPAxis_SetTickLabelOrientation(self, *args)
     __swig_destroy__ = _IVStudio.delete_IPAxis
     __del__ = lambda self: None
 IPAxis_swigregister = _IVStudio.IPAxis_swigregister
@@ -2204,59 +556,59 @@ class IPCursor(_object):
         raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
 
-    def ModifyOption(self, cursorOptions, bAdd):
-        return _IVStudio.IPCursor_ModifyOption(self, cursorOptions, bAdd)
+    def ModifyOption(self, *args):
+        return _IVStudio.IPCursor_ModifyOption(self, *args)
 
-    def GetCursorPos(self):
-        return _IVStudio.IPCursor_GetCursorPos(self)
+    def GetCursorPos(self, *args):
+        return _IVStudio.IPCursor_GetCursorPos(self, *args)
 
-    def SetCursorPos(self, x, y):
-        return _IVStudio.IPCursor_SetCursorPos(self, x, y)
+    def SetCursorPos(self, *args):
+        return _IVStudio.IPCursor_SetCursorPos(self, *args)
 
-    def SetColor(self, color):
-        return _IVStudio.IPCursor_SetColor(self, color)
+    def SetColor(self, *args):
+        return _IVStudio.IPCursor_SetColor(self, *args)
 
-    def SetLineStyle(self, lineType):
-        return _IVStudio.IPCursor_SetLineStyle(self, lineType)
+    def SetLineStyle(self, *args):
+        return _IVStudio.IPCursor_SetLineStyle(self, *args)
 
-    def SetLineWidth(self, width):
-        return _IVStudio.IPCursor_SetLineWidth(self, width)
+    def SetLineWidth(self, *args):
+        return _IVStudio.IPCursor_SetLineWidth(self, *args)
 
-    def SetCursorStyle(self, cursorLineShape):
-        return _IVStudio.IPCursor_SetCursorStyle(self, cursorLineShape)
+    def SetCursorStyle(self, *args):
+        return _IVStudio.IPCursor_SetCursorStyle(self, *args)
 
-    def SetWidth(self, width):
-        return _IVStudio.IPCursor_SetWidth(self, width)
+    def SetWidth(self, *args):
+        return _IVStudio.IPCursor_SetWidth(self, *args)
 
-    def SetHeight(self, height):
-        return _IVStudio.IPCursor_SetHeight(self, height)
+    def SetHeight(self, *args):
+        return _IVStudio.IPCursor_SetHeight(self, *args)
 
-    def SetLabelColor(self, color):
-        return _IVStudio.IPCursor_SetLabelColor(self, color)
+    def SetLabelColor(self, *args):
+        return _IVStudio.IPCursor_SetLabelColor(self, *args)
 
-    def SetLabelFont(self, name, size, orientation=0, style=0):
-        return _IVStudio.IPCursor_SetLabelFont(self, name, size, orientation, style)
+    def SetLabelFont(self, *args):
+        return _IVStudio.IPCursor_SetLabelFont(self, *args)
 
-    def SetLabelDecimal(self, decimal):
-        return _IVStudio.IPCursor_SetLabelDecimal(self, decimal)
+    def SetLabelDecimal(self, *args):
+        return _IVStudio.IPCursor_SetLabelDecimal(self, *args)
 
-    def SetSnapMode(self, snapModes):
-        return _IVStudio.IPCursor_SetSnapMode(self, snapModes)
+    def SetSnapMode(self, *args):
+        return _IVStudio.IPCursor_SetSnapMode(self, *args)
 
-    def SetSnapPlot(self, plotIndex):
-        return _IVStudio.IPCursor_SetSnapPlot(self, plotIndex)
+    def SetSnapPlot(self, *args):
+        return _IVStudio.IPCursor_SetSnapPlot(self, *args)
 
-    def GetCursorPos3D(self):
-        return _IVStudio.IPCursor_GetCursorPos3D(self)
+    def GetCursorPos3D(self, *args):
+        return _IVStudio.IPCursor_GetCursorPos3D(self, *args)
 
-    def SetCursorPos3D(self, x, y, z):
-        return _IVStudio.IPCursor_SetCursorPos3D(self, x, y, z)
+    def SetCursorPos3D(self, *args):
+        return _IVStudio.IPCursor_SetCursorPos3D(self, *args)
 
-    def SetLength(self, length):
-        return _IVStudio.IPCursor_SetLength(self, length)
+    def SetLength(self, *args):
+        return _IVStudio.IPCursor_SetLength(self, *args)
 
-    def SetTextOrientation(self, textOrientationStyle):
-        return _IVStudio.IPCursor_SetTextOrientation(self, textOrientationStyle)
+    def SetTextOrientation(self, *args):
+        return _IVStudio.IPCursor_SetTextOrientation(self, *args)
     __swig_destroy__ = _IVStudio.delete_IPCursor
     __del__ = lambda self: None
 IPCursor_swigregister = _IVStudio.IPCursor_swigregister
@@ -2272,50 +624,53 @@ class IPDrawItem(_object):
         raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
 
-    def GetType(self):
-        return _IVStudio.IPDrawItem_GetType(self)
+    def GetType(self, *args):
+        return _IVStudio.IPDrawItem_GetType(self, *args)
 
-    def SetLineStyle(self, lineType):
-        return _IVStudio.IPDrawItem_SetLineStyle(self, lineType)
+    def SetLineStyle(self, *args):
+        return _IVStudio.IPDrawItem_SetLineStyle(self, *args)
 
-    def SetLineWidth(self, lineWidth):
-        return _IVStudio.IPDrawItem_SetLineWidth(self, lineWidth)
+    def SetLineWidth(self, *args):
+        return _IVStudio.IPDrawItem_SetLineWidth(self, *args)
 
-    def SetLineColor(self, lineColor):
-        return _IVStudio.IPDrawItem_SetLineColor(self, lineColor)
+    def SetLineColor(self, *args):
+        return _IVStudio.IPDrawItem_SetLineColor(self, *args)
 
-    def SetLineBeginCap(self, lineCapType, size):
-        return _IVStudio.IPDrawItem_SetLineBeginCap(self, lineCapType, size)
+    def SetLineBeginCap(self, *args):
+        return _IVStudio.IPDrawItem_SetLineBeginCap(self, *args)
 
-    def SetLineEndCap(self, lineCapType, size):
-        return _IVStudio.IPDrawItem_SetLineEndCap(self, lineCapType, size)
+    def SetLineEndCap(self, *args):
+        return _IVStudio.IPDrawItem_SetLineEndCap(self, *args)
 
-    def SetFillStyle(self, fillType):
-        return _IVStudio.IPDrawItem_SetFillStyle(self, fillType)
+    def SetFillStyle(self, *args):
+        return _IVStudio.IPDrawItem_SetFillStyle(self, *args)
 
-    def SetFillColor(self, fillColor):
-        return _IVStudio.IPDrawItem_SetFillColor(self, fillColor)
+    def SetFillColor(self, *args):
+        return _IVStudio.IPDrawItem_SetFillColor(self, *args)
 
-    def SetFont(self, name, size, orientation=0, style=0):
-        return _IVStudio.IPDrawItem_SetFont(self, name, size, orientation, style)
+    def SetFont(self, *args):
+        return _IVStudio.IPDrawItem_SetFont(self, *args)
 
-    def SetTextColor(self, textColor):
-        return _IVStudio.IPDrawItem_SetTextColor(self, textColor)
+    def SetTextColor(self, *args):
+        return _IVStudio.IPDrawItem_SetTextColor(self, *args)
 
-    def SetOptions(self, bVisible, bRender3D):
-        return _IVStudio.IPDrawItem_SetOptions(self, bVisible, bRender3D)
+    def SetOptions(self, *args):
+        return _IVStudio.IPDrawItem_SetOptions(self, *args)
 
-    def SetText(self, text):
-        return _IVStudio.IPDrawItem_SetText(self, text)
+    def SetText(self, *args):
+        return _IVStudio.IPDrawItem_SetText(self, *args)
 
-    def SetAlignment(self, horizontalAlignment, verticalAlignment):
-        return _IVStudio.IPDrawItem_SetAlignment(self, horizontalAlignment, verticalAlignment)
+    def SetAlignment(self, *args):
+        return _IVStudio.IPDrawItem_SetAlignment(self, *args)
 
     def SetCoordinates(self, *args):
         return _IVStudio.IPDrawItem_SetCoordinates(self, *args)
 
-    def SetRotation(self, rx, ry, rz):
-        return _IVStudio.IPDrawItem_SetRotation(self, rx, ry, rz)
+    def SetCoordinates3D(self, *args):
+        return _IVStudio.IPDrawItem_SetCoordinates3D(self, *args)
+
+    def SetRotation(self, *args):
+        return _IVStudio.IPDrawItem_SetRotation(self, *args)
     __swig_destroy__ = _IVStudio.delete_IPDrawItem
     __del__ = lambda self: None
 IPDrawItem_swigregister = _IVStudio.IPDrawItem_swigregister
@@ -2331,26 +686,26 @@ class IPDrawGroup(_object):
         raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
 
-    def AddGroup(self, name):
-        return _IVStudio.IPDrawGroup_AddGroup(self, name)
+    def AddGroup(self, *args):
+        return _IVStudio.IPDrawGroup_AddGroup(self, *args)
 
-    def RemoveGroup(self, name):
-        return _IVStudio.IPDrawGroup_RemoveGroup(self, name)
+    def RemoveGroup(self, *args):
+        return _IVStudio.IPDrawGroup_RemoveGroup(self, *args)
 
-    def FindGroup(self, name):
-        return _IVStudio.IPDrawGroup_FindGroup(self, name)
+    def FindGroup(self, *args):
+        return _IVStudio.IPDrawGroup_FindGroup(self, *args)
 
-    def AddItem(self, drawItemType, name=None):
-        return _IVStudio.IPDrawGroup_AddItem(self, drawItemType, name)
+    def AddItem(self, *args):
+        return _IVStudio.IPDrawGroup_AddItem(self, *args)
 
-    def FindItem(self, name):
-        return _IVStudio.IPDrawGroup_FindItem(self, name)
+    def FindItem(self, *args):
+        return _IVStudio.IPDrawGroup_FindItem(self, *args)
 
-    def DeleteItem(self, name):
-        return _IVStudio.IPDrawGroup_DeleteItem(self, name)
+    def DeleteItem(self, *args):
+        return _IVStudio.IPDrawGroup_DeleteItem(self, *args)
 
-    def RemoveAllItems(self, bDelete):
-        return _IVStudio.IPDrawGroup_RemoveAllItems(self, bDelete)
+    def RemoveAllItems(self, *args):
+        return _IVStudio.IPDrawGroup_RemoveAllItems(self, *args)
     __swig_destroy__ = _IVStudio.delete_IPDrawGroup
     __del__ = lambda self: None
 IPDrawGroup_swigregister = _IVStudio.IPDrawGroup_swigregister
@@ -2366,47 +721,47 @@ class IPAnnotation(_object):
         raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
 
-    def SetCaption(self, text, horizontalAlignment=0, verticalAlignment=0):
-        return _IVStudio.IPAnnotation_SetCaption(self, text, horizontalAlignment, verticalAlignment)
+    def SetCaption(self, *args):
+        return _IVStudio.IPAnnotation_SetCaption(self, *args)
 
-    def SetCaptionColor(self, textcolor, backgroundColor=0):
-        return _IVStudio.IPAnnotation_SetCaptionColor(self, textcolor, backgroundColor)
+    def SetCaptionColor(self, *args):
+        return _IVStudio.IPAnnotation_SetCaptionColor(self, *args)
 
     def SetCaptionBorder(self, *args):
         return _IVStudio.IPAnnotation_SetCaptionBorder(self, *args)
 
-    def SetCaptionLocation(self, x, y, coorType=0):
-        return _IVStudio.IPAnnotation_SetCaptionLocation(self, x, y, coorType)
+    def SetCaptionLocation(self, *args):
+        return _IVStudio.IPAnnotation_SetCaptionLocation(self, *args)
 
-    def SetArrowLineWidth(self, width):
-        return _IVStudio.IPAnnotation_SetArrowLineWidth(self, width)
+    def SetArrowLineWidth(self, *args):
+        return _IVStudio.IPAnnotation_SetArrowLineWidth(self, *args)
 
-    def SetArrowLineColor(self, color):
-        return _IVStudio.IPAnnotation_SetArrowLineColor(self, color)
+    def SetArrowLineColor(self, *args):
+        return _IVStudio.IPAnnotation_SetArrowLineColor(self, *args)
 
-    def SetArrowLineStyle(self, lineType):
-        return _IVStudio.IPAnnotation_SetArrowLineStyle(self, lineType)
+    def SetArrowLineStyle(self, *args):
+        return _IVStudio.IPAnnotation_SetArrowLineStyle(self, *args)
 
-    def SetArrowTailStyle(self, lineCapType, width=5, height=10):
-        return _IVStudio.IPAnnotation_SetArrowTailStyle(self, lineCapType, width, height)
+    def SetArrowTailStyle(self, *args):
+        return _IVStudio.IPAnnotation_SetArrowTailStyle(self, *args)
 
-    def SetArrowHeadStyle(self, lineCapType, width=5, height=10):
-        return _IVStudio.IPAnnotation_SetArrowHeadStyle(self, lineCapType, width, height)
+    def SetArrowHeadStyle(self, *args):
+        return _IVStudio.IPAnnotation_SetArrowHeadStyle(self, *args)
 
-    def SetArrowHeadPos(self, x, y, coorType=0):
-        return _IVStudio.IPAnnotation_SetArrowHeadPos(self, x, y, coorType)
+    def SetArrowHeadPos(self, *args):
+        return _IVStudio.IPAnnotation_SetArrowHeadPos(self, *args)
 
-    def SetDrawType(self, drawItemType):
-        return _IVStudio.IPAnnotation_SetDrawType(self, drawItemType)
+    def SetDrawType(self, *args):
+        return _IVStudio.IPAnnotation_SetDrawType(self, *args)
 
-    def SetCaptionLocation3D(self, x, y, z, annotationCoordinate=0):
-        return _IVStudio.IPAnnotation_SetCaptionLocation3D(self, x, y, z, annotationCoordinate)
+    def SetCaptionLocation3D(self, *args):
+        return _IVStudio.IPAnnotation_SetCaptionLocation3D(self, *args)
 
-    def SetCaptionOrientation(self, textOrientationStyle, rotationX=0, rotationY=0, rotationZ=0):
-        return _IVStudio.IPAnnotation_SetCaptionOrientation(self, textOrientationStyle, rotationX, rotationY, rotationZ)
+    def SetCaptionOrientation(self, *args):
+        return _IVStudio.IPAnnotation_SetCaptionOrientation(self, *args)
 
-    def SetArrowHeadPos3D(self, x, y, z, annotationCoordinate=0):
-        return _IVStudio.IPAnnotation_SetArrowHeadPos3D(self, x, y, z, annotationCoordinate)
+    def SetArrowHeadPos3D(self, *args):
+        return _IVStudio.IPAnnotation_SetArrowHeadPos3D(self, *args)
     __swig_destroy__ = _IVStudio.delete_IPAnnotation
     __del__ = lambda self: None
 IPAnnotation_swigregister = _IVStudio.IPAnnotation_swigregister
@@ -2422,29 +777,29 @@ class IPLight3D(_object):
         raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
 
-    def ModifyOption(self, lightOptions, bAdd):
-        return _IVStudio.IPLight3D_ModifyOption(self, lightOptions, bAdd)
+    def ModifyOption(self, *args):
+        return _IVStudio.IPLight3D_ModifyOption(self, *args)
 
-    def SetDirection(self, nx, ny, nz, cutoffAngle):
-        return _IVStudio.IPLight3D_SetDirection(self, nx, ny, nz, cutoffAngle)
+    def SetDirection(self, *args):
+        return _IVStudio.IPLight3D_SetDirection(self, *args)
 
-    def SetPosition(self, px, py, pz):
-        return _IVStudio.IPLight3D_SetPosition(self, px, py, pz)
+    def SetPosition(self, *args):
+        return _IVStudio.IPLight3D_SetPosition(self, *args)
 
-    def SetDirectionLight(self, nx, ny, nz):
-        return _IVStudio.IPLight3D_SetDirectionLight(self, nx, ny, nz)
+    def SetDirectionLight(self, *args):
+        return _IVStudio.IPLight3D_SetDirectionLight(self, *args)
 
-    def SetPointLight(self, px, py, pz):
-        return _IVStudio.IPLight3D_SetPointLight(self, px, py, pz)
+    def SetPointLight(self, *args):
+        return _IVStudio.IPLight3D_SetPointLight(self, *args)
 
-    def SetSpotLight(self, px, py, pz, nx, ny, nz, cutoffAngle):
-        return _IVStudio.IPLight3D_SetSpotLight(self, px, py, pz, nx, ny, nz, cutoffAngle)
+    def SetSpotLight(self, *args):
+        return _IVStudio.IPLight3D_SetSpotLight(self, *args)
 
-    def SetColor(self, diffuse, ambient, specular):
-        return _IVStudio.IPLight3D_SetColor(self, diffuse, ambient, specular)
+    def SetColor(self, *args):
+        return _IVStudio.IPLight3D_SetColor(self, *args)
 
-    def SetAttenuation(self, constant, linear, quadratic):
-        return _IVStudio.IPLight3D_SetAttenuation(self, constant, linear, quadratic)
+    def SetAttenuation(self, *args):
+        return _IVStudio.IPLight3D_SetAttenuation(self, *args)
     __swig_destroy__ = _IVStudio.delete_IPLight3D
     __del__ = lambda self: None
 IPLight3D_swigregister = _IVStudio.IPLight3D_swigregister
@@ -2460,26 +815,38 @@ class IPPalette(_object):
         raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
 
-    def SetMaximumScale(self, maxScale):
-        return _IVStudio.IPPalette_SetMaximumScale(self, maxScale)
+    def ModifyOption(self, *args):
+        return _IVStudio.IPPalette_ModifyOption(self, *args)
 
-    def SetMinimumScale(self, minScale):
-        return _IVStudio.IPPalette_SetMinimumScale(self, minScale)
+    def SetTitle(self, *args):
+        return _IVStudio.IPPalette_SetTitle(self, *args)
 
-    def GetColor(self, index):
-        return _IVStudio.IPPalette_GetColor(self, index)
+    def SetAlign(self, *args):
+        return _IVStudio.IPPalette_SetAlign(self, *args)
 
-    def SetColor(self, index, color):
-        return _IVStudio.IPPalette_SetColor(self, index, color)
+    def SetTransparency(self, *args):
+        return _IVStudio.IPPalette_SetTransparency(self, *args)
 
-    def SetLevelNum(self, numThreshold):
-        return _IVStudio.IPPalette_SetLevelNum(self, numThreshold)
+    def SetMaximumScale(self, *args):
+        return _IVStudio.IPPalette_SetMaximumScale(self, *args)
 
-    def SetLevelValue(self, level, value):
-        return _IVStudio.IPPalette_SetLevelValue(self, level, value)
+    def SetMinimumScale(self, *args):
+        return _IVStudio.IPPalette_SetMinimumScale(self, *args)
 
-    def SetLevelType(self, level, type):
-        return _IVStudio.IPPalette_SetLevelType(self, level, type)
+    def GetColor(self, *args):
+        return _IVStudio.IPPalette_GetColor(self, *args)
+
+    def SetColor(self, *args):
+        return _IVStudio.IPPalette_SetColor(self, *args)
+
+    def SetLevelNum(self, *args):
+        return _IVStudio.IPPalette_SetLevelNum(self, *args)
+
+    def SetLevelValue(self, *args):
+        return _IVStudio.IPPalette_SetLevelValue(self, *args)
+
+    def SetLevelType(self, *args):
+        return _IVStudio.IPPalette_SetLevelType(self, *args)
     __swig_destroy__ = _IVStudio.delete_IPPalette
     __del__ = lambda self: None
 IPPalette_swigregister = _IVStudio.IPPalette_swigregister
@@ -2495,20 +862,20 @@ class IPLegend(_object):
         raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
 
-    def SetVisible(self, bVisible):
-        return _IVStudio.IPLegend_SetVisible(self, bVisible)
+    def SetVisible(self, *args):
+        return _IVStudio.IPLegend_SetVisible(self, *args)
 
-    def SetLength(self, length):
-        return _IVStudio.IPLegend_SetLength(self, length)
+    def SetLength(self, *args):
+        return _IVStudio.IPLegend_SetLength(self, *args)
 
-    def SetSpace(self, space, padding):
-        return _IVStudio.IPLegend_SetSpace(self, space, padding)
+    def SetSpace(self, *args):
+        return _IVStudio.IPLegend_SetSpace(self, *args)
 
-    def SetLocationSide(self, locationSide):
-        return _IVStudio.IPLegend_SetLocationSide(self, locationSide)
+    def SetLocationSide(self, *args):
+        return _IVStudio.IPLegend_SetLocationSide(self, *args)
 
-    def SetFont(self, name, size, orientation=0, style=0):
-        return _IVStudio.IPLegend_SetFont(self, name, size, orientation, style)
+    def SetFont(self, *args):
+        return _IVStudio.IPLegend_SetFont(self, *args)
     __swig_destroy__ = _IVStudio.delete_IPLegend
     __del__ = lambda self: None
 IPLegend_swigregister = _IVStudio.IPLegend_swigregister
@@ -2521,8 +888,8 @@ class IPGraph(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, IPGraph, name)
     __repr__ = _swig_repr
 
-    def __init__(self, id):
-        this = _IVStudio.new_IPGraph(id)
+    def __init__(self, *args):
+        this = _IVStudio.new_IPGraph(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
@@ -2534,131 +901,134 @@ class IPGraph(_object):
     if _newclass:
         graph_id = _swig_property(_IVStudio.IPGraph_graph_id_get, _IVStudio.IPGraph_graph_id_set)
 
-    def SetGraphQuality(self, graphQualityType):
-        return _IVStudio.IPGraph_SetGraphQuality(self, graphQualityType)
+    def SetGraphQuality(self, *args):
+        return _IVStudio.IPGraph_SetGraphQuality(self, *args)
 
-    def SetGraphCategory(self, graphCategory, plotStyle):
-        return _IVStudio.IPGraph_SetGraphCategory(self, graphCategory, plotStyle)
+    def SetGraphCategory(self, *args):
+        return _IVStudio.IPGraph_SetGraphCategory(self, *args)
 
-    def RedrawPlotArea(self, updatenow):
-        return _IVStudio.IPGraph_RedrawPlotArea(self, updatenow)
+    def RedrawPlotArea(self, *args):
+        return _IVStudio.IPGraph_RedrawPlotArea(self, *args)
 
-    def RedrawGraph(self, bRedrawBord=False):
-        return _IVStudio.IPGraph_RedrawGraph(self, bRedrawBord)
+    def RedrawGraph(self, *args):
+        return _IVStudio.IPGraph_RedrawGraph(self, *args)
 
-    def SetDisplayOrder(self, graphDisplayOrder):
-        return _IVStudio.IPGraph_SetDisplayOrder(self, graphDisplayOrder)
+    def SetDisplayOrder(self, *args):
+        return _IVStudio.IPGraph_SetDisplayOrder(self, *args)
 
-    def SetMouseTrackingMode(self, graphMouseTrackingMode, bAdd):
-        return _IVStudio.IPGraph_SetMouseTrackingMode(self, graphMouseTrackingMode, bAdd)
+    def SetMouseTrackingMode(self, *args):
+        return _IVStudio.IPGraph_SetMouseTrackingMode(self, *args)
 
-    def SetFrameColor(self, fillType, color):
-        return _IVStudio.IPGraph_SetFrameColor(self, fillType, color)
+    def SetFrameColor(self, *args):
+        return _IVStudio.IPGraph_SetFrameColor(self, *args)
 
-    def SetPlotAreaColor(self, fillStyle, color):
-        return _IVStudio.IPGraph_SetPlotAreaColor(self, fillStyle, color)
+    def SetPlotAreaColor(self, *args):
+        return _IVStudio.IPGraph_SetPlotAreaColor(self, *args)
 
-    def SetCaption(self, caption):
-        return _IVStudio.IPGraph_SetCaption(self, caption)
+    def SetCaption(self, *args):
+        return _IVStudio.IPGraph_SetCaption(self, *args)
 
-    def SetCaptionAlign(self, align):
-        return _IVStudio.IPGraph_SetCaptionAlign(self, align)
+    def SetCaptionAlign(self, *args):
+        return _IVStudio.IPGraph_SetCaptionAlign(self, *args)
 
-    def SetCaptionColor(self, color):
-        return _IVStudio.IPGraph_SetCaptionColor(self, color)
+    def SetCaptionColor(self, *args):
+        return _IVStudio.IPGraph_SetCaptionColor(self, *args)
 
-    def GetAxisCount(self):
-        return _IVStudio.IPGraph_GetAxisCount(self)
+    def GetAxisCount(self, *args):
+        return _IVStudio.IPGraph_GetAxisCount(self, *args)
 
     def Axes(self, *args):
         return _IVStudio.IPGraph_Axes(self, *args)
 
-    def NewAxis(self, name, type):
-        return _IVStudio.IPGraph_NewAxis(self, name, type)
+    def NewAxis(self, *args):
+        return _IVStudio.IPGraph_NewAxis(self, *args)
 
     def RemoveAxis(self, *args):
         return _IVStudio.IPGraph_RemoveAxis(self, *args)
 
-    def GetPlotCount(self):
-        return _IVStudio.IPGraph_GetPlotCount(self)
+    def GetPlotCount(self, *args):
+        return _IVStudio.IPGraph_GetPlotCount(self, *args)
 
     def Plots(self, *args):
         return _IVStudio.IPGraph_Plots(self, *args)
 
-    def NewPlot(self, name=None):
-        return _IVStudio.IPGraph_NewPlot(self, name)
+    def NewPlot(self, *args):
+        return _IVStudio.IPGraph_NewPlot(self, *args)
 
     def RemovePlot(self, *args):
         return _IVStudio.IPGraph_RemovePlot(self, *args)
 
-    def Set3DBarOffset(self, offset):
-        return _IVStudio.IPGraph_Set3DBarOffset(self, offset)
+    def Set3DBarOffset(self, *args):
+        return _IVStudio.IPGraph_Set3DBarOffset(self, *args)
 
-    def GetLegend(self):
-        return _IVStudio.IPGraph_GetLegend(self)
+    def GetLegend(self, *args):
+        return _IVStudio.IPGraph_GetLegend(self, *args)
 
-    def GetCursorCount(self):
-        return _IVStudio.IPGraph_GetCursorCount(self)
+    def GetCursorCount(self, *args):
+        return _IVStudio.IPGraph_GetCursorCount(self, *args)
 
-    def AddCursor(self, name=None):
-        return _IVStudio.IPGraph_AddCursor(self, name)
+    def Cursors(self, *args):
+        return _IVStudio.IPGraph_Cursors(self, *args)
+
+    def NewCursor(self, *args):
+        return _IVStudio.IPGraph_NewCursor(self, *args)
 
     def RemoveCursor(self, *args):
         return _IVStudio.IPGraph_RemoveCursor(self, *args)
 
-    def GetAnnotationCount(self):
-        return _IVStudio.IPGraph_GetAnnotationCount(self)
+    def GetAnnotationCount(self, *args):
+        return _IVStudio.IPGraph_GetAnnotationCount(self, *args)
 
-    def AddAnnotation(self, name=None):
-        return _IVStudio.IPGraph_AddAnnotation(self, name)
+    def Annotations(self, *args):
+        return _IVStudio.IPGraph_Annotations(self, *args)
 
-    def GetAnnotation(self, name):
-        return _IVStudio.IPGraph_GetAnnotation(self, name)
+    def NewAnnotation(self, *args):
+        return _IVStudio.IPGraph_NewAnnotation(self, *args)
 
-    def RemoveAnnotation(self, name):
-        return _IVStudio.IPGraph_RemoveAnnotation(self, name)
+    def RemoveAnnotation(self, *args):
+        return _IVStudio.IPGraph_RemoveAnnotation(self, *args)
 
-    def ShowAnnotationEditBar(self, dockSide, bVisible, x=-1, y=-1, cx=-1, cy=-1):
-        return _IVStudio.IPGraph_ShowAnnotationEditBar(self, dockSide, bVisible, x, y, cx, cy)
+    def ShowAnnotationEditBar(self, *args):
+        return _IVStudio.IPGraph_ShowAnnotationEditBar(self, *args)
 
-    def GetPalette(self):
-        return _IVStudio.IPGraph_GetPalette(self)
+    def GetPalette(self, *args):
+        return _IVStudio.IPGraph_GetPalette(self, *args)
 
-    def SetPalette(self, minScale=0, maxScale=1, bVisible=True):
-        return _IVStudio.IPGraph_SetPalette(self, minScale, maxScale, bVisible)
+    def SetPalette(self, *args):
+        return _IVStudio.IPGraph_SetPalette(self, *args)
 
-    def SetSkyBackground(self, right, left, top, bottom, back, front):
-        return _IVStudio.IPGraph_SetSkyBackground(self, right, left, top, bottom, back, front)
+    def SetSkyBackground(self, *args):
+        return _IVStudio.IPGraph_SetSkyBackground(self, *args)
 
-    def SetProjectionType(self, projection3DType):
-        return _IVStudio.IPGraph_SetProjectionType(self, projection3DType)
+    def SetProjectionType(self, *args):
+        return _IVStudio.IPGraph_SetProjectionType(self, *args)
 
-    def SetOrientation(self, ax, ay, az):
-        return _IVStudio.IPGraph_SetOrientation(self, ax, ay, az)
+    def SetOrientation(self, *args):
+        return _IVStudio.IPGraph_SetOrientation(self, *args)
 
-    def SetViewCenter(self, x, y, z):
-        return _IVStudio.IPGraph_SetViewCenter(self, x, y, z)
+    def SetViewCenter(self, *args):
+        return _IVStudio.IPGraph_SetViewCenter(self, *args)
 
-    def SetScale(self, sx, sy, sz):
-        return _IVStudio.IPGraph_SetScale(self, sx, sy, sz)
+    def SetScale(self, *args):
+        return _IVStudio.IPGraph_SetScale(self, *args)
 
-    def SetPlotAreaScale(self, scale):
-        return _IVStudio.IPGraph_SetPlotAreaScale(self, scale)
+    def SetPlotAreaScale(self, *args):
+        return _IVStudio.IPGraph_SetPlotAreaScale(self, *args)
 
-    def SetClip(self, bClip):
-        return _IVStudio.IPGraph_SetClip(self, bClip)
+    def SetClip(self, *args):
+        return _IVStudio.IPGraph_SetClip(self, *args)
 
-    def GetLightCount(self):
-        return _IVStudio.IPGraph_GetLightCount(self)
+    def GetLightCount(self, *args):
+        return _IVStudio.IPGraph_GetLightCount(self, *args)
 
-    def AddLight(self, name):
-        return _IVStudio.IPGraph_AddLight(self, name)
+    def NewLight(self, *args):
+        return _IVStudio.IPGraph_NewLight(self, *args)
 
-    def GetLight(self, *args):
-        return _IVStudio.IPGraph_GetLight(self, *args)
+    def Lights(self, *args):
+        return _IVStudio.IPGraph_Lights(self, *args)
 
-    def RemoveLight(self, name):
-        return _IVStudio.IPGraph_RemoveLight(self, name)
+    def RemoveLight(self, *args):
+        return _IVStudio.IPGraph_RemoveLight(self, *args)
 IPGraph_swigregister = _IVStudio.IPGraph_swigregister
 IPGraph_swigregister(IPGraph)
 
@@ -2669,8 +1039,8 @@ class IPDraw(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, IPDraw, name)
     __repr__ = _swig_repr
 
-    def __init__(self, id):
-        this = _IVStudio.new_IPDraw(id)
+    def __init__(self, *args):
+        this = _IVStudio.new_IPDraw(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
@@ -2682,305 +1052,379 @@ class IPDraw(_object):
     if _newclass:
         draw_id = _swig_property(_IVStudio.IPDraw_draw_id_get, _IVStudio.IPDraw_draw_id_set)
 
-    def SetBackgroundColor(self, color):
-        return _IVStudio.IPDraw_SetBackgroundColor(self, color)
+    def SetBackgroundColor(self, *args):
+        return _IVStudio.IPDraw_SetBackgroundColor(self, *args)
 
-    def SetPageSize(self, pageX, pageY, pageWidth, pageHeight, systemLengthUnit):
-        return _IVStudio.IPDraw_SetPageSize(self, pageX, pageY, pageWidth, pageHeight, systemLengthUnit)
+    def SetPageSize(self, *args):
+        return _IVStudio.IPDraw_SetPageSize(self, *args)
 
-    def SetZoomMode(self, drawZoom_Mode):
-        return _IVStudio.IPDraw_SetZoomMode(self, drawZoom_Mode)
+    def SetZoomMode(self, *args):
+        return _IVStudio.IPDraw_SetZoomMode(self, *args)
 
-    def ShowDrawTools(self, locationSide, bFloating, bVisible):
-        return _IVStudio.IPDraw_ShowDrawTools(self, locationSide, bFloating, bVisible)
+    def ShowDrawTools(self, *args):
+        return _IVStudio.IPDraw_ShowDrawTools(self, *args)
 
-    def GetDrawModel(self):
-        return _IVStudio.IPDraw_GetDrawModel(self)
+    def GetDrawModel(self, *args):
+        return _IVStudio.IPDraw_GetDrawModel(self, *args)
 
-    def AddDrawGroup(self, bSetActive, name):
-        return _IVStudio.IPDraw_AddDrawGroup(self, bSetActive, name)
+    def AddDrawGroup(self, *args):
+        return _IVStudio.IPDraw_AddDrawGroup(self, *args)
 
-    def FindDrawGroup(self, name):
-        return _IVStudio.IPDraw_FindDrawGroup(self, name)
+    def FindDrawGroup(self, *args):
+        return _IVStudio.IPDraw_FindDrawGroup(self, *args)
 
-    def SetActiveDrawGroup(self, name):
-        return _IVStudio.IPDraw_SetActiveDrawGroup(self, name)
+    def SetActiveDrawGroup(self, *args):
+        return _IVStudio.IPDraw_SetActiveDrawGroup(self, *args)
 
-    def AddDrawItem(self, drawItemType, name):
-        return _IVStudio.IPDraw_AddDrawItem(self, drawItemType, name)
+    def AddDrawItem(self, *args):
+        return _IVStudio.IPDraw_AddDrawItem(self, *args)
 
-    def FindDrawItem(self, name):
-        return _IVStudio.IPDraw_FindDrawItem(self, name)
+    def FindDrawItem(self, *args):
+        return _IVStudio.IPDraw_FindDrawItem(self, *args)
 
-    def DeleteDrawItem(self, name):
-        return _IVStudio.IPDraw_DeleteDrawItem(self, name)
+    def DeleteDrawItem(self, *args):
+        return _IVStudio.IPDraw_DeleteDrawItem(self, *args)
 
     def RemoveCursor(self, *args):
         return _IVStudio.IPDraw_RemoveCursor(self, *args)
 
-    def AddCursor(self, name):
-        return _IVStudio.IPDraw_AddCursor(self, name)
+    def AddCursor(self, *args):
+        return _IVStudio.IPDraw_AddCursor(self, *args)
 
-    def SetSkyBackground(self, right, left, top, bottom, back, front):
-        return _IVStudio.IPDraw_SetSkyBackground(self, right, left, top, bottom, back, front)
+    def SetSkyBackground(self, *args):
+        return _IVStudio.IPDraw_SetSkyBackground(self, *args)
 
-    def SetProjectionType(self, projection3DType):
-        return _IVStudio.IPDraw_SetProjectionType(self, projection3DType)
+    def SetProjectionType(self, *args):
+        return _IVStudio.IPDraw_SetProjectionType(self, *args)
 
-    def SetOrientation(self, ax, ay, az):
-        return _IVStudio.IPDraw_SetOrientation(self, ax, ay, az)
+    def SetOrientation(self, *args):
+        return _IVStudio.IPDraw_SetOrientation(self, *args)
 
-    def SetViewCenter(self, x, y, z):
-        return _IVStudio.IPDraw_SetViewCenter(self, x, y, z)
+    def SetViewCenter(self, *args):
+        return _IVStudio.IPDraw_SetViewCenter(self, *args)
 
-    def SetScale(self, sx, dy, sz):
-        return _IVStudio.IPDraw_SetScale(self, sx, dy, sz)
+    def SetScale(self, *args):
+        return _IVStudio.IPDraw_SetScale(self, *args)
 
-    def GetLightCount(self):
-        return _IVStudio.IPDraw_GetLightCount(self)
+    def GetLightCount(self, *args):
+        return _IVStudio.IPDraw_GetLightCount(self, *args)
 
-    def AddLight(self, name=None):
-        return _IVStudio.IPDraw_AddLight(self, name)
+    def NewLight(self, *args):
+        return _IVStudio.IPDraw_NewLight(self, *args)
 
-    def GetLight(self, *args):
-        return _IVStudio.IPDraw_GetLight(self, *args)
+    def Lights(self, *args):
+        return _IVStudio.IPDraw_Lights(self, *args)
 
     def RemoveLight(self, *args):
         return _IVStudio.IPDraw_RemoveLight(self, *args)
 
-    def GetDrawImage(self, pData, width, height, type, bBottomUp):
-        return _IVStudio.IPDraw_GetDrawImage(self, pData, width, height, type, bBottomUp)
+    def GetDrawImage(self, *args):
+        return _IVStudio.IPDraw_GetDrawImage(self, *args)
 IPDraw_swigregister = _IVStudio.IPDraw_swigregister
 IPDraw_swigregister(IPDraw)
 
-class IPDataGrid(_object):
+class IPDataTable(_object):
     __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, IPDataGrid, name, value)
+    __setattr__ = lambda self, name, value: _swig_setattr(self, IPDataTable, name, value)
     __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, IPDataGrid, name)
+    __getattr__ = lambda self, name: _swig_getattr(self, IPDataTable, name)
     __repr__ = _swig_repr
 
-    def __init__(self, id):
-        this = _IVStudio.new_IPDataGrid(id)
+    def __init__(self, *args):
+        this = _IVStudio.new_IPDataTable(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
             self.this = this
-    __swig_destroy__ = _IVStudio.delete_IPDataGrid
+    __swig_destroy__ = _IVStudio.delete_IPDataTable
     __del__ = lambda self: None
-    __swig_setmethods__["grid_id"] = _IVStudio.IPDataGrid_grid_id_set
-    __swig_getmethods__["grid_id"] = _IVStudio.IPDataGrid_grid_id_get
+    __swig_setmethods__["grid_id"] = _IVStudio.IPDataTable_grid_id_set
+    __swig_getmethods__["grid_id"] = _IVStudio.IPDataTable_grid_id_get
     if _newclass:
-        grid_id = _swig_property(_IVStudio.IPDataGrid_grid_id_get, _IVStudio.IPDataGrid_grid_id_set)
+        grid_id = _swig_property(_IVStudio.IPDataTable_grid_id_get, _IVStudio.IPDataTable_grid_id_set)
 
-    def SetGridType(self, gridType, bInitial=True):
-        return _IVStudio.IPDataGrid_SetGridType(self, gridType, bInitial)
+    def SetTableType(self, *args):
+        return _IVStudio.IPDataTable_SetTableType(self, *args)
 
-    def GetColNumber(self):
-        return _IVStudio.IPDataGrid_GetColNumber(self)
+    def ModifyOption(self, *args):
+        return _IVStudio.IPDataTable_ModifyOption(self, *args)
 
-    def GetRowNumber(self):
-        return _IVStudio.IPDataGrid_GetRowNumber(self)
+    def ModifyPopupMenu(self, *args):
+        return _IVStudio.IPDataTable_ModifyPopupMenu(self, *args)
 
-    def SetColNumber(self, n):
-        return _IVStudio.IPDataGrid_SetColNumber(self, n)
+    def GetColNumber(self, *args):
+        return _IVStudio.IPDataTable_GetColNumber(self, *args)
 
-    def SetRowNumber(self, n):
-        return _IVStudio.IPDataGrid_SetRowNumber(self, n)
+    def GetRowNumber(self, *args):
+        return _IVStudio.IPDataTable_GetRowNumber(self, *args)
 
-    def AppendRow(self, numRow):
-        return _IVStudio.IPDataGrid_AppendRow(self, numRow)
+    def SetColNumber(self, *args):
+        return _IVStudio.IPDataTable_SetColNumber(self, *args)
 
-    def AppendCol(self, numCol):
-        return _IVStudio.IPDataGrid_AppendCol(self, numCol)
+    def SetRowNumber(self, *args):
+        return _IVStudio.IPDataTable_SetRowNumber(self, *args)
 
-    def InsertRow(self, insertAfter, numRow):
-        return _IVStudio.IPDataGrid_InsertRow(self, insertAfter, numRow)
+    def AppendRow(self, *args):
+        return _IVStudio.IPDataTable_AppendRow(self, *args)
 
-    def InsertCol(self, insertAfter, numCol):
-        return _IVStudio.IPDataGrid_InsertCol(self, insertAfter, numCol)
+    def AppendCol(self, *args):
+        return _IVStudio.IPDataTable_AppendCol(self, *args)
 
-    def InsertCells(self, cellInsertOption, numcell, numrow, numcol):
-        return _IVStudio.IPDataGrid_InsertCells(self, cellInsertOption, numcell, numrow, numcol)
+    def InsertRow(self, *args):
+        return _IVStudio.IPDataTable_InsertRow(self, *args)
 
-    def RemoveCells(self, cellDeleteOption, numcell, numrow, numcol):
-        return _IVStudio.IPDataGrid_RemoveCells(self, cellDeleteOption, numcell, numrow, numcol)
+    def InsertCol(self, *args):
+        return _IVStudio.IPDataTable_InsertCol(self, *args)
 
-    def RemoveRow(self, firstRow, lastRow):
-        return _IVStudio.IPDataGrid_RemoveRow(self, firstRow, lastRow)
+    def InsertCells(self, *args):
+        return _IVStudio.IPDataTable_InsertCells(self, *args)
 
-    def RemoveCol(self, firstCol, lastCol):
-        return _IVStudio.IPDataGrid_RemoveCol(self, firstCol, lastCol)
+    def RemoveCells(self, *args):
+        return _IVStudio.IPDataTable_RemoveCells(self, *args)
 
-    def RemoveAll(self):
-        return _IVStudio.IPDataGrid_RemoveAll(self)
+    def RemoveRow(self, *args):
+        return _IVStudio.IPDataTable_RemoveRow(self, *args)
 
-    def GetSelCells(self):
-        return _IVStudio.IPDataGrid_GetSelCells(self)
+    def RemoveCol(self, *args):
+        return _IVStudio.IPDataTable_RemoveCol(self, *args)
 
-    def SetSelCells(self, col0, row0, col1, row1):
-        return _IVStudio.IPDataGrid_SetSelCells(self, col0, row0, col1, row1)
+    def RemoveAll(self, *args):
+        return _IVStudio.IPDataTable_RemoveAll(self, *args)
 
-    def JointCells(self, firstCol, firstRow, lastCol, lastRow):
-        return _IVStudio.IPDataGrid_JointCells(self, firstCol, firstRow, lastCol, lastRow)
+    def GetSelCells(self, *args):
+        return _IVStudio.IPDataTable_GetSelCells(self, *args)
 
-    def UnJointCells(self, firstCol, firstRow, lastCol, lastRow):
-        return _IVStudio.IPDataGrid_UnJointCells(self, firstCol, firstRow, lastCol, lastRow)
+    def SetSelCells(self, *args):
+        return _IVStudio.IPDataTable_SetSelCells(self, *args)
 
-    def SetCellData(self, col, row, data):
-        return _IVStudio.IPDataGrid_SetCellData(self, col, row, data)
+    def JointCells(self, *args):
+        return _IVStudio.IPDataTable_JointCells(self, *args)
 
-    def SetCellText(self, col, row, pText, bText=True):
-        return _IVStudio.IPDataGrid_SetCellText(self, col, row, pText, bText)
+    def UnJointCells(self, *args):
+        return _IVStudio.IPDataTable_UnJointCells(self, *args)
 
-    def SetCellChar(self, col, row, pText, len, bText=True):
-        return _IVStudio.IPDataGrid_SetCellChar(self, col, row, pText, len, bText)
+    def SetCellData(self, *args):
+        return _IVStudio.IPDataTable_SetCellData(self, *args)
 
-    def SetRowData(self, row, firstCol, numData, data0, dataInc, bAdd=True):
-        return _IVStudio.IPDataGrid_SetRowData(self, row, firstCol, numData, data0, dataInc, bAdd)
+    def SetCellText(self, *args):
+        return _IVStudio.IPDataTable_SetCellText(self, *args)
+
+    def SetCellChar(self, *args):
+        return _IVStudio.IPDataTable_SetCellChar(self, *args)
+
+    def SetRowData(self, *args):
+        return _IVStudio.IPDataTable_SetRowData(self, *args)
 
     def SetColData(self, *args):
-        return _IVStudio.IPDataGrid_SetColData(self, *args)
+        return _IVStudio.IPDataTable_SetColData(self, *args)
 
-    def SetData(self, firstCol, firstRow, lastCol, lastRow, array, bTranspose, bAdd=True):
-        return _IVStudio.IPDataGrid_SetData(self, firstCol, firstRow, lastCol, lastRow, array, bTranspose, bAdd)
+    def SetData(self, *args):
+        return _IVStudio.IPDataTable_SetData(self, *args)
 
-    def SetReadOnly(self, firstCol, firstRow, lastCol, lastRow, bReadOnly=True):
-        return _IVStudio.IPDataGrid_SetReadOnly(self, firstCol, firstRow, lastCol, lastRow, bReadOnly)
+    def SetText(self, *args):
+        return _IVStudio.IPDataTable_SetText(self, *args)
 
-    def SetColReadOnly(self, col, bReadOnly=True):
-        return _IVStudio.IPDataGrid_SetColReadOnly(self, col, bReadOnly)
+    def SetReadOnly(self, *args):
+        return _IVStudio.IPDataTable_SetReadOnly(self, *args)
 
-    def SetRowReadOnly(self, row, bReadOnly=True):
-        return _IVStudio.IPDataGrid_SetRowReadOnly(self, row, bReadOnly)
+    def SetColReadOnly(self, *args):
+        return _IVStudio.IPDataTable_SetColReadOnly(self, *args)
 
-    def GetCellData(self, col, row):
-        return _IVStudio.IPDataGrid_GetCellData(self, col, row)
+    def SetRowReadOnly(self, *args):
+        return _IVStudio.IPDataTable_SetRowReadOnly(self, *args)
 
-    def GetCellText(self, col, row):
-        return _IVStudio.IPDataGrid_GetCellText(self, col, row)
+    def GetCellData(self, *args):
+        return _IVStudio.IPDataTable_GetCellData(self, *args)
 
-    def GetData(self, col0, col1, colInc, row0, row1, rowInc, pData):
-        return _IVStudio.IPDataGrid_GetData(self, col0, col1, colInc, row0, row1, rowInc, pData)
+    def GetCellText(self, *args):
+        return _IVStudio.IPDataTable_GetCellText(self, *args)
 
-    def GetColData(self, col, firstRow, lastRow, rowInc, pData, bValidOnly=False):
-        return _IVStudio.IPDataGrid_GetColData(self, col, firstRow, lastRow, rowInc, pData, bValidOnly)
+    def GetData(self, *args):
+        return _IVStudio.IPDataTable_GetData(self, *args)
 
-    def GetColText(self, col, firstRow, lastRow, rowInc):
-        return _IVStudio.IPDataGrid_GetColText(self, col, firstRow, lastRow, rowInc)
+    def GetData2(self, *args):
+        return _IVStudio.IPDataTable_GetData2(self, *args)
 
-    def GetRowData(self, row, firstCol, lastCol, colInc, pData, bValidOnly=False):
-        return _IVStudio.IPDataGrid_GetRowData(self, row, firstCol, lastCol, colInc, pData, bValidOnly)
+    def GetColData(self, *args):
+        return _IVStudio.IPDataTable_GetColData(self, *args)
 
-    def ClearData(self, firstCol, firstRow, lastCol, lastRow):
-        return _IVStudio.IPDataGrid_ClearData(self, firstCol, firstRow, lastCol, lastRow)
+    def GetText(self, *args):
+        return _IVStudio.IPDataTable_GetText(self, *args)
 
-    def DeleteData(self, firstCol, firstRow, lastCol, lastRow):
-        return _IVStudio.IPDataGrid_DeleteData(self, firstCol, firstRow, lastCol, lastRow)
+    def GetColText(self, *args):
+        return _IVStudio.IPDataTable_GetColText(self, *args)
 
-    def SetDefaultColWidth(self, colWidth):
-        return _IVStudio.IPDataGrid_SetDefaultColWidth(self, colWidth)
+    def GetRowData(self, *args):
+        return _IVStudio.IPDataTable_GetRowData(self, *args)
 
-    def SetDefaultRowHeight(self, rowHeight):
-        return _IVStudio.IPDataGrid_SetDefaultRowHeight(self, rowHeight)
+    def GetRowText(self, *args):
+        return _IVStudio.IPDataTable_GetRowText(self, *args)
 
-    def SetColWidth(self, col, width, bFix=False):
-        return _IVStudio.IPDataGrid_SetColWidth(self, col, width, bFix)
+    def ClearData(self, *args):
+        return _IVStudio.IPDataTable_ClearData(self, *args)
 
-    def SetRowHeight(self, row, height, bFix=False):
-        return _IVStudio.IPDataGrid_SetRowHeight(self, row, height, bFix)
+    def DeleteData(self, *args):
+        return _IVStudio.IPDataTable_DeleteData(self, *args)
 
-    def FitColToWindow(self, col0, col1):
-        return _IVStudio.IPDataGrid_FitColToWindow(self, col0, col1)
+    def SetDefaultColWidth(self, *args):
+        return _IVStudio.IPDataTable_SetDefaultColWidth(self, *args)
 
-    def FitRowToWindow(self, row0, row1):
-        return _IVStudio.IPDataGrid_FitRowToWindow(self, row0, row1)
+    def SetDefaultRowHeight(self, *args):
+        return _IVStudio.IPDataTable_SetDefaultRowHeight(self, *args)
 
-    def EnableScroll(self, bHScroll, bVScroll, bAutoScroll=True):
-        return _IVStudio.IPDataGrid_EnableScroll(self, bHScroll, bVScroll, bAutoScroll)
+    def SetColWidth(self, *args):
+        return _IVStudio.IPDataTable_SetColWidth(self, *args)
 
-    def SetTopHeaderNum(self, n):
-        return _IVStudio.IPDataGrid_SetTopHeaderNum(self, n)
+    def SetRowHeight(self, *args):
+        return _IVStudio.IPDataTable_SetRowHeight(self, *args)
 
-    def SetLeftHeaderNum(self, n):
-        return _IVStudio.IPDataGrid_SetLeftHeaderNum(self, n)
+    def FitColToWindow(self, *args):
+        return _IVStudio.IPDataTable_FitColToWindow(self, *args)
 
-    def GetColName(self, col):
-        return _IVStudio.IPDataGrid_GetColName(self, col)
+    def FitRowToWindow(self, *args):
+        return _IVStudio.IPDataTable_FitRowToWindow(self, *args)
 
-    def SetCellFormat(self, firstCol, firstRow, lastCol, lastRow, gridCellType, gridCellStyle):
-        return _IVStudio.IPDataGrid_SetCellFormat(self, firstCol, firstRow, lastCol, lastRow, gridCellType, gridCellStyle)
+    def EnableScroll(self, *args):
+        return _IVStudio.IPDataTable_EnableScroll(self, *args)
 
-    def SetCellAlignment(self, firstCol, firstRow, lastCol, lastRow, horizontalAlignment, verticalAlignment, gridTextWrap):
-        return _IVStudio.IPDataGrid_SetCellAlignment(self, firstCol, firstRow, lastCol, lastRow, horizontalAlignment, verticalAlignment, gridTextWrap)
+    def SetTopHeaderNum(self, *args):
+        return _IVStudio.IPDataTable_SetTopHeaderNum(self, *args)
 
-    def SetCellStyle(self, col, row, gridCellStyle):
-        return _IVStudio.IPDataGrid_SetCellStyle(self, col, row, gridCellStyle)
+    def SetLeftHeaderNum(self, *args):
+        return _IVStudio.IPDataTable_SetLeftHeaderNum(self, *args)
 
-    def SetCellType(self, col, row, gridCellType):
-        return _IVStudio.IPDataGrid_SetCellType(self, col, row, gridCellType)
+    def GetColName(self, *args):
+        return _IVStudio.IPDataTable_GetColName(self, *args)
 
-    def SetCellTypeStyle(self, gridCellType, fill, text):
-        return _IVStudio.IPDataGrid_SetCellTypeStyle(self, gridCellType, fill, text)
+    def SetCellFormat(self, *args):
+        return _IVStudio.IPDataTable_SetCellFormat(self, *args)
 
-    def SetCellhAlignment(self, col, row, horizontalAlignment):
-        return _IVStudio.IPDataGrid_SetCellhAlignment(self, col, row, horizontalAlignment)
+    def SetCellAlignment(self, *args):
+        return _IVStudio.IPDataTable_SetCellAlignment(self, *args)
 
-    def SetCellvAlignment(self, col, row, verticalAlignment):
-        return _IVStudio.IPDataGrid_SetCellvAlignment(self, col, row, verticalAlignment)
+    def SetCellStyle(self, *args):
+        return _IVStudio.IPDataTable_SetCellStyle(self, *args)
 
-    def SetCellTextWrap(self, col, row, gridTextWrap):
-        return _IVStudio.IPDataGrid_SetCellTextWrap(self, col, row, gridTextWrap)
+    def SetCellType(self, *args):
+        return _IVStudio.IPDataTable_SetCellType(self, *args)
 
-    def SetTextRotation(self, col, row, textAngle):
-        return _IVStudio.IPDataGrid_SetTextRotation(self, col, row, textAngle)
+    def SetCellTypeStyle(self, *args):
+        return _IVStudio.IPDataTable_SetCellTypeStyle(self, *args)
 
-    def SetDataDecimalNum(self, col, row, decNum):
-        return _IVStudio.IPDataGrid_SetDataDecimalNum(self, col, row, decNum)
+    def SetCellhAlignment(self, *args):
+        return _IVStudio.IPDataTable_SetCellhAlignment(self, *args)
 
-    def SetDataCategory(self, col, row, gridCellDataCategory):
-        return _IVStudio.IPDataGrid_SetDataCategory(self, col, row, gridCellDataCategory)
+    def SetCellvAlignment(self, *args):
+        return _IVStudio.IPDataTable_SetCellvAlignment(self, *args)
+
+    def SetCellTextWrap(self, *args):
+        return _IVStudio.IPDataTable_SetCellTextWrap(self, *args)
+
+    def SetTextRotation(self, *args):
+        return _IVStudio.IPDataTable_SetTextRotation(self, *args)
+
+    def SetDataDecimalNum(self, *args):
+        return _IVStudio.IPDataTable_SetDataDecimalNum(self, *args)
+
+    def SetDataCategory(self, *args):
+        return _IVStudio.IPDataTable_SetDataCategory(self, *args)
 
     def SetDataFormat(self, *args):
-        return _IVStudio.IPDataGrid_SetDataFormat(self, *args)
+        return _IVStudio.IPDataTable_SetDataFormat(self, *args)
 
-    def AddFont(self, name, size, orientation=0, style=0):
-        return _IVStudio.IPDataGrid_AddFont(self, name, size, orientation, style)
+    def GetFont(self, *args):
+        return _IVStudio.IPDataTable_GetFont(self, *args)
 
-    def SetCellFont(self, firstCol, firstRow, lastCol, lastRow, fontIndex):
-        return _IVStudio.IPDataGrid_SetCellFont(self, firstCol, firstRow, lastCol, lastRow, fontIndex)
+    def AddFont(self, *args):
+        return _IVStudio.IPDataTable_AddFont(self, *args)
 
-    def AddColor(self, color):
-        return _IVStudio.IPDataGrid_AddColor(self, color)
+    def SetCellFont(self, *args):
+        return _IVStudio.IPDataTable_SetCellFont(self, *args)
 
-    def SetCellTextColor(self, firstCol, firstRow, lastCol, lastRow, crIndex):
-        return _IVStudio.IPDataGrid_SetCellTextColor(self, firstCol, firstRow, lastCol, lastRow, crIndex)
+    def AddColor(self, *args):
+        return _IVStudio.IPDataTable_AddColor(self, *args)
 
-    def SetCellFillColor(self, firstCol, firstRow, lastCol, lastRow, crIndex):
-        return _IVStudio.IPDataGrid_SetCellFillColor(self, firstCol, firstRow, lastCol, lastRow, crIndex)
+    def SetCellTextColor(self, *args):
+        return _IVStudio.IPDataTable_SetCellTextColor(self, *args)
 
-    def TabAppearance(self, bTabNavigate, bTabDropDown):
-        return _IVStudio.IPDataGrid_TabAppearance(self, bTabNavigate, bTabDropDown)
+    def SetCellFillColor(self, *args):
+        return _IVStudio.IPDataTable_SetCellFillColor(self, *args)
 
-    def SetSheetName(self, iSheet, name):
-        return _IVStudio.IPDataGrid_SetSheetName(self, iSheet, name)
+    def TabAppearance(self, *args):
+        return _IVStudio.IPDataTable_TabAppearance(self, *args)
 
-    def AddSheet(self, name):
-        return _IVStudio.IPDataGrid_AddSheet(self, name)
+    def SetSheetName(self, *args):
+        return _IVStudio.IPDataTable_SetSheetName(self, *args)
 
-    def InsertSheet(self, iSheet, name):
-        return _IVStudio.IPDataGrid_InsertSheet(self, iSheet, name)
+    def AddSheet(self, *args):
+        return _IVStudio.IPDataTable_AddSheet(self, *args)
 
-    def RemoveSheet(self, iSheet):
-        return _IVStudio.IPDataGrid_RemoveSheet(self, iSheet)
+    def InsertSheet(self, *args):
+        return _IVStudio.IPDataTable_InsertSheet(self, *args)
 
-    def SelectSheet(self, iSheet):
-        return _IVStudio.IPDataGrid_SelectSheet(self, iSheet)
+    def RemoveSheet(self, *args):
+        return _IVStudio.IPDataTable_RemoveSheet(self, *args)
 
-    def GetSheetNumber(self):
-        return _IVStudio.IPDataGrid_GetSheetNumber(self)
-IPDataGrid_swigregister = _IVStudio.IPDataGrid_swigregister
-IPDataGrid_swigregister(IPDataGrid)
+    def SelectSheet(self, *args):
+        return _IVStudio.IPDataTable_SelectSheet(self, *args)
+
+    def GetSheetNumber(self, *args):
+        return _IVStudio.IPDataTable_GetSheetNumber(self, *args)
+
+    def GetDataFrame(self, colStart, colEnd, rowStart, rowEnd, needColumnLabel, needIndexLabel, isText):
+        import pandas
+        ncol = colEnd - colStart + 1
+        nrow = rowEnd - rowStart + 1
+        n = ncol * nrow
+        if(isText):
+            data = np.array(self.GetText(colStart, colEnd, 1, rowStart, rowEnd, 1))
+        else:
+            data = np.zeros(n)
+            self.GetData(colStart, colEnd, 1, rowStart, rowEnd, 1, data)
+        data = data.reshape([nrow, ncol])
+        if(needColumnLabel):
+            cols = self.GetRowText(0, colStart, colEnd, 1)
+        else:
+            cols = np.array(range(0, ncol))
+        if(needIndexLabel):
+            rows = self.GetColText(0, rowStart, rowEnd, 1)
+        else:
+            rows = np.array(range(0, nrow))
+        return pandas.DataFrame(data, index = rows, columns = cols)
+
+    def GetSeries(self, col, rowStart, rowEnd, needIndexLabel, isText):
+        import pandas
+        nrow = rowEnd - rowStart + 1
+        if(isText):
+            data = self.GetColText(col, rowStart, rowEnd, 1)
+        else:
+            data = np.zeros(nrow)
+            self.GetColData(col, rowStart, rowEnd, 1, data)
+        if(needIndexLabel):
+            rows = self.GetColText(0, rowStart, rowEnd, 1)
+        else:
+            rows = np.array(range(0, nrow))
+        return pandas.Series(data, index = rows)
+
+    def SetDataFrame(self, dataFrame, colStart, rowStart):
+        import pandas
+        import numbers
+        data = dataFrame.values;
+        ncol = data.shape[1]
+        nrow = data.shape[0]
+        for col in range(ncol):
+            a = data[:, col]
+            if isinstance(a[0], numbers.Number): 
+                if a.dtype == object:
+                    a = a.astype(np.float64)
+                    self.SetColData(col + colStart, rowStart, a, True)
+                else:
+                    self.SetColData(col + colStart, rowStart, a, True)
+            else:
+                self.SetText(col + colStart, rowStart, col + colStart, nrow + rowStart - 1, a, False, True)
+
+IPDataTable_swigregister = _IVStudio.IPDataTable_swigregister
+IPDataTable_swigregister(IPDataTable)
 
 class IPCamera(IPGraph):
     __swig_setmethods__ = {}
@@ -2993,8 +1437,8 @@ class IPCamera(IPGraph):
     __getattr__ = lambda self, name: _swig_getattr(self, IPCamera, name)
     __repr__ = _swig_repr
 
-    def __init__(self, id):
-        this = _IVStudio.new_IPCamera(id)
+    def __init__(self, *args):
+        this = _IVStudio.new_IPCamera(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
@@ -3002,20 +1446,20 @@ class IPCamera(IPGraph):
     __swig_destroy__ = _IVStudio.delete_IPCamera
     __del__ = lambda self: None
 
-    def GetImage(self, INPLACE_ARRAY4):
-        return _IVStudio.IPCamera_GetImage(self, INPLACE_ARRAY4)
+    def GetImage(self, *args):
+        return _IVStudio.IPCamera_GetImage(self, *args)
 
-    def GetImage_uint8(self, INPLACE_ARRAY4):
-        return _IVStudio.IPCamera_GetImage_uint8(self, INPLACE_ARRAY4)
+    def GetImage_uint8(self, *args):
+        return _IVStudio.IPCamera_GetImage_uint8(self, *args)
 
-    def ClearBoundingBox(self):
-        return _IVStudio.IPCamera_ClearBoundingBox(self)
+    def ClearBoundingBox(self, *args):
+        return _IVStudio.IPCamera_ClearBoundingBox(self, *args)
 
     def DrawBoundingBox(self, *args):
         return _IVStudio.IPCamera_DrawBoundingBox(self, *args)
 
-    def DrawMaskImage(self, IN_ARRAY2, threshold, color, x0, y0, x1, y1, bNormalized):
-        return _IVStudio.IPCamera_DrawMaskImage(self, IN_ARRAY2, threshold, color, x0, y0, x1, y1, bNormalized)
+    def DrawMaskImage(self, *args):
+        return _IVStudio.IPCamera_DrawMaskImage(self, *args)
 IPCamera_swigregister = _IVStudio.IPCamera_swigregister
 IPCamera_swigregister(IPCamera)
 
@@ -3030,8 +1474,8 @@ class IPAudio(IPGraph):
     __getattr__ = lambda self, name: _swig_getattr(self, IPAudio, name)
     __repr__ = _swig_repr
 
-    def __init__(self, id):
-        this = _IVStudio.new_IPAudio(id)
+    def __init__(self, *args):
+        this = _IVStudio.new_IPAudio(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
@@ -3039,155 +1483,10 @@ class IPAudio(IPGraph):
     __swig_destroy__ = _IVStudio.delete_IPAudio
     __del__ = lambda self: None
 
-    def GetWaveform(self, INPLACE_ARRAY1):
-        return _IVStudio.IPAudio_GetWaveform(self, INPLACE_ARRAY1)
+    def GetWaveform(self, *args):
+        return _IVStudio.IPAudio_GetWaveform(self, *args)
 IPAudio_swigregister = _IVStudio.IPAudio_swigregister
 IPAudio_swigregister(IPAudio)
-
-class PWindowType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PWindowType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PWindowType, name)
-    __repr__ = _swig_repr
-    WindowIdeal = _IVStudio.PWindowType_WindowIdeal
-    WindowHanning = _IVStudio.PWindowType_WindowHanning
-    WindowHamming = _IVStudio.PWindowType_WindowHamming
-    WindowBlackman = _IVStudio.PWindowType_WindowBlackman
-    WindowBartlett = _IVStudio.PWindowType_WindowBartlett
-    WindowGaussian = _IVStudio.PWindowType_WindowGaussian
-
-    def __init__(self):
-        this = _IVStudio.new_PWindowType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PWindowType
-    __del__ = lambda self: None
-PWindowType_swigregister = _IVStudio.PWindowType_swigregister
-PWindowType_swigregister(PWindowType)
-
-class PPaddingType(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, PPaddingType, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, PPaddingType, name)
-    __repr__ = _swig_repr
-    PaddingZero = _IVStudio.PPaddingType_PaddingZero
-    PaddingPeodic = _IVStudio.PPaddingType_PaddingPeodic
-    PaddingSymmetric = _IVStudio.PPaddingType_PaddingSymmetric
-
-    def __init__(self):
-        this = _IVStudio.new_PPaddingType()
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_PPaddingType
-    __del__ = lambda self: None
-PPaddingType_swigregister = _IVStudio.PPaddingType_swigregister
-PPaddingType_swigregister(PPaddingType)
-
-class IPFFTTransform(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, IPFFTTransform, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, IPFFTTransform, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, spectrumLen, window_type=0, padding_type=0):
-        this = _IVStudio.new_IPFFTTransform(spectrumLen, window_type, padding_type)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_destroy__ = _IVStudio.delete_IPFFTTransform
-    __del__ = lambda self: None
-    __swig_setmethods__["spectrum_length"] = _IVStudio.IPFFTTransform_spectrum_length_set
-    __swig_getmethods__["spectrum_length"] = _IVStudio.IPFFTTransform_spectrum_length_get
-    if _newclass:
-        spectrum_length = _swig_property(_IVStudio.IPFFTTransform_spectrum_length_get, _IVStudio.IPFFTTransform_spectrum_length_set)
-
-    def CosTransform(self, data, cosCoeff):
-        return _IVStudio.IPFFTTransform_CosTransform(self, data, cosCoeff)
-
-    def SinTransform(self, data, sinCoeff):
-        return _IVStudio.IPFFTTransform_SinTransform(self, data, sinCoeff)
-
-    def SetupFFT(self, spectrumLen, window_type=0, padding_type=0):
-        return _IVStudio.IPFFTTransform_SetupFFT(self, spectrumLen, window_type, padding_type)
-
-    def FFT(self, *args):
-        return _IVStudio.IPFFTTransform_FFT(self, *args)
-
-    def InverseFFT(self, *args):
-        return _IVStudio.IPFFTTransform_InverseFFT(self, *args)
-
-    def SetupFFT2D(self, spectrumLenX, spectrumLenY, window_type=0, padding_type=0):
-        return _IVStudio.IPFFTTransform_SetupFFT2D(self, spectrumLenX, spectrumLenY, window_type, padding_type)
-
-    def FFT2D(self, *args):
-        return _IVStudio.IPFFTTransform_FFT2D(self, *args)
-
-    def InverseFFT2D(self, *args):
-        return _IVStudio.IPFFTTransform_InverseFFT2D(self, *args)
-
-    def SwapQuadrant2D(self, spectrum, spectrumLenX, spectrumLenY):
-        return _IVStudio.IPFFTTransform_SwapQuadrant2D(self, spectrum, spectrumLenX, spectrumLenY)
-
-    def AmplitudeSpectrum(self, data, ampSpectrum, dt):
-        return _IVStudio.IPFFTTransform_AmplitudeSpectrum(self, data, ampSpectrum, dt)
-
-    def AmpPhaseSpectrum(self, data, ampSpectrum, phaseSpectrum, unwrapPhase, dt):
-        return _IVStudio.IPFFTTransform_AmpPhaseSpectrum(self, data, ampSpectrum, phaseSpectrum, unwrapPhase, dt)
-
-    def PowerSpectrum(self, data, powerSpectrum, dt):
-        return _IVStudio.IPFFTTransform_PowerSpectrum(self, data, powerSpectrum, dt)
-
-    def FastHilbertTransform(self, *args):
-        return _IVStudio.IPFFTTransform_FastHilbertTransform(self, *args)
-
-    def InverseFastHilbertTransform(self, data):
-        return _IVStudio.IPFFTTransform_InverseFastHilbertTransform(self, data)
-
-    def SetupSTFFT(self, spectrumLen, winSize=64, window_type=0, padding_type=0):
-        return _IVStudio.IPFFTTransform_SetupSTFFT(self, spectrumLen, winSize, window_type, padding_type)
-
-    def STFFT(self, *args):
-        return _IVStudio.IPFFTTransform_STFFT(self, *args)
-IPFFTTransform_swigregister = _IVStudio.IPFFTTransform_swigregister
-IPFFTTransform_swigregister(IPFFTTransform)
-
-class CNumpy(_object):
-    __swig_setmethods__ = {}
-    __setattr__ = lambda self, name, value: _swig_setattr(self, CNumpy, name, value)
-    __swig_getmethods__ = {}
-    __getattr__ = lambda self, name: _swig_getattr(self, CNumpy, name)
-    __repr__ = _swig_repr
-
-    def __init__(self, data, nm, type):
-        this = _IVStudio.new_CNumpy(data, nm, type)
-        try:
-            self.this.append(this)
-        except __builtin__.Exception:
-            self.this = this
-    __swig_setmethods__["pData"] = _IVStudio.CNumpy_pData_set
-    __swig_getmethods__["pData"] = _IVStudio.CNumpy_pData_get
-    if _newclass:
-        pData = _swig_property(_IVStudio.CNumpy_pData_get, _IVStudio.CNumpy_pData_set)
-    __swig_setmethods__["data_size"] = _IVStudio.CNumpy_data_size_set
-    __swig_getmethods__["data_size"] = _IVStudio.CNumpy_data_size_get
-    if _newclass:
-        data_size = _swig_property(_IVStudio.CNumpy_data_size_get, _IVStudio.CNumpy_data_size_set)
-    __swig_setmethods__["data_type"] = _IVStudio.CNumpy_data_type_set
-    __swig_getmethods__["data_type"] = _IVStudio.CNumpy_data_type_get
-    if _newclass:
-        data_type = _swig_property(_IVStudio.CNumpy_data_type_get, _IVStudio.CNumpy_data_type_set)
-    __swig_destroy__ = _IVStudio.delete_CNumpy
-    __del__ = lambda self: None
-CNumpy_swigregister = _IVStudio.CNumpy_swigregister
-CNumpy_swigregister(CNumpy)
 
 class IPStudio(_object):
     __swig_setmethods__ = {}
@@ -3196,8 +1495,8 @@ class IPStudio(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, IPStudio, name)
     __repr__ = _swig_repr
 
-    def __init__(self):
-        this = _IVStudio.new_IPStudio()
+    def __init__(self, *args):
+        this = _IVStudio.new_IPStudio(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
@@ -3217,146 +1516,146 @@ class IPStudio(_object):
     if _newclass:
         SystemFolder = _swig_property(_IVStudio.IPStudio_SystemFolder_get, _IVStudio.IPStudio_SystemFolder_set)
 
-    def SaveTensor4(self, name, type, IN_ARRAY4):
-        return _IVStudio.IPStudio_SaveTensor4(self, name, type, IN_ARRAY4)
+    def SaveTensor4(self, *args):
+        return _IVStudio.IPStudio_SaveTensor4(self, *args)
 
-    def SaveTensor4_F(self, name, type, IN_ARRAY4):
-        return _IVStudio.IPStudio_SaveTensor4_F(self, name, type, IN_ARRAY4)
+    def SaveTensor4_F(self, *args):
+        return _IVStudio.IPStudio_SaveTensor4_F(self, *args)
 
-    def SaveTensor4_I(self, name, type, IN_ARRAY4):
-        return _IVStudio.IPStudio_SaveTensor4_I(self, name, type, IN_ARRAY4)
+    def SaveTensor4_I(self, *args):
+        return _IVStudio.IPStudio_SaveTensor4_I(self, *args)
 
-    def SaveTensor4_S(self, name, type, IN_ARRAY4):
-        return _IVStudio.IPStudio_SaveTensor4_S(self, name, type, IN_ARRAY4)
+    def SaveTensor4_S(self, *args):
+        return _IVStudio.IPStudio_SaveTensor4_S(self, *args)
 
-    def SaveTensor4_C(self, name, type, IN_ARRAY4, DIM1, DIM2, DIM3, DIM4):
-        return _IVStudio.IPStudio_SaveTensor4_C(self, name, type, IN_ARRAY4, DIM1, DIM2, DIM3, DIM4)
+    def SaveTensor4_C(self, *args):
+        return _IVStudio.IPStudio_SaveTensor4_C(self, *args)
 
-    def SaveTensor3(self, name, type, IN_ARRAY3):
-        return _IVStudio.IPStudio_SaveTensor3(self, name, type, IN_ARRAY3)
+    def SaveTensor3(self, *args):
+        return _IVStudio.IPStudio_SaveTensor3(self, *args)
 
-    def SaveTensor3_F(self, name, type, IN_ARRAY3):
-        return _IVStudio.IPStudio_SaveTensor3_F(self, name, type, IN_ARRAY3)
+    def SaveTensor3_F(self, *args):
+        return _IVStudio.IPStudio_SaveTensor3_F(self, *args)
 
-    def SaveTensor3_I(self, name, type, IN_ARRAY3):
-        return _IVStudio.IPStudio_SaveTensor3_I(self, name, type, IN_ARRAY3)
+    def SaveTensor3_I(self, *args):
+        return _IVStudio.IPStudio_SaveTensor3_I(self, *args)
 
-    def SaveTensor3_S(self, name, type, IN_ARRAY3):
-        return _IVStudio.IPStudio_SaveTensor3_S(self, name, type, IN_ARRAY3)
+    def SaveTensor3_S(self, *args):
+        return _IVStudio.IPStudio_SaveTensor3_S(self, *args)
 
-    def SaveTensor3_C(self, name, type, IN_ARRAY3, DIM1, DIM2, DIM3):
-        return _IVStudio.IPStudio_SaveTensor3_C(self, name, type, IN_ARRAY3, DIM1, DIM2, DIM3)
+    def SaveTensor3_C(self, *args):
+        return _IVStudio.IPStudio_SaveTensor3_C(self, *args)
 
-    def SaveTensor2(self, name, type, IN_ARRAY2):
-        return _IVStudio.IPStudio_SaveTensor2(self, name, type, IN_ARRAY2)
+    def SaveTensor2(self, *args):
+        return _IVStudio.IPStudio_SaveTensor2(self, *args)
 
-    def SaveTensor2_F(self, name, type, IN_ARRAY2):
-        return _IVStudio.IPStudio_SaveTensor2_F(self, name, type, IN_ARRAY2)
+    def SaveTensor2_F(self, *args):
+        return _IVStudio.IPStudio_SaveTensor2_F(self, *args)
 
-    def SaveTensor2_I(self, name, type, IN_ARRAY2):
-        return _IVStudio.IPStudio_SaveTensor2_I(self, name, type, IN_ARRAY2)
+    def SaveTensor2_I(self, *args):
+        return _IVStudio.IPStudio_SaveTensor2_I(self, *args)
 
-    def SaveTensor2_S(self, name, type, IN_ARRAY2):
-        return _IVStudio.IPStudio_SaveTensor2_S(self, name, type, IN_ARRAY2)
+    def SaveTensor2_S(self, *args):
+        return _IVStudio.IPStudio_SaveTensor2_S(self, *args)
 
-    def SaveTensor2_C(self, name, type, IN_ARRAY2, DIM1, DIM2):
-        return _IVStudio.IPStudio_SaveTensor2_C(self, name, type, IN_ARRAY2, DIM1, DIM2)
+    def SaveTensor2_C(self, *args):
+        return _IVStudio.IPStudio_SaveTensor2_C(self, *args)
 
-    def SaveTensor1(self, name, type, IN_ARRAY1):
-        return _IVStudio.IPStudio_SaveTensor1(self, name, type, IN_ARRAY1)
+    def SaveTensor1(self, *args):
+        return _IVStudio.IPStudio_SaveTensor1(self, *args)
 
-    def SaveTensor1_F(self, name, type, IN_ARRAY1):
-        return _IVStudio.IPStudio_SaveTensor1_F(self, name, type, IN_ARRAY1)
+    def SaveTensor1_F(self, *args):
+        return _IVStudio.IPStudio_SaveTensor1_F(self, *args)
 
-    def SaveTensor1_I(self, name, type, IN_ARRAY1):
-        return _IVStudio.IPStudio_SaveTensor1_I(self, name, type, IN_ARRAY1)
+    def SaveTensor1_I(self, *args):
+        return _IVStudio.IPStudio_SaveTensor1_I(self, *args)
 
-    def SaveTensor1_S(self, name, type, IN_ARRAY1):
-        return _IVStudio.IPStudio_SaveTensor1_S(self, name, type, IN_ARRAY1)
+    def SaveTensor1_S(self, *args):
+        return _IVStudio.IPStudio_SaveTensor1_S(self, *args)
 
-    def SaveTensor1_C(self, name, type, IN_ARRAY1, DIM1):
-        return _IVStudio.IPStudio_SaveTensor1_C(self, name, type, IN_ARRAY1, DIM1)
+    def SaveTensor1_C(self, *args):
+        return _IVStudio.IPStudio_SaveTensor1_C(self, *args)
 
-    def SaveScalar(self, name, value):
-        return _IVStudio.IPStudio_SaveScalar(self, name, value)
+    def SaveScalar(self, *args):
+        return _IVStudio.IPStudio_SaveScalar(self, *args)
 
-    def SaveText(self, name, text):
-        return _IVStudio.IPStudio_SaveText(self, name, text)
+    def SaveText(self, *args):
+        return _IVStudio.IPStudio_SaveText(self, *args)
 
-    def SaveWaveform2(self, name, IN_ARRAY2, samplerate):
-        return _IVStudio.IPStudio_SaveWaveform2(self, name, IN_ARRAY2, samplerate)
+    def SaveWaveform2(self, *args):
+        return _IVStudio.IPStudio_SaveWaveform2(self, *args)
 
-    def SaveWaveform2_F(self, name, IN_ARRAY2, samplerate):
-        return _IVStudio.IPStudio_SaveWaveform2_F(self, name, IN_ARRAY2, samplerate)
+    def SaveWaveform2_F(self, *args):
+        return _IVStudio.IPStudio_SaveWaveform2_F(self, *args)
 
-    def SaveWaveform2_I(self, name, IN_ARRAY2, samplerate):
-        return _IVStudio.IPStudio_SaveWaveform2_I(self, name, IN_ARRAY2, samplerate)
+    def SaveWaveform2_I(self, *args):
+        return _IVStudio.IPStudio_SaveWaveform2_I(self, *args)
 
-    def SaveWaveform2_S(self, name, IN_ARRAY2, samplerate):
-        return _IVStudio.IPStudio_SaveWaveform2_S(self, name, IN_ARRAY2, samplerate)
+    def SaveWaveform2_S(self, *args):
+        return _IVStudio.IPStudio_SaveWaveform2_S(self, *args)
 
-    def SaveWaveform2_C(self, name, IN_ARRAY2, DIM1, DIM2, samplerate):
-        return _IVStudio.IPStudio_SaveWaveform2_C(self, name, IN_ARRAY2, DIM1, DIM2, samplerate)
+    def SaveWaveform2_C(self, *args):
+        return _IVStudio.IPStudio_SaveWaveform2_C(self, *args)
 
-    def SaveWaveform1(self, name, IN_ARRAY1, samplerate):
-        return _IVStudio.IPStudio_SaveWaveform1(self, name, IN_ARRAY1, samplerate)
+    def SaveWaveform1(self, *args):
+        return _IVStudio.IPStudio_SaveWaveform1(self, *args)
 
-    def SaveWaveform1_F(self, name, IN_ARRAY1, samplerate):
-        return _IVStudio.IPStudio_SaveWaveform1_F(self, name, IN_ARRAY1, samplerate)
+    def SaveWaveform1_F(self, *args):
+        return _IVStudio.IPStudio_SaveWaveform1_F(self, *args)
 
-    def SaveWaveform1_I(self, name, IN_ARRAY1, samplerate):
-        return _IVStudio.IPStudio_SaveWaveform1_I(self, name, IN_ARRAY1, samplerate)
+    def SaveWaveform1_I(self, *args):
+        return _IVStudio.IPStudio_SaveWaveform1_I(self, *args)
 
-    def SaveWaveform1_S(self, name, IN_ARRAY1, samplerate):
-        return _IVStudio.IPStudio_SaveWaveform1_S(self, name, IN_ARRAY1, samplerate)
+    def SaveWaveform1_S(self, *args):
+        return _IVStudio.IPStudio_SaveWaveform1_S(self, *args)
 
-    def SaveWaveform1_C(self, name, IN_ARRAY1, DIM1, samplerate):
-        return _IVStudio.IPStudio_SaveWaveform1_C(self, name, IN_ARRAY1, DIM1, samplerate)
+    def SaveWaveform1_C(self, *args):
+        return _IVStudio.IPStudio_SaveWaveform1_C(self, *args)
 
-    def StartSaveGraphDef(self, graphname):
-        return _IVStudio.IPStudio_StartSaveGraphDef(self, graphname)
+    def StartSaveGraphDef(self, *args):
+        return _IVStudio.IPStudio_StartSaveGraphDef(self, *args)
 
-    def CloseSaveGraphDef(self):
-        return _IVStudio.IPStudio_CloseSaveGraphDef(self)
+    def CloseSaveGraphDef(self, *args):
+        return _IVStudio.IPStudio_CloseSaveGraphDef(self, *args)
 
-    def AddNodeGraphDef(self, nodename, opname):
-        return _IVStudio.IPStudio_AddNodeGraphDef(self, nodename, opname)
+    def AddNodeGraphDef(self, *args):
+        return _IVStudio.IPStudio_AddNodeGraphDef(self, *args)
 
-    def CloseNodeGraphDef(self):
-        return _IVStudio.IPStudio_CloseNodeGraphDef(self)
+    def CloseNodeGraphDef(self, *args):
+        return _IVStudio.IPStudio_CloseNodeGraphDef(self, *args)
 
-    def AddNodeInputGraphDef(self, inputname):
-        return _IVStudio.IPStudio_AddNodeInputGraphDef(self, inputname)
+    def AddNodeInputGraphDef(self, *args):
+        return _IVStudio.IPStudio_AddNodeInputGraphDef(self, *args)
 
-    def AddNodeAttrIntGraphDef(self, attrname, v):
-        return _IVStudio.IPStudio_AddNodeAttrIntGraphDef(self, attrname, v)
+    def AddNodeAttrIntGraphDef(self, *args):
+        return _IVStudio.IPStudio_AddNodeAttrIntGraphDef(self, *args)
 
-    def AddNodeAttrStringGraphDef(self, name, v):
-        return _IVStudio.IPStudio_AddNodeAttrStringGraphDef(self, name, v)
+    def AddNodeAttrStringGraphDef(self, *args):
+        return _IVStudio.IPStudio_AddNodeAttrStringGraphDef(self, *args)
 
-    def AddNodeAttrFloatGraphDef(self, name, v):
-        return _IVStudio.IPStudio_AddNodeAttrFloatGraphDef(self, name, v)
+    def AddNodeAttrFloatGraphDef(self, *args):
+        return _IVStudio.IPStudio_AddNodeAttrFloatGraphDef(self, *args)
 
-    def AddNodeAttrBoolGraphDef(self, name, v):
-        return _IVStudio.IPStudio_AddNodeAttrBoolGraphDef(self, name, v)
+    def AddNodeAttrBoolGraphDef(self, *args):
+        return _IVStudio.IPStudio_AddNodeAttrBoolGraphDef(self, *args)
 
-    def AddNodeAttrShapeGraphDef(self, name, IN_ARRAY1):
-        return _IVStudio.IPStudio_AddNodeAttrShapeGraphDef(self, name, IN_ARRAY1)
+    def AddNodeAttrShapeGraphDef(self, *args):
+        return _IVStudio.IPStudio_AddNodeAttrShapeGraphDef(self, *args)
 
-    def LogOutput(self, type, name):
-        return _IVStudio.IPStudio_LogOutput(self, type, name)
+    def CloseSaver(self, *args):
+        return _IVStudio.IPStudio_CloseSaver(self, *args)
 
-    def GetKeyState(self, key):
-        return _IVStudio.IPStudio_GetKeyState(self, key)
+    def LogOutput(self, *args):
+        return _IVStudio.IPStudio_LogOutput(self, *args)
 
-    def ToNumpy(self, *args):
-        return _IVStudio.IPStudio_ToNumpy(self, *args)
+    def GetKeyState(self, *args):
+        return _IVStudio.IPStudio_GetKeyState(self, *args)
 
-    def WriteVideo(self, filename, dataFormat, frame_rate, channel, width, height, data):
-        return _IVStudio.IPStudio_WriteVideo(self, filename, dataFormat, frame_rate, channel, width, height, data)
+    def WriteVideo(self, *args):
+        return _IVStudio.IPStudio_WriteVideo(self, *args)
 
-    def LoadVideo(self, filename, dataFormat, data):
-        return _IVStudio.IPStudio_LoadVideo(self, filename, dataFormat, data)
+    def LoadVideo(self, *args):
+        return _IVStudio.IPStudio_LoadVideo(self, *args)
 
     def WriteAudio(self, *args):
         return _IVStudio.IPStudio_WriteAudio(self, *args)
@@ -3367,8 +1666,8 @@ class IPStudio(_object):
     def GetAudioStream(self, *args):
         return _IVStudio.IPStudio_GetAudioStream(self, *args)
 
-    def GetInputText(self, name):
-        return _IVStudio.IPStudio_GetInputText(self, name)
+    def GetInputText(self, *args):
+        return _IVStudio.IPStudio_GetInputText(self, *args)
 IPStudio_swigregister = _IVStudio.IPStudio_swigregister
 IPStudio_swigregister(IPStudio)
 
@@ -3379,8 +1678,8 @@ class IPShell(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, IPShell, name)
     __repr__ = _swig_repr
 
-    def __init__(self):
-        this = _IVStudio.new_IPShell()
+    def __init__(self, *args):
+        this = _IVStudio.new_IPShell(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
@@ -3388,11 +1687,11 @@ class IPShell(_object):
     __swig_destroy__ = _IVStudio.delete_IPShell
     __del__ = lambda self: None
 
-    def ShellOutput(self, type, name):
-        return _IVStudio.IPShell_ShellOutput(self, type, name)
+    def ShellOutput(self, *args):
+        return _IVStudio.IPShell_ShellOutput(self, *args)
 
-    def ShellInput(self):
-        return _IVStudio.IPShell_ShellInput(self)
+    def ShellInput(self, *args):
+        return _IVStudio.IPShell_ShellInput(self, *args)
 IPShell_swigregister = _IVStudio.IPShell_swigregister
 IPShell_swigregister(IPShell)
 
@@ -3403,8 +1702,8 @@ class IPRun(_object):
     __getattr__ = lambda self, name: _swig_getattr(self, IPRun, name)
     __repr__ = _swig_repr
 
-    def __init__(self):
-        this = _IVStudio.new_IPRun()
+    def __init__(self, *args):
+        this = _IVStudio.new_IPRun(*args)
         try:
             self.this.append(this)
         except __builtin__.Exception:
@@ -3412,32 +1711,29 @@ class IPRun(_object):
     __swig_destroy__ = _IVStudio.delete_IPRun
     __del__ = lambda self: None
 
-    def DebugStart(self):
-        return _IVStudio.IPRun_DebugStart(self)
+    def DebugStart(self, *args):
+        return _IVStudio.IPRun_DebugStart(self, *args)
 
-    def RunOutput(self, type, name):
-        return _IVStudio.IPRun_RunOutput(self, type, name)
+    def RunOutput(self, *args):
+        return _IVStudio.IPRun_RunOutput(self, *args)
 
-    def DebugInfoCallback(self, msgID, data, size):
-        return _IVStudio.IPRun_DebugInfoCallback(self, msgID, data, size)
+    def DebugInfoOutput(self, *args):
+        return _IVStudio.IPRun_DebugInfoOutput(self, *args)
 
-    def DebugInfoOutput(self, type, data):
-        return _IVStudio.IPRun_DebugInfoOutput(self, type, data)
+    def DebugInfoStatus(self, *args):
+        return _IVStudio.IPRun_DebugInfoStatus(self, *args)
 
-    def DebugInfoStatus(self, type, status):
-        return _IVStudio.IPRun_DebugInfoStatus(self, type, status)
+    def IsBreakPoint(self, *args):
+        return _IVStudio.IPRun_IsBreakPoint(self, *args)
 
-    def IsBreakPoint(self, name, line):
-        return _IVStudio.IPRun_IsBreakPoint(self, name, line)
+    def WaitAtBreakPoint(self, *args):
+        return _IVStudio.IPRun_WaitAtBreakPoint(self, *args)
 
-    def WaitAtBreakPoint(self, name, line):
-        return _IVStudio.IPRun_WaitAtBreakPoint(self, name, line)
+    def GetBreakPoint(self, *args):
+        return _IVStudio.IPRun_GetBreakPoint(self, *args)
 
-    def GetBreakPoint(self):
-        return _IVStudio.IPRun_GetBreakPoint(self)
-
-    def GetWatchVariable(self, index):
-        return _IVStudio.IPRun_GetWatchVariable(self, index)
+    def GetWatchVariable(self, *args):
+        return _IVStudio.IPRun_GetWatchVariable(self, *args)
 IPRun_swigregister = _IVStudio.IPRun_swigregister
 IPRun_swigregister(IPRun)
 

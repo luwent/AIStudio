@@ -165,31 +165,31 @@ def main(_):
         sess.run(tf.global_variables_initializer())
         #studio.RestoreCheckpoint(sess, "mnist_deep") 
          
-        for i in range(7):
+        for i in range(100):
+            print(i) 
             batch = mnist.train.next_batch(50)
-            #~ if i % 100 == 0:
-                #~ train_accuracy = accuracy.eval(feed_dict={
-                    #~ x: batch[0], y_: batch[1], keep_prob: 1.0})
-                #~ print('step %d, training accuracy %g' % (i, train_accuracy))
-                #~ #studio.RecordScalar(train_accuracy, "accuracy")
-            #~ if i % 10 == 0:
-            """record data for display"""
-            summary_result, _ = sess.run([summary, train_step], feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
-            cc = summary[0].eval()
-            #print(summary_result)
-                #studio.SaveRecordList(summary_result)
-            #else:
-            #   c0 = sess.run(train_step, feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
-             #   print(c0) 
-                #train_step.run(feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+            if i % 20 == 0:
+                train_accuracy = accuracy.eval(feed_dict={
+                    x: batch[0], y_: batch[1], keep_prob: 1.0})
+                print('step %d, training accuracy %g' % (i, train_accuracy))
+                studio.RecordScalar(train_accuracy, "accuracy")
+            if i % 2 == 0:
+                """record data for display"""
+                summary_result, _ = sess.run([summary, train_step], feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
+                print(summary_result)
+                studio.SaveRecordList(summary_result)
+            else:
+                sess.run(train_step, feed_dict={x: batch[0], y_: batch[1], keep_prob: 0.5})
         studio.SaveCheckpoint(sess, "mnist_deep") 
         print('test accuracy %g' % accuracy.eval(feed_dict={
             x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
-
+        studio.CloseSaver()
+        
         #inference
         draw = iv.IPDraw("Draw2D-1")
         image3 = iv.IPGraph("Image-3")
         plot3 = image3.Plots(0)
+        
         print("Start inference, draw number using draw pad")
         while(1):
             if(studio.GetKeyState(0x1B) < 0):

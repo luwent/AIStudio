@@ -84,6 +84,7 @@ def main(_):
         studio.RecordImage(batch_xs, "input image")
         studio.RecordScalar(c, "loss")
         #studio.SaveRecordList(summary_result)
+        sleep(0.1)
     
     # Test trained model
     correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
@@ -98,11 +99,14 @@ def main(_):
     draw = iv.IPDraw("Draw2D-1")
     image3 = iv.IPGraph("Image-3")
     plot3 = image3.Plots(0)
+    studio.CloseSaver()
+    return
     print("Start inference, draw number using draw pad")
     for k in range(600):
         # get draw image
         image = draw.GetDrawImage(28*28, 28, 28, 1, False)
-        image.astype(np.float32)
+        image = image.astype(np.float32)
+        a = image.max()
         image /= (-image.max())
         image += 1
         #draw the normalized image

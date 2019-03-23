@@ -8,6 +8,7 @@ import torch
 from decoder import GreedyDecoder
 from model import DeepSpeech
 import IStudio as iv
+import IMath as im
 import json
 
 studio = iv.AIStudio("pytorch")
@@ -47,16 +48,16 @@ else:
     decoder = None
 target_decoder = GreedyDecoder(labels, blank_index=labels.index('_'))
 
-tranform = iv.IPFFTTransform(1024, 0, 0)
+tranform = im.IPFFTTransform(1024, 0, 0)
 tranform.SetupSTFFT(1024, 128)
 
 def LoadAudioData():
-    ass = iv.ShortVector(1)
-    n, sr, cc = studio.LoadAudio(model_path + "\\yes.wav",  ass)
-    spectrum = iv.ComplexVector(10)
+    #ass, sr, ch = studio.LoadAudio(model_path + "\\yes.wav",  iv.NPDType.SHORT)
+    ass, sr, ch = studio.LoadAudio(model_path + "\\443.wav",  iv.NPDType.SHORT)
+    n = tranform.GetSTFFTSpectrumSize(ass, 128, 161)
+    spectrum = np.empty([n], dtype=np.complex128)
     r = tranform.STFFT(ass, 128, 161, True, spectrum)
-    aspectrum = studio.ToNumpy(spectrum)
-    spect = np.absolute(aspectrum)
+    spect = np.absolute(spectrum)
     spect = np.log1p(spect)
     spect = spect.reshape(161, -1)
     spect = torch.FloatTensor(spect)
@@ -67,13 +68,12 @@ def LoadAudioData():
     return spect
 
 def GetAudioData():
-    ass = iv.ShortVector(1)
-    studio.GetAudioStream("Record", ass, 5.0, 16000.0, 1)
+    ass = studio.GetAudioStream("Record",  5.0, 16000.0, 1)
     #studio.WriteAudio("c:\\data\\test.wav", ass, 16000.0, 1)
-    spectrum = iv.ComplexVector(10)
+    n = tranform.GetSTFFTSpectrumSize(ass, 128, 161)
+    spectrum = np.empty([n], dtype=np.complex128)
     r = tranform.STFFT(ass, 128, 161, True, spectrum)
-    aspectrum = studio.ToNumpy(spectrum)
-    spect = np.absolute(aspectrum)
+    spect = np.absolute(spectrum)
     spect = np.log1p(spect)
     spect = spect.reshape(161, -1)
     spect = torch.FloatTensor(spect)

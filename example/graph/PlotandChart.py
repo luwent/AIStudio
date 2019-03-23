@@ -9,14 +9,14 @@ import random
 
 #top graph
 graph = vi.IPGraph("Chart-1")
-graph.SetFrameColor(vi.PFillType.FillType_Solid, [vi.MakeColor(223, 218, 241)])
-graph.SetPlotAreaColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
+graph.SetFrameColor(vi.FillType.FillType_Solid, [vi.MakeColor(223, 218, 241)])
+graph.SetPlotAreaColor(vi.FillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
 graph.SetCaption("Chart Graph Example")
 
 #bottom graph
 graph2 = vi.IPGraph("Plot-2")
-graph2.SetFrameColor(vi.PFillType.FillType_Solid, [vi.MakeColor(223, 218, 241)])
-graph2.SetPlotAreaColor(vi.PFillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
+graph2.SetFrameColor(vi.FillType.FillType_Solid, [vi.MakeColor(223, 218, 241)])
+graph2.SetPlotAreaColor(vi.FillType.FillType_Solid, [vi.MakeColor(255, 255, 255)])
 graph2.SetCaption("Random Plot Graph Example")
 
 #xaxis
@@ -38,7 +38,7 @@ else:
 chart.ChartXRange(0, 0.1*np.pi, 400, True, 50)
 chart.SetLineWidth(2)
 chart.SetLineColor(vi.MakeColor(0, 0, 255))
-chart.SetLineStyle(vi.PLineType.LineType_Dot)
+chart.SetLineStyle(vi.LineType.LineType_Dot)
 
 plotnum = graph2.GetPlotCount()
 if plotnum < 1:
@@ -48,9 +48,11 @@ else:
 plot.PlotXRange(0, 0.1*np.pi)
 plot.SetLineColor(vi.MakeColor(0, 0, 255))
 j = 0
+
 while(j < 10000):
     ychart = [4 * np.sin(j * 0.1 * np.pi)] 
     chart.ChartY(ychart)
     yplot = [4 * np.sin(i * 0.1 *np.pi) + random.uniform(0, 1) for i in range(1000)] 
     plot.PlotY(yplot)  
     j = j +0.5
+    
