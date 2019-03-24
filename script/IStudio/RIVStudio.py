@@ -52,8 +52,8 @@ class IPPlot():
     def __StreamData(self, id, array):
         if(len(array) * 8 > rs.config.max_msg_size):
             msg = self.__GetMsg(id | RPCMessageID.IPCMsg_Has_Stream)
-            step = rs.config.max_msg_size / 8
-            n = len(array) / step
+            step = int(rs.config.max_msg_size / 8)
+            n = int(len(array) / step)
             def SteamMsg():
                 for i in range(n):
                     del msg.double_data[:]
@@ -63,7 +63,7 @@ class IPPlot():
                 if n * step < len(array):
                     msg.double_data.extend(array[n * step:])
                 yield msg
-            rs.data_service.PostMsgStreamToClient(SteamMsg)
+            rs.data_service.PostMsgStreamToClient(msg, SteamMsg)
             msg = self.__GetMsg(id | RPCMessageID.IPCMsg_Has_Stream | RPCMessageID.IPCMsg_Has_EndStream)
             msg.int_data.append(len(array))
             rs.data_service.PostMsgToClient(msg)
@@ -75,27 +75,33 @@ class IPPlot():
 
     def __StreamMultiData(self, id, data_list):
         nd = len(data_list)
-        nn = min([len(array) for array in data_list])
+        nn = len(data_list[0])
+        for array in data_list:
+            if(array is not None and nn < len(array)):
+                nn = len(array)
         if(nn * nd * 8 > rs.config.max_msg_size):
             msg = self.__GetMsg(id | RPCMessageID.IPCMsg_Has_Stream)
-            step = rs.config.max_msg_size / 8
-            n = nn / step
+            step = int(rs.config.max_msg_size / 8)
+            n = int(nn / step)
             msg.int_data.append(nd)
             def SteamMsg():
                 for array in data_list:
-                    msg.int_data.append(nn * 8)
-                    for i in range(n):
-                        if(i != 0):
-                            del msg.int_data[:]
+                    if array != None:
+                        msg.int_data.append(nn * 8)
+                        for i in range(n):
+                            if(i != 0):
+                                del msg.int_data[:]
+                            del msg.double_data[:]
+                            msg.double_data.extend(array[i * step:(i + 1) * step])
+                            yield msg
                         del msg.double_data[:]
-                        msg.double_data.extend(array[i * step:(i + 1) * step])
+                        if n * step < nn:
+                            msg.double_data.extend(array[n * step:])
                         yield msg
-                    del msg.double_data[:]
-                    if n * step < nn:
-                        msg.double_data.extend(array[n * step:])
-                    yield msg
-
-            rs.data_service.PostMsgStreamToClient(SteamMsg)
+                    else:
+                        msg.int_data.append(0)
+                        yield msg
+            rs.data_service.PostMsgStreamToClient(msg, SteamMsg)
             msg = self.__GetMsg(id | RPCMessageID.IPCMsg_Has_Stream | RPCMessageID.IPCMsg_Has_EndStream)
             msg.int_data.append(4)
             rs.data_service.PostMsgToClient(msg)
@@ -104,8 +110,11 @@ class IPPlot():
             msg.int_data.append(nd)
             msg.int_data.append(nd)
             for array in data_list:
-                msg.int_data.append(nn * 8)
-                msg.double_data.extend(array)
+                if array is not None:
+                    msg.int_data.append(nn * 8)
+                    msg.double_data.extend(array)
+                else:
+                    msg.int_data.append(0)
             rs.data_service.PostMsgToClient(msg)
 
     def SetVisible(self, bVisible):
@@ -278,16 +287,24 @@ class IPPlot():
         msg.double_data.append(y0)
         msg.double_data.append(yinc)
         rs.data_service.PostMsgToClient(msg)
-
-    def ImageColor(self, images, nx, ny, channel = 1, batch = 1):
+              
+    def ImageColor(self, images, nx = 0, ny = 0, channel = 1, batch = 1):
         if not isinstance(images, np.ndarray):
             return
-        images.flatten()
+        if images.ndim == 2:
+            nx =images.shape[1]
+            ny = images.shape[0]
+        elif images.ndim == 4:
+            nx = images.shape[2]
+            ny = images.shape[1]
+            channel = 3
+            batch = images.shape[0]
+        images = images.flatten()
         datatype = 2
         if(len(images) * images.itemsize > rs.config.max_msg_size):
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_ImageXY | RPCMessageID.IPCMsg_Has_Stream)
-            step = rs.config.max_msg_size / images.itemsize
-            n = len(images) / step
+            step = int(rs.config.max_msg_size / images.itemsize)
+            n = int(len(images) / step)
             def SteamMsg():
                 for i in range(n):
                     if images.dtype == np.float64:
@@ -310,6 +327,7 @@ class IPPlot():
                         datatype = 6
                         del msg.byte_data[:]
                         msg.byte_data.append(images[i * step:(i + 1) * step])
+                    #sys.__stdout__.write("stream-" + str(i))
                     yield msg
                 if n * step < len(images):
                     if images.dtype == np.float64:
@@ -328,7 +346,7 @@ class IPPlot():
                         del msg.byte_data[:]
                         msg.byte_data.append(images[n * step:])
                     yield msg
-            rs.data_service.PostMsgStreamToClient(SteamMsg)
+            rs.data_service.PostMsgStreamToClient(msg, SteamMsg)
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_ImageXY | RPCMessageID.IPCMsg_Has_Stream | RPCMessageID.IPCMsg_Has_EndStream)
             msg.int_data.append(nx)
             msg.int_data.append(ny)
@@ -454,8 +472,8 @@ class IPPlot():
     def PieColor(self, color):
         if(len(color) * 4 > rs.config.max_msg_size):
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_PlotPieColor | RPCMessageID.IPCMsg_Has_Stream)
-            step = rs.config.max_msg_size / 4
-            n = len(color) / step
+            step = int(rs.config.max_msg_size / 4)
+            n = int(len(color) / step)
             def SteamMsg():
                 for i in range(n):
                     del msg.uint_data[:]
@@ -465,7 +483,7 @@ class IPPlot():
                 if n * step < len(color):
                     msg.uint_data.extend(color[n * step:])
                 yield msg
-            rs.data_service.PostMsgStreamToClient(SteamMsg)
+            rs.data_service.PostMsgStreamToClient(msg, SteamMsg)
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_PlotPieColor | RPCMessageID.IPCMsg_Has_Stream | RPCMessageID.IPCMsg_Has_EndStream)
             msg.int_data.append(len(color))
             rs.data_service.PostMsgToClient(msg)
@@ -585,7 +603,7 @@ class IPPlot():
         msg.double_data.append(scrollPercent)
         rs.data_service.PostMsgToClient(msg)
 
-    def PlotXYZCurve(self, data1, data2, data3, data4):
+    def PlotXYZCurve(self, data1, data2, data3, data4 = None):
         self.__StreamMultiData(RPCMessageID.IPCMsg_Widget_Plot3DXYZ, [data1, data2, data3, data4])
 
     def SurfaceXYZ(self, x, y, z, c):
@@ -595,7 +613,7 @@ class IPPlot():
             nn = nn + len(c)
         if(nn * 8 > rs.config.max_msg_size):
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_Plot3DSurfaceXYZ | RPCMessageID.IPCMsg_Has_Stream)
-            step = rs.config.max_msg_size / 8
+            step = int(rs.config.max_msg_size / 8)
             msg.int_data.append(nd)
             def SteamMsg():
                 for array in [x, y, z, c]:
@@ -604,7 +622,7 @@ class IPPlot():
                         yield msg
                     else:
                         nn = len(array)
-                        n = nn / step
+                        n = int(nn / step)
                         msg.int_data.append(len(array) * 8)
                         for i in range(n):
                             if(i != 0):
@@ -617,7 +635,7 @@ class IPPlot():
                             msg.double_data.extend(array[n * step:])
                         yield msg
 
-            rs.data_service.PostMsgStreamToClient(SteamMsg)
+            rs.data_service.PostMsgStreamToClient(msg, SteamMsg)
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_Plot3DSurfaceXYZ | RPCMessageID.IPCMsg_Has_Stream | RPCMessageID.IPCMsg_Has_EndStream)
             msg.int_data.append(4)
             rs.data_service.PostMsgToClient(msg)
@@ -634,6 +652,13 @@ class IPPlot():
                     msg.int_data.append(0)
             rs.data_service.PostMsgToClient(msg)
 
+    def SurfaceXYZ2(self, x, y, z2, c2 = None):
+        z = z2.flatten()
+        c = None
+        if c2 is not None:
+            c = c2.flatten()
+        self.SurfaceXYZ(x, y, z, c)
+
     def SurfaceXYZParametric(self, x, y, z, c, nu, nv):
         if(len(x) != nu * nv or len(y) != nu * nv or len(z) != nu * nv):
             return
@@ -642,7 +667,7 @@ class IPPlot():
         nd = 5
         if(nu * nv * 3 * 8 > rs.config.max_msg_size):
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_Plot3DSurfacePara | RPCMessageID.IPCMsg_Has_Stream)
-            step = rs.config.max_msg_size / 8
+            step = int(rs.config.max_msg_size / 8)
             msg.int_data.append(nd)
             def SteamMsg():
                 msg.int_data.append(2 * 4)
@@ -653,7 +678,7 @@ class IPPlot():
                     if(array == None):
                         continue
                     nn = len(array)
-                    n = nn / step
+                    n = int(nn / step)
                     msg.int_data.append(len(array) * 8)
                     for i in range(n):
                         if(i != 0):
@@ -666,7 +691,7 @@ class IPPlot():
                         msg.double_data.extend(array[n * step:])
                     yield msg
 
-            rs.data_service.PostMsgStreamToClient(SteamMsg)
+            rs.data_service.PostMsgStreamToClient(msg, SteamMsg)
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_Plot3DSurfacePara | RPCMessageID.IPCMsg_Has_Stream | RPCMessageID.IPCMsg_Has_EndStream)
             msg.int_data.append(4)
             rs.data_service.PostMsgToClient(msg)
@@ -690,10 +715,10 @@ class IPPlot():
             return 
         if(nx * ny * 8 > rs.config.max_msg_size):
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_Plot3DSurfaceZ | RPCMessageID.IPCMsg_Has_Stream)
-            step = rs.config.max_msg_size / 8
+            step = int(rs.config.max_msg_size / 8)
             def SteamMsg():
                 nn = len(array)
-                n = nn / step
+                n = int(nn / step)
                 msg.int_data.append(len(array) * 8)
                 for i in range(n):
                     if(i != 0):
@@ -706,7 +731,7 @@ class IPPlot():
                     msg.double_data.extend(array[n * step:])
                 yield msg
 
-            rs.data_service.PostMsgStreamToClient(SteamMsg)
+            rs.data_service.PostMsgStreamToClient(msg, SteamMsg)
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_Plot3DSurfaceZ | RPCMessageID.IPCMsg_Has_Stream | RPCMessageID.IPCMsg_Has_EndStream)
             msg.int_data.append(nx)
             msg.int_data.append(ny)
@@ -753,12 +778,12 @@ class IPPlot():
         shape = slices.shape
         if(slices.size * 8 > rs.config.max_msg_size):
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_Plot3DVolData | RPCMessageID.IPCMsg_Has_Stream)
-            step = rs.config.max_msg_size / 8
+            step = int(rs.config.max_msg_size / 8)
             msg.int_data.append(nd)
             array = slices.flatten()
             def SteamMsg():
                 nn = len(array)
-                n = nn / step
+                n = int(nn / step)
                 msg.int_data.append(len(array) * 8)
                 for i in range(n):
                     if(i != 0):
@@ -771,7 +796,7 @@ class IPPlot():
                     msg.float_data.extend(array[n * step:])
                 yield msg
 
-            rs.data_service.PostMsgStreamToClient(SteamMsg)
+            rs.data_service.PostMsgStreamToClient(msg, SteamMsg)
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_Plot3DVolData | RPCMessageID.IPCMsg_Has_Stream | RPCMessageID.IPCMsg_Has_EndStream)
             msg.int_data.append(shape[0])
             msg.int_data.append(shape[1])
@@ -1825,7 +1850,7 @@ class IPGraph():
         rs.data_service.PostMsgToClient(msg)
 
     def SetSkyBackground(self, right, left, top, bottom, back, front):
-        msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_SetSkyBackground)
+        msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_GraphSetSkyBackground)
         msg.string_data.append(right)
         msg.string_data.append(left)
         msg.string_data.append(top)
@@ -2234,8 +2259,8 @@ class IPDataTable():
     def SetData(self, firstCol, firstRow, lastCol, lastRow, array, bTranspose, bAdd=True):
         if(len(array) * 8 > rs.config.max_msg_size):
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_GridData| RPCMessageID.IPCMsg_Has_Stream)
-            step = rs.config.max_msg_size / 4
-            n = len(array) / step
+            step = int(rs.config.max_msg_size / 4)
+            n = int(len(array) / step)
             def SteamMsg():
                 for i in range(n):
                     del msg.double_data[:]
@@ -2245,7 +2270,7 @@ class IPDataTable():
                 if n * step < len(array):
                     msg.double_data.extend(array[n * step:])
                 yield msg
-            rs.data_service.PostMsgStreamToClient(SteamMsg)
+            rs.data_service.PostMsgStreamToClient(msg, SteamMsg)
             msg = self.__GetMsg(RPCMessageID.IPCMsg_Widget_GridData | RPCMessageID.IPCMsg_Has_Stream | RPCMessageID.IPCMsg_Has_EndStream)
             msg.int_data.append(firstCol)
             msg.int_data.append(firstRow)

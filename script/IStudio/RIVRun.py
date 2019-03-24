@@ -21,7 +21,10 @@ class IPRun:
         rs.config.is_remote_run = True
  
     def start_serve(self):
-        self.server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
+        self.server = grpc.server(futures.ThreadPoolExecutor(max_workers=10), options=[
+          ('grpc.max_send_message_length', 50 * 1024 * 1024),
+          ('grpc.max_receive_message_length', 50 * 1024 * 1024)
+        ])
         rs.data_service = rs.IVDataService()
         rs.IVGrpc_pb2_grpc.add_DataRPCServicer_to_server(rs.data_service, self.server)
         data_server = rs.config.ftp_server_address + ":" + str(self.port_)

@@ -94,6 +94,7 @@ class IVDataService(IVGrpc_pb2_grpc.DataRPCServicer):
         self.msg_response_list[RPCMessageID.IPCMsg_Debug_PostInfo] = self.PostDebugMsg
         self.msg_response_list[RPCMessageID.IPCMsg_PY_ReadLine] = self.ResponseReadlineMsg
         self.response_msg = None
+        self.stream_msg_callback = None
         self.stream_msg = None
         self.send_msg = None
         self.current_rsp_id = 0
@@ -137,24 +138,27 @@ class IVDataService(IVGrpc_pb2_grpc.DataRPCServicer):
     #send to client no response
     def PostMsgToClient(self, msg):
         with self.rpc_send_cv:
-            while(self.send_msg and self.continue_link):
+            while((self.send_msg or self.stream_msg) and self.continue_link):
                 self.rpc_send_cv.wait(0.2)
             self.send_msg = msg
             self.rpc_send_cv.notifyAll()
 
-    def PostMsgStreamToClient(self, msg_stream):
+    def PostMsgStreamToClient(self, msg, msg_stream_call):
         with self.rpc_send_cv:
-            while(self.send_msg and self.continue_link):
+            while((self.send_msg or self.stream_msg) and self.continue_link):
                 self.rpc_send_cv.wait(0.2)
-            self.stream_msg = msg_stream
+            self.stream_msg_callback = msg_stream_call
+            self.stream_msg = msg
             self.rpc_send_cv.notifyAll()
+        while(self.stream_msg and self.continue_link):
+            time.sleep(0.1)
 
     #send to client with response
     def GetResponse(self, msg, timeout = 4000):
         id = msg.msgID
         with self.rpc_rev_cv:
             with self.rpc_send_cv:
-                while(self.send_msg and self.continue_link):
+                while((self.send_msg or self.stream_msg) and self.continue_link):
                     self.rpc_send_cv.wait(0.2)
                 msg.msgID |= RPCMessageID.IPCMsg_Need_Response
                 self.response_msg = None
@@ -233,13 +237,14 @@ class IVDataService(IVGrpc_pb2_grpc.DataRPCServicer):
                 need_resp = False
                 with self.rpc_send_cv:
                     if(self.stream_msg):
-                        if(self.send_msg.msgID & RPCMessageID.IPCMsg_Need_Response):
+                        if(self.stream_msg.msgID & RPCMessageID.IPCMsg_Need_Response):
                             need_resp = True
-                        stream = self.stream_msg
+                        for msg in self.stream_msg_callback():
+                            yield msg
                         self.send_msg = None
                         self.stream_msg = None
+                        self.stream_msg_callback = None
                         self.rpc_send_cv.notifyAll()
-                        stream()
                     elif(self.send_msg):
                         if(self.send_msg.msgID & RPCMessageID.IPCMsg_Need_Response):
                             need_resp = True
